@@ -1,0 +1,33 @@
+{
+  "last_updated": "2026-01-25T12:00:00Z",
+  "account": {
+    "number": "262048469",
+    "symbol": "XAUUSDm",
+    "starting_balance": 500
+  },
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "breakeven": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "avg_pnl": 0,
+    "best_trade": 0,
+    "worst_trade": 0,
+    "profit_factor": 0,
+    "today_trades": 0,
+    "today_pnl": 0,
+    "week_trades": 0,
+    "week_pnl": 0,
+    "patterns": 0
+  },
+  "trades": [],
+  "strategies": [],
+  "learnings": [],
+  "equity_curve": {
+    "labels": [],
+    "values": []
+  },
+  "daily_performance": []
+}
