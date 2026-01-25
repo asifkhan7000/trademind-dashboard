@@ -1,24 +1,50 @@
 {
-  "last_updated": "2026-01-25T12:00:00Z",
-  "account": {
-    "number": "262048469",
-    "symbol": "XAUUSDm",
-    "starting_balance": 500
+  "last_updated": "2026-01-25T04:13:02.503188Z",
+  "bots": {
+    "safe": {
+      "bot_name": "TradeMind v4.1 (Safe)",
+      "stats": {
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0,
+        "total_pnl": 0,
+        "today_trades": 0,
+        "today_pnl": 0,
+        "week_trades": 0,
+        "week_pnl": 0,
+        "patterns": 0
+      },
+      "trades": [],
+      "strategies": [],
+      "learnings": []
+    },
+    "aggressive": {
+      "bot_name": "AI Scalper v5.0 (Aggressive)",
+      "stats": {
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0,
+        "total_pnl": 0,
+        "today_trades": 0,
+        "today_pnl": 0,
+        "week_trades": 0,
+        "week_pnl": 0,
+        "patterns": 0
+      },
+      "trades": [],
+      "strategies": [],
+      "learnings": []
+    }
   },
-  "stats": {
+  "combined_stats": {
     "total_trades": 0,
     "wins": 0,
     "losses": 0,
-    "breakeven": 0,
     "win_rate": 0,
     "total_pnl": 0,
-    "avg_pnl": 0,
-    "best_trade": 0,
-    "worst_trade": 0,
-    "profit_factor": 0,
-    "today_trades": 0,
     "today_pnl": 0,
-    "week_trades": 0,
     "week_pnl": 0,
     "patterns": 0
   },
@@ -29,5 +55,15 @@
     "labels": [],
     "values": []
   },
-  "daily_performance": []
+  "daily_performance": [],
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
+    "total_pnl": 0,
+    "today_pnl": 0,
+    "week_pnl": 0,
+    "patterns": 0
+  }
 }
