@@ -1,8 +1,42 @@
 {
-  "last_updated": "2026-01-25T04:42:32.812714Z",
+  "last_updated": "2026-01-25T04:43:33.426033Z",
   "bots": {
-    "safe": null,
-    "aggressive": null
+    "safe": {
+      "bot_name": "TradeMind v4.1 (Safe)",
+      "stats": {
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0,
+        "total_pnl": 0,
+        "today_trades": 0,
+        "today_pnl": 0,
+        "week_trades": 0,
+        "week_pnl": 0,
+        "patterns": 0
+      },
+      "trades": [],
+      "strategies": [],
+      "learnings": []
+    },
+    "aggressive": {
+      "bot_name": "AI Scalper v5.0 (Aggressive)",
+      "stats": {
+        "total_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate": 0,
+        "total_pnl": 0,
+        "today_trades": 0,
+        "today_pnl": 0,
+        "week_trades": 0,
+        "week_pnl": 0,
+        "patterns": 0
+      },
+      "trades": [],
+      "strategies": [],
+      "learnings": []
+    }
   },
   "combined_stats": {
     "total_trades": 0,
