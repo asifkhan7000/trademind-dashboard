@@ -3,390 +3,470 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeMind AI | Dual Bot Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>TradeMind v6.0 - AI Trading Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg: #f8fafc; --card: #fff; --border: #e2e8f0;
-            --text: #0f172a; --muted: #94a3b8;
-            --accent: #6366f1; --accent-light: #eef2ff;
-            --success: #10b981; --success-light: #ecfdf5;
-            --danger: #ef4444; --danger-light: #fef2f2;
-            --safe: #3b82f6; --safe-light: #eff6ff;
-            --aggressive: #f59e0b; --aggressive-light: #fffbeb;
-        }
-        body { font-family: Inter, sans-serif; background: var(--bg); color: var(--text); font-size: 16px; }
-        
-        .header {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white; padding: 24px 36px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .header h1 { font-size: 28px; font-weight: 800; }
-        .header p { opacity: 0.9; margin-top: 4px; }
-        .live-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,255,255,0.2); padding: 10px 18px; border-radius: 25px;
-            font-size: 14px; font-weight: 600;
-        }
-        .live-badge .dot { width: 10px; height: 10px; background: #10b981; border-radius: 50%; animation: blink 1.5s infinite; }
-        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
-        
-        .content { padding: 28px 36px; max-width: 1600px; margin: 0 auto; }
-        
-        /* Combined Stats */
-        .combined-stats {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 28px;
-        }
-        .combined-card {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 20px; padding: 24px; color: white;
-        }
-        .combined-card .label { font-size: 14px; opacity: 0.9; font-weight: 600; }
-        .combined-card .value { font-size: 36px; font-weight: 800; margin-top: 8px; }
-        
-        /* Bot Comparison */
-        .bot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
-        
-        .bot-card {
-            background: white; border: 2px solid var(--border);
-            border-radius: 20px; overflow: hidden;
-        }
-        .bot-card.safe { border-color: var(--safe); }
-        .bot-card.aggressive { border-color: var(--aggressive); }
-        
-        .bot-header {
-            padding: 20px 24px; display: flex; justify-content: space-between; align-items: center;
-        }
-        .bot-header.safe { background: var(--safe-light); }
-        .bot-header.aggressive { background: var(--aggressive-light); }
-        
-        .bot-title { display: flex; align-items: center; gap: 12px; }
-        .bot-icon {
-            width: 48px; height: 48px; border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .bot-icon.safe { background: var(--safe); }
-        .bot-icon.aggressive { background: var(--aggressive); }
-        .bot-icon svg { width: 24px; height: 24px; color: white; }
-        .bot-name { font-size: 18px; font-weight: 700; }
-        .bot-account { font-size: 13px; color: var(--muted); margin-top: 2px; }
-        
-        .bot-badge {
-            padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 700;
-        }
-        .bot-badge.safe { background: var(--safe); color: white; }
-        .bot-badge.aggressive { background: var(--aggressive); color: white; }
-        
-        .bot-stats { padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-        .bot-stat { text-align: center; padding: 16px; background: var(--bg); border-radius: 12px; }
-        .bot-stat-value { font-size: 28px; font-weight: 800; }
-        .bot-stat-value.pos { color: var(--success); }
-        .bot-stat-value.neg { color: var(--danger); }
-        .bot-stat-label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; margin-top: 4px; }
-        
-        .bot-trades { padding: 0 24px 24px; }
-        .bot-trades-title { font-size: 14px; font-weight: 700; color: var(--muted); margin-bottom: 12px; text-transform: uppercase; }
-        .trade-row {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 12px 16px; background: var(--bg); border-radius: 10px; margin-bottom: 8px;
-        }
-        .trade-info { display: flex; align-items: center; gap: 12px; }
-        .trade-type {
-            padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;
-        }
-        .trade-type.BUY { background: var(--success-light); color: var(--success); }
-        .trade-type.SELL { background: var(--danger-light); color: var(--danger); }
-        .trade-strategy { font-size: 14px; font-weight: 600; }
-        .trade-time { font-size: 12px; color: var(--muted); }
-        .trade-pnl { font-size: 16px; font-weight: 700; }
-        .trade-pnl.pos { color: var(--success); }
-        .trade-pnl.neg { color: var(--danger); }
-        
-        /* Performance Comparison */
-        .comparison-card {
-            background: white; border: 1px solid var(--border);
-            border-radius: 20px; padding: 24px; margin-bottom: 28px;
-        }
-        .comparison-title {
-            font-size: 18px; font-weight: 700; margin-bottom: 20px;
-            display: flex; align-items: center; gap: 12px;
-        }
-        .comparison-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
-        .comparison-item { text-align: center; }
-        .comparison-label { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
-        .comparison-bars { display: flex; justify-content: center; gap: 8px; align-items: flex-end; height: 80px; }
-        .bar {
-            width: 40px; border-radius: 6px 6px 0 0; display: flex; align-items: flex-end;
-            justify-content: center; padding-bottom: 4px; font-size: 11px; font-weight: 700; color: white;
-            min-height: 20px;
-        }
-        .bar.safe { background: var(--safe); }
-        .bar.aggressive { background: var(--aggressive); }
-        
-        /* No Data State */
-        .no-data { text-align: center; padding: 40px; color: var(--muted); }
-        .no-data-icon { font-size: 48px; margin-bottom: 16px; }
-        
-        .refresh { text-align: center; padding: 20px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); margin-top: 20px; }
-        
-        .legend { display: flex; justify-content: center; gap: 24px; margin-top: 16px; }
-        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
-        .legend-dot { width: 12px; height: 12px; border-radius: 4px; }
-        .legend-dot.safe { background: var(--safe); }
-        .legend-dot.aggressive { background: var(--aggressive); }
-        
-        @media (max-width: 1200px) {
-            .bot-grid { grid-template-columns: 1fr; }
-            .combined-stats { grid-template-columns: repeat(2, 1fr); }
-            .comparison-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .combined-stats { grid-template-columns: 1fr; }
-            .bot-stats { grid-template-columns: 1fr; }
-            .comparison-grid { grid-template-columns: repeat(2, 1fr); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); }
+        .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        .glow-orange { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+        .glow-green { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+        .glow-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
     </style>
 </head>
-<body>
-    <header class="header">
-        <div>
-            <h1>TradeMind AI Dashboard</h1>
-            <p>Dual Bot Performance Monitor • Auto-refresh 60s</p>
+<body class="bg-gray-900 text-white min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold">TradeMind v6.0</h1>
+                    <p class="text-xs text-gray-400">Universal AI Trading Bot</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <div id="marketStatus" class="flex items-center gap-2 px-3 py-1 rounded-full bg-gray-700">
+                    <span class="w-2 h-2 rounded-full bg-green-500 pulse"></span>
+                    <span class="text-sm">Loading...</span>
+                </div>
+                <div class="text-sm text-gray-400">
+                    <span id="lastUpdate">--:--:--</span>
+                </div>
+            </div>
         </div>
-        <div class="live-badge"><span class="dot"></span> Live</div>
     </header>
-    
-    <div class="content" id="main-content">
-        <div class="no-data">
-            <div class="no-data-icon">⏳</div>
-            <p>Loading dashboard data...</p>
-        </div>
-    </div>
-    
-    <script>
-        const DATA_URL = './data.json';
-        const REFRESH_INTERVAL = 60000;
+
+    <main class="max-w-7xl mx-auto p-6">
         
-        async function loadData() {
-            try {
-                const response = await fetch(DATA_URL + '?t=' + Date.now());
-                if (!response.ok) throw new Error('Failed to load');
-                const data = await response.json();
-                renderDashboard(data);
-            } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('main-content').innerHTML = `
-                    <div class="no-data">
-                        <div class="no-data-icon">⚠️</div>
-                        <p>Unable to load data. Retrying...</p>
+        <!-- Combined Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="glass rounded-xl p-4 border border-gray-700">
+                <div class="text-gray-400 text-sm mb-1">Total Balance</div>
+                <div class="text-2xl font-bold" id="totalBalance">$0.00</div>
+            </div>
+            <div class="glass rounded-xl p-4 border border-gray-700">
+                <div class="text-gray-400 text-sm mb-1">Today's Trades</div>
+                <div class="text-2xl font-bold" id="totalTrades">0</div>
+            </div>
+            <div class="glass rounded-xl p-4 border border-gray-700">
+                <div class="text-gray-400 text-sm mb-1">Today's P&L</div>
+                <div class="text-2xl font-bold" id="totalPnl">$0.00</div>
+            </div>
+            <div class="glass rounded-xl p-4 border border-gray-700">
+                <div class="text-gray-400 text-sm mb-1">Win Rate</div>
+                <div class="text-2xl font-bold" id="totalWinRate">0%</div>
+            </div>
+        </div>
+
+        <!-- Bot Cards -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            
+            <!-- Safe Bot Card -->
+            <div class="glass rounded-xl border border-blue-500/30 glow-blue overflow-hidden">
+                <div class="bg-blue-500/20 px-4 py-3 border-b border-blue-500/30">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-blue-400"></i>
+                            <span class="font-semibold">Safe Bot</span>
+                            <span class="text-xs bg-blue-500/30 px-2 py-0.5 rounded">CONSERVATIVE</span>
+                        </div>
+                        <span class="text-sm text-gray-400" id="safeAccount">#----</span>
                     </div>
+                </div>
+                <div class="p-4">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <div class="text-gray-400 text-xs">Balance</div>
+                            <div class="text-xl font-bold text-blue-400" id="safeBalance">$0.00</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Today's P&L</div>
+                            <div class="text-xl font-bold" id="safePnl">$0.00</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Trades Today</div>
+                            <div class="text-lg font-semibold" id="safeTrades">0</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Win Rate</div>
+                            <div class="text-lg font-semibold" id="safeWinRate">0%</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-700 pt-3">
+                        <div class="text-xs text-gray-400 mb-2">Recent Trades</div>
+                        <div class="space-y-1 max-h-32 overflow-y-auto" id="safeRecentTrades">
+                            <div class="text-gray-500 text-sm">No trades yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aggressive Bot Card -->
+            <div class="glass rounded-xl border border-orange-500/30 glow-orange overflow-hidden">
+                <div class="bg-orange-500/20 px-4 py-3 border-b border-orange-500/30">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-bolt text-orange-400"></i>
+                            <span class="font-semibold">Aggressive Bot</span>
+                            <span class="text-xs bg-orange-500/30 px-2 py-0.5 rounded">SCALPER</span>
+                        </div>
+                        <span class="text-sm text-gray-400" id="aggressiveAccount">#----</span>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <div class="text-gray-400 text-xs">Balance</div>
+                            <div class="text-xl font-bold text-orange-400" id="aggressiveBalance">$0.00</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Today's P&L</div>
+                            <div class="text-xl font-bold" id="aggressivePnl">$0.00</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Trades Today</div>
+                            <div class="text-lg font-semibold" id="aggressiveTrades">0</div>
+                        </div>
+                        <div>
+                            <div class="text-gray-400 text-xs">Win Rate</div>
+                            <div class="text-lg font-semibold" id="aggressiveWinRate">0%</div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-700 pt-3">
+                        <div class="text-xs text-gray-400 mb-2">Recent Trades</div>
+                        <div class="space-y-1 max-h-32 overflow-y-auto" id="aggressiveRecentTrades">
+                            <div class="text-gray-500 text-sm">No trades yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Comparison -->
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+            
+            <!-- Chart -->
+            <div class="glass rounded-xl border border-gray-700 p-4">
+                <h3 class="font-semibold mb-4">
+                    <i class="fas fa-chart-bar mr-2 text-purple-400"></i>
+                    Performance Comparison
+                </h3>
+                <canvas id="comparisonChart" height="200"></canvas>
+            </div>
+
+            <!-- Session Performance -->
+            <div class="glass rounded-xl border border-gray-700 p-4">
+                <h3 class="font-semibold mb-4">
+                    <i class="fas fa-clock mr-2 text-green-400"></i>
+                    Session Performance (UTC)
+                </h3>
+                <div class="space-y-2" id="sessionPerformance">
+                    <div class="flex items-center justify-between p-2 rounded bg-green-500/20 border border-green-500/30">
+                        <span>Hour 7 (London Open)</span>
+                        <span class="text-green-400">+$11.22</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
+                        <span>Hour 9</span>
+                        <span class="text-red-400">-$36.51 (Avoided)</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
+                        <span>Hour 10</span>
+                        <span class="text-red-400">-$18.35 (Avoided)</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
+                        <span>Hour 12</span>
+                        <span class="text-red-400">-$39.77 (Avoided)</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2 rounded bg-green-500/20 border border-green-500/30">
+                        <span>Hour 13 (London/NY)</span>
+                        <span class="text-green-400">+$47.98</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Status -->
+        <div class="glass rounded-xl border border-gray-700 p-4 mb-6">
+            <h3 class="font-semibold mb-4">
+                <i class="fas fa-cogs mr-2 text-blue-400"></i>
+                v6.0 Features Status
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Self-Tuning</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">News Filter</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Telegram Control</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Daily Report</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Drawdown Protection</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Multi-Timeframe</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Session Awareness</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Partial Profits</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Loss Recovery</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Support/Resistance</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Multi-Symbol Ready</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
+                    <i class="fas fa-check-circle text-green-400"></i>
+                    <span class="text-sm">Spread Filter</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Open Positions -->
+        <div class="glass rounded-xl border border-gray-700 p-4">
+            <h3 class="font-semibold mb-4">
+                <i class="fas fa-exchange-alt mr-2 text-yellow-400"></i>
+                Open Positions
+            </h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="text-gray-400 border-b border-gray-700">
+                            <th class="text-left py-2">Bot</th>
+                            <th class="text-left py-2">Symbol</th>
+                            <th class="text-left py-2">Type</th>
+                            <th class="text-right py-2">Entry</th>
+                            <th class="text-right py-2">Current</th>
+                            <th class="text-right py-2">P&L</th>
+                        </tr>
+                    </thead>
+                    <tbody id="openPositions">
+                        <tr>
+                            <td colspan="6" class="text-center py-4 text-gray-500">No open positions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700 py-4 px-6 mt-6">
+        <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
+            TradeMind v6.0 - Universal AI Trading Bot | 11 Features | Halal Trading
+        </div>
+    </footer>
+
+    <script>
+        // Initialize chart
+        let comparisonChart;
+
+        function initChart() {
+            const ctx = document.getElementById('comparisonChart').getContext('2d');
+            comparisonChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Trades', 'Wins', 'Losses', 'P&L ($)'],
+                    datasets: [
+                        {
+                            label: 'Safe Bot',
+                            data: [0, 0, 0, 0],
+                            backgroundColor: 'rgba(59, 130, 246, 0.5)',
+                            borderColor: 'rgba(59, 130, 246, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Aggressive Bot',
+                            data: [0, 0, 0, 0],
+                            backgroundColor: 'rgba(249, 115, 22, 0.5)',
+                            borderColor: 'rgba(249, 115, 22, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#9ca3af' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#9ca3af' },
+                            grid: { color: '#374151' }
+                        },
+                        x: {
+                            ticks: { color: '#9ca3af' },
+                            grid: { color: '#374151' }
+                        }
+                    }
+                }
+            });
+        }
+
+        function updateDashboard(data) {
+            // Update timestamp
+            document.getElementById('lastUpdate').textContent = data.updated_at_display || new Date().toLocaleTimeString();
+
+            // Update market status
+            if (data.market_status) {
+                const statusEl = document.getElementById('marketStatus');
+                const isOpen = data.market_status.is_open;
+                statusEl.innerHTML = `
+                    <span class="w-2 h-2 rounded-full ${isOpen ? 'bg-green-500' : 'bg-red-500'} pulse"></span>
+                    <span class="text-sm">${data.market_status.status}</span>
                 `;
             }
-        }
-        
-        function formatPnl(value) {
-            if (value === undefined || value === null) value = 0;
-            const prefix = value >= 0 ? '+$' : '-$';
-            return prefix + Math.abs(value).toFixed(2);
-        }
-        
-        function getBarHeight(value, max) {
-            if (!max || max === 0) return 20;
-            return Math.max(20, (value / max) * 80);
-        }
-        
-        function renderDashboard(data) {
-            const safe = data.bots?.safe?.stats || { total_trades: 0, wins: 0, losses: 0, win_rate: 0, total_pnl: 0, today_pnl: 0 };
-            const aggressive = data.bots?.aggressive?.stats || { total_trades: 0, wins: 0, losses: 0, win_rate: 0, total_pnl: 0, today_pnl: 0 };
-            const combined = data.combined_stats || data.stats || {};
-            
-            const safeTrades = data.bots?.safe?.trades || [];
-            const aggressiveTrades = data.bots?.aggressive?.trades || [];
-            
-            // Calculate max values for bar charts
-            const maxTrades = Math.max(safe.total_trades || 0, aggressive.total_trades || 0, 1);
-            const maxWinRate = Math.max(safe.win_rate || 0, aggressive.win_rate || 0, 1);
-            const maxPnl = Math.max(Math.abs(safe.total_pnl || 0), Math.abs(aggressive.total_pnl || 0), 1);
-            
-            let html = `
-                <!-- Combined Stats -->
-                <div class="combined-stats">
-                    <div class="combined-card">
-                        <div class="label">TOTAL TRADES</div>
-                        <div class="value">${combined.total_trades || 0}</div>
-                    </div>
-                    <div class="combined-card">
-                        <div class="label">COMBINED WIN RATE</div>
-                        <div class="value">${combined.win_rate || 0}%</div>
-                    </div>
-                    <div class="combined-card">
-                        <div class="label">TODAY P&L</div>
-                        <div class="value">${formatPnl(combined.today_pnl)}</div>
-                    </div>
-                    <div class="combined-card">
-                        <div class="label">TOTAL P&L</div>
-                        <div class="value">${formatPnl(combined.total_pnl)}</div>
-                    </div>
-                </div>
+
+            // Update combined stats
+            if (data.combined) {
+                document.getElementById('totalBalance').textContent = `$${data.combined.total_balance.toFixed(2)}`;
+                document.getElementById('totalTrades').textContent = data.combined.total_trades_today;
                 
-                <!-- Bot Comparison Cards -->
-                <div class="bot-grid">
-                    <!-- Safe Bot -->
-                    <div class="bot-card safe">
-                        <div class="bot-header safe">
-                            <div class="bot-title">
-                                <div class="bot-icon safe">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                </div>
-                                <div>
-                                    <div class="bot-name">TradeMind v4.1</div>
-                                    <div class="bot-account">Account #262048469 • Real $500</div>
-                                </div>
-                            </div>
-                            <span class="bot-badge safe">SAFE</span>
-                        </div>
-                        <div class="bot-stats">
-                            <div class="bot-stat">
-                                <div class="bot-stat-value">${safe.total_trades || 0}</div>
-                                <div class="bot-stat-label">Trades</div>
-                            </div>
-                            <div class="bot-stat">
-                                <div class="bot-stat-value ${(safe.win_rate || 0) >= 50 ? 'pos' : ''}">${safe.win_rate || 0}%</div>
-                                <div class="bot-stat-label">Win Rate</div>
-                            </div>
-                            <div class="bot-stat">
-                                <div class="bot-stat-value ${(safe.total_pnl || 0) >= 0 ? 'pos' : 'neg'}">${formatPnl(safe.total_pnl)}</div>
-                                <div class="bot-stat-label">Total P&L</div>
-                            </div>
-                        </div>
-                        <div class="bot-trades">
-                            <div class="bot-trades-title">Recent Trades</div>
-                            ${safeTrades.length === 0 ? '<div class="no-data">No trades yet</div>' : ''}
-                            ${safeTrades.slice(0, 5).map(t => `
-                                <div class="trade-row">
-                                    <div class="trade-info">
-                                        <span class="trade-type ${t.signal_type}">${t.signal_type}</span>
-                                        <div>
-                                            <div class="trade-strategy">${t.strategy}</div>
-                                            <div class="trade-time">${t.entry_time ? t.entry_time.substring(0, 16) : 'N/A'}</div>
-                                        </div>
-                                    </div>
-                                    <div class="trade-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${formatPnl(t.pnl)}</div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
+                const pnlEl = document.getElementById('totalPnl');
+                pnlEl.textContent = `$${data.combined.total_pnl_today >= 0 ? '+' : ''}${data.combined.total_pnl_today.toFixed(2)}`;
+                pnlEl.className = `text-2xl font-bold ${data.combined.total_pnl_today >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                
+                document.getElementById('totalWinRate').textContent = `${data.combined.combined_win_rate}%`;
+            }
+
+            // Update bot cards
+            if (data.bots) {
+                data.bots.forEach(bot => {
+                    const prefix = bot.mode === 'SAFE' ? 'safe' : 'aggressive';
                     
-                    <!-- Aggressive Bot -->
-                    <div class="bot-card aggressive">
-                        <div class="bot-header aggressive">
-                            <div class="bot-title">
-                                <div class="bot-icon aggressive">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                                </div>
-                                <div>
-                                    <div class="bot-name">AI Scalper v5.0</div>
-                                    <div class="bot-account">Account #262112946 • Demo $1000</div>
-                                </div>
+                    document.getElementById(`${prefix}Account`).textContent = `#${bot.account}`;
+                    document.getElementById(`${prefix}Balance`).textContent = `$${bot.balance.toFixed(2)}`;
+                    
+                    const pnlEl = document.getElementById(`${prefix}Pnl`);
+                    pnlEl.textContent = `$${bot.today.pnl >= 0 ? '+' : ''}${bot.today.pnl.toFixed(2)}`;
+                    pnlEl.className = `text-xl font-bold ${bot.today.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                    
+                    document.getElementById(`${prefix}Trades`).textContent = bot.today.trades;
+                    document.getElementById(`${prefix}WinRate`).textContent = `${bot.today.win_rate}%`;
+                    
+                    // Recent trades
+                    const tradesEl = document.getElementById(`${prefix}RecentTrades`);
+                    if (bot.recent_trades && bot.recent_trades.length > 0) {
+                        tradesEl.innerHTML = bot.recent_trades.map(t => `
+                            <div class="flex justify-between text-xs py-1 border-b border-gray-700">
+                                <span>${t.time} - ${t.type} ${t.symbol}</span>
+                                <span class="${t.profit >= 0 ? 'text-green-400' : 'text-red-400'}">
+                                    $${t.profit >= 0 ? '+' : ''}${t.profit.toFixed(2)}
+                                </span>
                             </div>
-                            <span class="bot-badge aggressive">AGGRESSIVE</span>
-                        </div>
-                        <div class="bot-stats">
-                            <div class="bot-stat">
-                                <div class="bot-stat-value">${aggressive.total_trades || 0}</div>
-                                <div class="bot-stat-label">Trades</div>
-                            </div>
-                            <div class="bot-stat">
-                                <div class="bot-stat-value ${(aggressive.win_rate || 0) >= 50 ? 'pos' : ''}">${aggressive.win_rate || 0}%</div>
-                                <div class="bot-stat-label">Win Rate</div>
-                            </div>
-                            <div class="bot-stat">
-                                <div class="bot-stat-value ${(aggressive.total_pnl || 0) >= 0 ? 'pos' : 'neg'}">${formatPnl(aggressive.total_pnl)}</div>
-                                <div class="bot-stat-label">Total P&L</div>
-                            </div>
-                        </div>
-                        <div class="bot-trades">
-                            <div class="bot-trades-title">Recent Trades</div>
-                            ${aggressiveTrades.length === 0 ? '<div class="no-data">No trades yet</div>' : ''}
-                            ${aggressiveTrades.slice(0, 5).map(t => `
-                                <div class="trade-row">
-                                    <div class="trade-info">
-                                        <span class="trade-type ${t.signal_type}">${t.signal_type}</span>
-                                        <div>
-                                            <div class="trade-strategy">${t.strategy}</div>
-                                            <div class="trade-time">${t.entry_time ? t.entry_time.substring(0, 16) : 'N/A'}</div>
-                                        </div>
-                                    </div>
-                                    <div class="trade-pnl ${t.pnl >= 0 ? 'pos' : 'neg'}">${formatPnl(t.pnl)}</div>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Performance Comparison -->
-                <div class="comparison-card">
-                    <div class="comparison-title">
-                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
-                        Performance Comparison
-                    </div>
-                    <div class="comparison-grid">
-                        <div class="comparison-item">
-                            <div class="comparison-label">Total Trades</div>
-                            <div class="comparison-bars">
-                                <div class="bar safe" style="height: ${getBarHeight(safe.total_trades || 0, maxTrades)}px">${safe.total_trades || 0}</div>
-                                <div class="bar aggressive" style="height: ${getBarHeight(aggressive.total_trades || 0, maxTrades)}px">${aggressive.total_trades || 0}</div>
-                            </div>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-label">Wins</div>
-                            <div class="comparison-bars">
-                                <div class="bar safe" style="height: ${getBarHeight(safe.wins || 0, maxTrades)}px">${safe.wins || 0}</div>
-                                <div class="bar aggressive" style="height: ${getBarHeight(aggressive.wins || 0, maxTrades)}px">${aggressive.wins || 0}</div>
-                            </div>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-label">Win Rate</div>
-                            <div class="comparison-bars">
-                                <div class="bar safe" style="height: ${getBarHeight(safe.win_rate || 0, 100)}px">${safe.win_rate || 0}%</div>
-                                <div class="bar aggressive" style="height: ${getBarHeight(aggressive.win_rate || 0, 100)}px">${aggressive.win_rate || 0}%</div>
-                            </div>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-label">Today P&L</div>
-                            <div class="comparison-bars">
-                                <div class="bar safe" style="height: 40px">${formatPnl(safe.today_pnl)}</div>
-                                <div class="bar aggressive" style="height: 40px">${formatPnl(aggressive.today_pnl)}</div>
-                            </div>
-                        </div>
-                        <div class="comparison-item">
-                            <div class="comparison-label">Total P&L</div>
-                            <div class="comparison-bars">
-                                <div class="bar safe" style="height: 40px">${formatPnl(safe.total_pnl)}</div>
-                                <div class="bar aggressive" style="height: 40px">${formatPnl(aggressive.total_pnl)}</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="legend">
-                        <div class="legend-item"><span class="legend-dot safe"></span> Safe Bot (v4.1)</div>
-                        <div class="legend-item"><span class="legend-dot aggressive"></span> Aggressive Scalper (v5.0)</div>
-                    </div>
-                </div>
-                
-                <div class="refresh">Last updated: ${data.last_updated || 'N/A'} • Refreshes every 60s</div>
-            `;
-            
-            document.getElementById('main-content').innerHTML = html;
+                        `).join('');
+                    } else {
+                        tradesEl.innerHTML = '<div class="text-gray-500 text-sm">No trades yet</div>';
+                    }
+                });
+
+                // Update chart
+                if (comparisonChart && data.bots.length >= 2) {
+                    const safeBot = data.bots.find(b => b.mode === 'SAFE') || { today: { trades: 0, wins: 0, losses: 0, pnl: 0 }};
+                    const aggrBot = data.bots.find(b => b.mode === 'AGGRESSIVE') || { today: { trades: 0, wins: 0, losses: 0, pnl: 0 }};
+                    
+                    comparisonChart.data.datasets[0].data = [
+                        safeBot.today.trades,
+                        safeBot.today.wins,
+                        safeBot.today.losses,
+                        safeBot.today.pnl
+                    ];
+                    comparisonChart.data.datasets[1].data = [
+                        aggrBot.today.trades,
+                        aggrBot.today.wins,
+                        aggrBot.today.losses,
+                        aggrBot.today.pnl
+                    ];
+                    comparisonChart.update();
+                }
+
+                // Update open positions
+                const positionsEl = document.getElementById('openPositions');
+                let allPositions = [];
+                data.bots.forEach(bot => {
+                    if (bot.open_trades) {
+                        bot.open_trades.forEach(t => {
+                            allPositions.push({ ...t, botName: bot.name, botMode: bot.mode });
+                        });
+                    }
+                });
+
+                if (allPositions.length > 0) {
+                    positionsEl.innerHTML = allPositions.map(p => `
+                        <tr class="border-b border-gray-700">
+                            <td class="py-2">${p.botName}</td>
+                            <td class="py-2">${p.symbol}</td>
+                            <td class="py-2">
+                                <span class="px-2 py-0.5 rounded text-xs ${p.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
+                                    ${p.type}
+                                </span>
+                            </td>
+                            <td class="py-2 text-right">${p.entry_price.toFixed(2)}</td>
+                            <td class="py-2 text-right">${p.current_price.toFixed(2)}</td>
+                            <td class="py-2 text-right ${p.profit >= 0 ? 'text-green-400' : 'text-red-400'}">
+                                $${p.profit >= 0 ? '+' : ''}${p.profit.toFixed(2)}
+                            </td>
+                        </tr>
+                    `).join('');
+                } else {
+                    positionsEl.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-gray-500">No open positions</td></tr>';
+                }
+            }
         }
-        
-        // Initial load
-        loadData();
-        
-        // Auto-refresh
-        setInterval(loadData, REFRESH_INTERVAL);
+
+        async function fetchData() {
+            try {
+                const response = await fetch('dashboard_data.json?' + Date.now());
+                if (response.ok) {
+                    const data = await response.json();
+                    updateDashboard(data);
+                }
+            } catch (error) {
+                console.log('Waiting for data...');
+            }
+        }
+
+        // Initialize
+        initChart();
+        fetchData();
+        setInterval(fetchData, 5000); // Update every 5 seconds
     </script>
 </body>
 </html>
