@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T00:31:16.862299",
-  "updated_at_display": "2026-01-27 00:31:16",
+  "updated_at": "2026-01-27T00:36:50.050797",
+  "updated_at_display": "2026-01-27 00:36:50",
   "bots": [
     {
       "name": "Safe Bot",
@@ -27,54 +27,86 @@
       "mode": "AGGRESSIVE",
       "account": 262112946,
       "color": "#f97316",
-      "balance": 1000.0,
-      "equity": 1002.25,
-      "profit": 2.25,
+      "balance": 1021.65,
+      "equity": 1021.65,
+      "profit": 0.0,
       "today": {
-        "trades": 0,
-        "wins": 0,
+        "trades": 7,
+        "wins": 7,
         "losses": 0,
-        "pnl": 0,
-        "win_rate": 0
+        "pnl": 21.65,
+        "win_rate": 100.0
       },
-      "open_trades": [
+      "open_trades": [],
+      "open_pnl": 0,
+      "recent_trades": [
+        {
+          "ticket": 601485355,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.28,
+          "time": "00:32:02"
+        },
         {
           "ticket": 601482767,
           "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": 0.66,
-          "entry_price": 5058.063,
-          "current_price": 5057.397
+          "type": "BUY",
+          "profit": 0.0,
+          "time": "00:32:24"
         },
         {
           "ticket": 601483973,
           "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": 0.52,
-          "entry_price": 5057.919,
-          "current_price": 5057.397
+          "type": "BUY",
+          "profit": 0.01,
+          "time": "00:32:24"
         },
         {
-          "ticket": 601485355,
+          "ticket": 601507923,
           "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": 1.07,
-          "entry_price": 5058.467000000001,
-          "current_price": 5057.397
+          "type": "BUY",
+          "profit": 4.13,
+          "time": "00:32:41"
+        },
+        {
+          "ticket": 601494693,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.44,
+          "time": "00:35:14"
+        },
+        {
+          "ticket": 601506038,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.74,
+          "time": "00:35:14"
+        },
+        {
+          "ticket": 601509155,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.26,
+          "time": "00:35:14"
+        },
+        {
+          "ticket": 601510785,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.79,
+          "time": "00:35:14"
         }
-      ],
-      "open_pnl": 2.25,
-      "recent_trades": []
+      ]
     }
   ],
   "combined": {
-    "total_balance": 1500.0,
-    "total_equity": 1502.25,
-    "total_trades_today": 0,
-    "total_wins_today": 0,
+    "total_balance": 1521.65,
+    "total_equity": 1521.65,
+    "total_trades_today": 7,
+    "total_wins_today": 7,
     "total_losses_today": 0,
-    "total_pnl_today": 0,
-    "combined_win_rate": 0
+    "total_pnl_today": 21.65,
+    "combined_win_rate": 100.0
   },
   "learning": {
     "safe": {
@@ -93,6 +125,6 @@
     "status": "Open (New York Session)",
     "current_hour_utc": 20,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-26T20:31:16.862299"
+    "timestamp": "2026-01-26T20:36:50.051797"
   }
 }
