@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T00:58:48.195855",
-  "updated_at_display": "2026-01-27 00:58:48",
+  "updated_at": "2026-01-27T01:04:10.545610",
+  "updated_at_display": "2026-01-27 01:04:10",
   "bots": [
     {
       "name": "Safe Bot",
@@ -137,8 +137,8 @@
   "market_status": {
     "is_open": true,
     "status": "Open (New York Session)",
-    "current_hour_utc": 20,
+    "current_hour_utc": 21,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-26T20:58:48.195855"
+    "timestamp": "2026-01-26T21:04:10.545610"
   }
 }
