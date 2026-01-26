@@ -1,35 +1,73 @@
 {
-  "last_updated": "2026-01-26T15:08:41.080943Z",
-  "bots": {
-    "safe": null,
-    "aggressive": null
+  "version": "6.0",
+  "updated_at": "2026-01-26T21:42:47.547485",
+  "updated_at_display": "2026-01-26 21:42:47",
+  "bots": [
+    {
+      "name": "Safe Bot",
+      "mode": "SAFE",
+      "account": 262048469,
+      "color": "#3b82f6",
+      "balance": 500.0,
+      "equity": 500.0,
+      "profit": 0.0,
+      "today": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "pnl": 0,
+        "win_rate": 0
+      },
+      "open_trades": [],
+      "open_pnl": 0,
+      "recent_trades": []
+    },
+    {
+      "name": "Aggressive Bot",
+      "mode": "AGGRESSIVE",
+      "account": 262112946,
+      "color": "#f97316",
+      "balance": 1000.0,
+      "equity": 1000.0,
+      "profit": 0.0,
+      "today": {
+        "trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "pnl": 0,
+        "win_rate": 0
+      },
+      "open_trades": [],
+      "open_pnl": 0,
+      "recent_trades": []
+    }
+  ],
+  "combined": {
+    "total_balance": 1500.0,
+    "total_equity": 1500.0,
+    "total_trades_today": 0,
+    "total_wins_today": 0,
+    "total_losses_today": 0,
+    "total_pnl_today": 0,
+    "combined_win_rate": 0
   },
-  "combined_stats": {
-    "total_trades": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "total_pnl": 0,
-    "today_pnl": 0,
-    "week_pnl": 0,
-    "patterns": 0
+  "learning": {
+    "safe": {
+      "strategies": [],
+      "sessions": [],
+      "total_learnings": 0
+    },
+    "aggressive": {
+      "strategies": [],
+      "sessions": [],
+      "total_learnings": 0
+    }
   },
-  "trades": [],
-  "strategies": [],
-  "learnings": [],
-  "equity_curve": {
-    "labels": [],
-    "values": []
-  },
-  "daily_performance": [],
-  "stats": {
-    "total_trades": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0,
-    "total_pnl": 0,
-    "today_pnl": 0,
-    "week_pnl": 0,
-    "patterns": 0
+  "market_status": {
+    "is_open": true,
+    "status": "Open (New York Session)",
+    "current_hour_utc": 17,
+    "hour_quality": "Neutral",
+    "timestamp": "2026-01-26T17:42:47.547485"
   }
 }
