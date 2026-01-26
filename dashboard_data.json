@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T00:36:50.050797",
-  "updated_at_display": "2026-01-27 00:36:50",
+  "updated_at": "2026-01-27T00:41:55.454299",
+  "updated_at_display": "2026-01-27 00:41:55",
   "bots": [
     {
       "name": "Safe Bot",
@@ -27,33 +27,19 @@
       "mode": "AGGRESSIVE",
       "account": 262112946,
       "color": "#f97316",
-      "balance": 1021.65,
-      "equity": 1021.65,
+      "balance": 952.45,
+      "equity": 952.45,
       "profit": 0.0,
       "today": {
-        "trades": 7,
+        "trades": 11,
         "wins": 7,
-        "losses": 0,
-        "pnl": 21.65,
-        "win_rate": 100.0
+        "losses": 4,
+        "pnl": -47.55,
+        "win_rate": 63.6
       },
       "open_trades": [],
       "open_pnl": 0,
       "recent_trades": [
-        {
-          "ticket": 601485355,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 3.28,
-          "time": "00:32:02"
-        },
-        {
-          "ticket": 601482767,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 0.0,
-          "time": "00:32:24"
-        },
         {
           "ticket": 601483973,
           "symbol": "XAUUSDm",
@@ -95,18 +81,46 @@
           "type": "BUY",
           "profit": 3.79,
           "time": "00:35:14"
+        },
+        {
+          "ticket": 601557510,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.5,
+          "time": "00:38:48"
+        },
+        {
+          "ticket": 601545815,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.05,
+          "time": "00:40:34"
+        },
+        {
+          "ticket": 601546861,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.35,
+          "time": "00:40:34"
+        },
+        {
+          "ticket": 601549145,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.3,
+          "time": "00:40:34"
         }
       ]
     }
   ],
   "combined": {
-    "total_balance": 1521.65,
-    "total_equity": 1521.65,
-    "total_trades_today": 7,
+    "total_balance": 1452.45,
+    "total_equity": 1452.45,
+    "total_trades_today": 11,
     "total_wins_today": 7,
-    "total_losses_today": 0,
-    "total_pnl_today": 21.65,
-    "combined_win_rate": 100.0
+    "total_losses_today": 4,
+    "total_pnl_today": -47.55,
+    "combined_win_rate": 63.6
   },
   "learning": {
     "safe": {
@@ -125,6 +139,6 @@
     "status": "Open (New York Session)",
     "current_hour_utc": 20,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-26T20:36:50.051797"
+    "timestamp": "2026-01-26T20:41:55.457297"
   }
 }
