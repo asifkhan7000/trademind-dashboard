@@ -1,144 +1,92 @@
 {
-  "version": "6.0",
-  "updated_at": "2026-01-27T20:48:57.697899",
-  "updated_at_display": "2026-01-27 20:48:57",
-  "bots": [
-    {
-      "name": "Safe Bot",
-      "mode": "SAFE",
-      "account": 262048469,
-      "color": "#3b82f6",
-      "balance": 500.0,
-      "equity": 500.0,
-      "profit": 0.0,
-      "today": {
-        "trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "pnl": 0,
-        "win_rate": 0
-      },
-      "open_trades": [],
-      "open_pnl": 0,
-      "recent_trades": []
+  "version": "6.1",
+  "bot_name": "TradeMind AI",
+  "tagline": "Universal Safe AI Trading Bot",
+  "updated_at": "2026-01-27T20:58:56.835096",
+  "updated_at_display": "2026-01-27 20:58:56",
+  "bot": {
+    "name": "TradeMind AI",
+    "account": 262112946,
+    "balance": 1000.0,
+    "equity": 1000.0,
+    "profit": 0.0,
+    "initial_balance": 1000.0,
+    "today": {
+      "trades": 4,
+      "wins": 3,
+      "losses": 1,
+      "pnl": 6.05,
+      "pnl_pct": 0.61,
+      "win_rate": 75.0,
+      "target": 1.5,
+      "progress": 40.3
     },
-    {
-      "name": "Aggressive Bot",
-      "mode": "AGGRESSIVE",
-      "account": 262112946,
-      "color": "#f97316",
-      "balance": 1000.0,
-      "equity": 1000.0,
-      "profit": 0.0,
-      "today": {
-        "trades": 16,
-        "wins": 7,
-        "losses": 9,
-        "pnl": -72.37,
-        "win_rate": 43.8
+    "month": {
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6.05,
+      "pnl_pct": 0.61,
+      "win_rate": 75.0,
+      "target": 33.0,
+      "progress": 1.8
+    },
+    "ultra_safe_mode": false,
+    "open_trades": [],
+    "open_pnl": 0,
+    "recent_trades": [
+      {
+        "ticket": 609225203,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 3.6,
+        "time": "19:59:43"
       },
-      "open_trades": [],
-      "open_pnl": 0,
-      "recent_trades": [
-        {
-          "ticket": 601510785,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 3.79,
-          "time": "00:35:14"
-        },
-        {
-          "ticket": 601557510,
-          "symbol": "XAGUSDm",
-          "type": "BUY",
-          "profit": -17.5,
-          "time": "00:38:48"
-        },
-        {
-          "ticket": 601545815,
-          "symbol": "XAGUSDm",
-          "type": "BUY",
-          "profit": -17.05,
-          "time": "00:40:34"
-        },
-        {
-          "ticket": 601546861,
-          "symbol": "XAGUSDm",
-          "type": "BUY",
-          "profit": -17.35,
-          "time": "00:40:34"
-        },
-        {
-          "ticket": 601549145,
-          "symbol": "XAGUSDm",
-          "type": "BUY",
-          "profit": -17.3,
-          "time": "00:40:34"
-        },
-        {
-          "ticket": 603269732,
-          "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": -4.97,
-          "time": "07:27:07"
-        },
-        {
-          "ticket": 603268959,
-          "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": -5.0,
-          "time": "07:27:07"
-        },
-        {
-          "ticket": 603276856,
-          "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": -4.85,
-          "time": "07:27:07"
-        },
-        {
-          "ticket": 603268400,
-          "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": -5.0,
-          "time": "07:27:13"
-        },
-        {
-          "ticket": 603420434,
-          "symbol": "XAUUSDm",
-          "type": "SELL",
-          "profit": -5.0,
-          "time": "08:11:13"
-        }
-      ]
-    }
-  ],
-  "combined": {
-    "total_balance": 1500.0,
-    "total_equity": 1500.0,
-    "total_trades_today": 16,
-    "total_wins_today": 7,
-    "total_losses_today": 9,
-    "total_pnl_today": -72.37,
-    "combined_win_rate": 43.8
+      {
+        "ticket": 609229377,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 3.58,
+        "time": "19:59:46"
+      },
+      {
+        "ticket": 609235666,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 3.87,
+        "time": "19:59:51"
+      },
+      {
+        "ticket": 609246040,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": -5.0,
+        "time": "20:05:19"
+      }
+    ]
   },
   "learning": {
-    "safe": {
-      "strategies": [],
-      "sessions": [],
-      "total_learnings": 0
-    },
-    "aggressive": {
-      "strategies": [],
-      "sessions": [],
-      "total_learnings": 0
-    }
+    "strategies": [],
+    "sessions": [],
+    "total_learnings": 0
   },
-  "market_status": {
+  "market": {
     "is_open": true,
-    "status": "Open (London/NY Overlap Session)",
-    "current_hour_utc": 16,
-    "hour_quality": "Neutral",
-    "timestamp": "2026-01-27T16:48:57.697899"
+    "status": "Open - \ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\uddf8 London/NY Overlap",
+    "utc_time": "16:58",
+    "dubai_time": "20:58",
+    "current_hour_utc": 16
+  },
+  "settings": {
+    "daily_target": "1.5%",
+    "monthly_target": "33.0%",
+    "risk_per_trade": "0.3%",
+    "confidence_threshold": "65%",
+    "max_open_trades": 1,
+    "features": [
+      "Claude AI Decision Making",
+      "Confidence-Based Scaling",
+      "Monthly Target Protection",
+      "Self-Learning System"
+    ]
   }
 }
