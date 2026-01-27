@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T11:31:03.686141",
-  "updated_at_display": "2026-01-27 11:31:03",
+  "updated_at": "2026-01-27T11:36:37.008434",
+  "updated_at_display": "2026-01-27 11:36:37",
   "bots": [
     {
       "name": "Safe Bot",
@@ -139,6 +139,6 @@
     "status": "Open (London Session)",
     "current_hour_utc": 7,
     "hour_quality": "Good",
-    "timestamp": "2026-01-27T07:31:03.686141"
+    "timestamp": "2026-01-27T07:36:37.008434"
   }
 }
