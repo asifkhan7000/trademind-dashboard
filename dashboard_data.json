@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T07:26:26.449081",
-  "updated_at_display": "2026-01-27 07:26:26",
+  "updated_at": "2026-01-27T07:31:59.548364",
+  "updated_at_display": "2026-01-27 07:31:59",
   "bots": [
     {
       "name": "Safe Bot",
@@ -27,80 +27,19 @@
       "mode": "AGGRESSIVE",
       "account": 262112946,
       "color": "#f97316",
-      "balance": 1000.0,
-      "equity": 995.11,
-      "profit": -4.89,
+      "balance": 980.18,
+      "equity": 980.18,
+      "profit": 0.0,
       "today": {
-        "trades": 11,
+        "trades": 15,
         "wins": 7,
-        "losses": 4,
-        "pnl": -47.55,
-        "win_rate": 63.6
+        "losses": 8,
+        "pnl": -67.37,
+        "win_rate": 46.7
       },
-      "open_trades": [
-        {
-          "ticket": 603268400,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": -0.7,
-          "entry_price": 5070.7,
-          "current_price": 5070.003
-        },
-        {
-          "ticket": 603268959,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": -1.28,
-          "entry_price": 5071.2789999999995,
-          "current_price": 5070.003
-        },
-        {
-          "ticket": 603269732,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": -1.9,
-          "entry_price": 5071.896,
-          "current_price": 5070.003
-        },
-        {
-          "ticket": 603276856,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": -1.01,
-          "entry_price": 5071.009,
-          "current_price": 5070.003
-        }
-      ],
-      "open_pnl": -4.89,
+      "open_trades": [],
+      "open_pnl": 0,
       "recent_trades": [
-        {
-          "ticket": 601483973,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 0.01,
-          "time": "00:32:24"
-        },
-        {
-          "ticket": 601507923,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 4.13,
-          "time": "00:32:41"
-        },
-        {
-          "ticket": 601494693,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 3.44,
-          "time": "00:35:14"
-        },
-        {
-          "ticket": 601506038,
-          "symbol": "XAUUSDm",
-          "type": "BUY",
-          "profit": 3.74,
-          "time": "00:35:14"
-        },
         {
           "ticket": 601509155,
           "symbol": "XAUUSDm",
@@ -142,18 +81,46 @@
           "type": "BUY",
           "profit": -17.3,
           "time": "00:40:34"
+        },
+        {
+          "ticket": 603269732,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -4.97,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603268959,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -5.0,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603276856,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -4.85,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603268400,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -5.0,
+          "time": "07:27:13"
         }
       ]
     }
   ],
   "combined": {
-    "total_balance": 1500.0,
-    "total_equity": 1495.1100000000001,
-    "total_trades_today": 11,
+    "total_balance": 1480.1799999999998,
+    "total_equity": 1480.1799999999998,
+    "total_trades_today": 15,
     "total_wins_today": 7,
-    "total_losses_today": 4,
-    "total_pnl_today": -47.55,
-    "combined_win_rate": 63.6
+    "total_losses_today": 8,
+    "total_pnl_today": -67.37,
+    "combined_win_rate": 46.7
   },
   "learning": {
     "safe": {
@@ -172,6 +139,6 @@
     "status": "Open (Asian Session)",
     "current_hour_utc": 3,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-27T03:26:26.449081"
+    "timestamp": "2026-01-27T03:31:59.548364"
   }
 }
