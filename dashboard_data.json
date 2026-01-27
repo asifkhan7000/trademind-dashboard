@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T07:20:52.731675",
-  "updated_at_display": "2026-01-27 07:20:52",
+  "updated_at": "2026-01-27T07:26:26.449081",
+  "updated_at_display": "2026-01-27 07:26:26",
   "bots": [
     {
       "name": "Safe Bot",
@@ -28,8 +28,8 @@
       "account": 262112946,
       "color": "#f97316",
       "balance": 1000.0,
-      "equity": 1000.0,
-      "profit": 0.0,
+      "equity": 995.11,
+      "profit": -4.89,
       "today": {
         "trades": 11,
         "wins": 7,
@@ -37,8 +37,41 @@
         "pnl": -47.55,
         "win_rate": 63.6
       },
-      "open_trades": [],
-      "open_pnl": 0,
+      "open_trades": [
+        {
+          "ticket": 603268400,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": -0.7,
+          "entry_price": 5070.7,
+          "current_price": 5070.003
+        },
+        {
+          "ticket": 603268959,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": -1.28,
+          "entry_price": 5071.2789999999995,
+          "current_price": 5070.003
+        },
+        {
+          "ticket": 603269732,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": -1.9,
+          "entry_price": 5071.896,
+          "current_price": 5070.003
+        },
+        {
+          "ticket": 603276856,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": -1.01,
+          "entry_price": 5071.009,
+          "current_price": 5070.003
+        }
+      ],
+      "open_pnl": -4.89,
       "recent_trades": [
         {
           "ticket": 601483973,
@@ -115,7 +148,7 @@
   ],
   "combined": {
     "total_balance": 1500.0,
-    "total_equity": 1500.0,
+    "total_equity": 1495.1100000000001,
     "total_trades_today": 11,
     "total_wins_today": 7,
     "total_losses_today": 4,
@@ -139,6 +172,6 @@
     "status": "Open (Asian Session)",
     "current_hour_utc": 3,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-27T03:20:52.731675"
+    "timestamp": "2026-01-27T03:26:26.449081"
   }
 }
