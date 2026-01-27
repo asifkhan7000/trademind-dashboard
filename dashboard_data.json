@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T20:03:30.589100",
-  "updated_at_display": "2026-01-27 20:03:30",
+  "updated_at": "2026-01-27T20:09:04.718825",
+  "updated_at_display": "2026-01-27 20:09:04",
   "bots": [
     {
       "name": "Safe Bot",
@@ -27,9 +27,9 @@
       "mode": "AGGRESSIVE",
       "account": 262112946,
       "color": "#f97316",
-      "balance": 986.23,
-      "equity": 988.67,
-      "profit": 2.44,
+      "balance": 981.23,
+      "equity": 981.23,
+      "profit": 0.0,
       "today": {
         "trades": 16,
         "wins": 7,
@@ -114,8 +114,8 @@
     }
   ],
   "combined": {
-    "total_balance": 1486.23,
-    "total_equity": 1488.67,
+    "total_balance": 1481.23,
+    "total_equity": 1481.23,
     "total_trades_today": 16,
     "total_wins_today": 7,
     "total_losses_today": 9,
@@ -139,6 +139,6 @@
     "status": "Open (London/NY Overlap Session)",
     "current_hour_utc": 16,
     "hour_quality": "Neutral",
-    "timestamp": "2026-01-27T16:03:30.589100"
+    "timestamp": "2026-01-27T16:09:04.718825"
   }
 }
