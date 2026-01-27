@@ -2,13 +2,13 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-27T22:27:04.626237",
-  "updated_at_display": "2026-01-27 22:27:04",
+  "updated_at": "2026-01-27T22:28:07.611617",
+  "updated_at_display": "2026-01-27 22:28:07",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 997.53,
-    "equity": 997.53,
+    "balance": 5000.0,
+    "equity": 5000.0,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
@@ -107,40 +107,15 @@
     ]
   },
   "learning": {
-    "strategies": [
-      {
-        "name": "Trend_Following",
-        "wins": 4,
-        "losses": 4,
-        "win_rate": 50.0,
-        "pnl": -7.91
-      }
-    ],
-    "sessions": [
-      {
-        "hour": 21,
-        "trades": 6,
-        "wins": 4,
-        "win_rate": 66.7,
-        "pnl": 1.86,
-        "profitable": true
-      },
-      {
-        "hour": 22,
-        "trades": 2,
-        "wins": 0,
-        "win_rate": 0.0,
-        "pnl": -9.77,
-        "profitable": false
-      }
-    ],
-    "total_learnings": 3
+    "strategies": [],
+    "sessions": [],
+    "total_learnings": 0
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "18:27",
-    "dubai_time": "22:27",
+    "utc_time": "18:28",
+    "dubai_time": "22:28",
     "current_hour_utc": 18
   },
   "settings": {
