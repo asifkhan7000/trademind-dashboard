@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeMind v6.0 - AI Trading Dashboard</title>
+    <title>TradeMind AI - Universal Safe AI Trading Bot</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,442 +11,313 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); }
-        .glow-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-        .glow-orange { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
-        .glow-green { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
-        .glow-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+        .glow { box-shadow: 0 0 30px rgba(16, 185, 129, 0.2); }
         .pulse { animation: pulse 2s infinite; }
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.5; }
+        }
+        .progress-bar {
+            background: linear-gradient(90deg, #10b981, #34d399);
+            transition: width 0.5s ease;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-white min-h-screen">
     
     <!-- Header -->
-    <header class="bg-gray-800 border-b border-gray-700 py-4 px-6">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <header class="bg-gray-800/50 border-b border-gray-700 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-robot text-white"></i>
+                <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-brain text-white text-xl"></i>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold">TradeMind v6.0</h1>
-                    <p class="text-xs text-gray-400">Universal AI Trading Bot</p>
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+                        TradeMind AI
+                    </h1>
+                    <p class="text-xs text-gray-400">Universal Safe AI Trading Bot</p>
                 </div>
             </div>
             <div class="flex items-center gap-4">
-                <div id="marketStatus" class="flex items-center gap-2 px-3 py-1 rounded-full bg-gray-700">
+                <div id="marketStatus" class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-700/50">
                     <span class="w-2 h-2 rounded-full bg-green-500 pulse"></span>
                     <span class="text-sm">Loading...</span>
                 </div>
-                <div class="text-sm text-gray-400">
-                    <span id="lastUpdate">--:--:--</span>
+                <div class="text-right">
+                    <div class="text-xs text-gray-400">Last Update</div>
+                    <div class="text-sm font-mono" id="lastUpdate">--:--:--</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto p-6">
+    <main class="max-w-6xl mx-auto p-6">
         
-        <!-- Combined Stats -->
+        <!-- Account Overview -->
+        <div class="glass rounded-2xl border border-emerald-500/30 glow p-6 mb-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="text-gray-400 text-sm">Account</span>
+                        <span class="text-sm font-mono text-emerald-400" id="accountNumber">#------</span>
+                        <span id="ultraSafeBadge" class="hidden px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded-full">
+                            🛡️ Ultra-Safe Mode
+                        </span>
+                    </div>
+                    <div class="text-4xl font-bold" id="balance">$0.00</div>
+                    <div class="text-gray-400 text-sm">Equity: <span id="equity">$0.00</span></div>
+                </div>
+                <div class="flex gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold" id="todayPnl">$0</div>
+                        <div class="text-gray-400 text-xs">Today's P&L</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-emerald-400" id="monthPnl">$0</div>
+                        <div class="text-gray-400 text-xs">Monthly P&L</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Bars -->
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-400">Daily Target (1.5%)</span>
+                        <span id="dailyProgress" class="text-emerald-400">0%</span>
+                    </div>
+                    <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                        <div id="dailyProgressBar" class="h-full progress-bar rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="text-gray-400">Monthly Target (33%)</span>
+                        <span id="monthlyProgress" class="text-emerald-400">0%</span>
+                    </div>
+                    <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                        <div id="monthlyProgressBar" class="h-full progress-bar rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
             <div class="glass rounded-xl p-4 border border-gray-700">
-                <div class="text-gray-400 text-sm mb-1">Total Balance</div>
-                <div class="text-2xl font-bold" id="totalBalance">$0.00</div>
+                <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
+                    <i class="fas fa-chart-line text-emerald-400"></i>
+                    Today's Trades
+                </div>
+                <div class="text-2xl font-bold" id="todayTrades">0</div>
+                <div class="text-xs text-gray-500"><span id="todayWins">0</span>W / <span id="todayLosses">0</span>L</div>
             </div>
             <div class="glass rounded-xl p-4 border border-gray-700">
-                <div class="text-gray-400 text-sm mb-1">Today's Trades</div>
-                <div class="text-2xl font-bold" id="totalTrades">0</div>
+                <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
+                    <i class="fas fa-percentage text-emerald-400"></i>
+                    Win Rate
+                </div>
+                <div class="text-2xl font-bold" id="winRate">0%</div>
+                <div class="text-xs text-gray-500">Today</div>
             </div>
             <div class="glass rounded-xl p-4 border border-gray-700">
-                <div class="text-gray-400 text-sm mb-1">Today's P&L</div>
-                <div class="text-2xl font-bold" id="totalPnl">$0.00</div>
+                <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
+                    <i class="fas fa-calendar text-emerald-400"></i>
+                    Month Trades
+                </div>
+                <div class="text-2xl font-bold" id="monthTrades">0</div>
+                <div class="text-xs text-gray-500">This month</div>
             </div>
             <div class="glass rounded-xl p-4 border border-gray-700">
-                <div class="text-gray-400 text-sm mb-1">Win Rate</div>
-                <div class="text-2xl font-bold" id="totalWinRate">0%</div>
+                <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
+                    <i class="fas fa-trophy text-emerald-400"></i>
+                    Month Win Rate
+                </div>
+                <div class="text-2xl font-bold" id="monthWinRate">0%</div>
+                <div class="text-xs text-gray-500">This month</div>
             </div>
         </div>
 
-        <!-- Bot Cards -->
         <div class="grid md:grid-cols-2 gap-6 mb-6">
             
-            <!-- Safe Bot Card -->
-            <div class="glass rounded-xl border border-blue-500/30 glow-blue overflow-hidden">
-                <div class="bg-blue-500/20 px-4 py-3 border-b border-blue-500/30">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-shield-alt text-blue-400"></i>
-                            <span class="font-semibold">Safe Bot</span>
-                            <span class="text-xs bg-blue-500/30 px-2 py-0.5 rounded">CONSERVATIVE</span>
-                        </div>
-                        <span class="text-sm text-gray-400" id="safeAccount">#----</span>
-                    </div>
-                </div>
-                <div class="p-4">
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <div class="text-gray-400 text-xs">Balance</div>
-                            <div class="text-xl font-bold text-blue-400" id="safeBalance">$0.00</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Today's P&L</div>
-                            <div class="text-xl font-bold" id="safePnl">$0.00</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Trades Today</div>
-                            <div class="text-lg font-semibold" id="safeTrades">0</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Win Rate</div>
-                            <div class="text-lg font-semibold" id="safeWinRate">0%</div>
-                        </div>
-                    </div>
-                    <div class="border-t border-gray-700 pt-3">
-                        <div class="text-xs text-gray-400 mb-2">Recent Trades</div>
-                        <div class="space-y-1 max-h-32 overflow-y-auto" id="safeRecentTrades">
-                            <div class="text-gray-500 text-sm">No trades yet</div>
-                        </div>
-                    </div>
+            <!-- Open Positions -->
+            <div class="glass rounded-xl border border-gray-700 p-4">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <i class="fas fa-crosshairs text-emerald-400"></i>
+                    Open Positions
+                </h3>
+                <div id="openPositions" class="space-y-2">
+                    <div class="text-gray-500 text-sm text-center py-4">No open positions</div>
                 </div>
             </div>
 
-            <!-- Aggressive Bot Card -->
-            <div class="glass rounded-xl border border-orange-500/30 glow-orange overflow-hidden">
-                <div class="bg-orange-500/20 px-4 py-3 border-b border-orange-500/30">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2">
-                            <i class="fas fa-bolt text-orange-400"></i>
-                            <span class="font-semibold">Aggressive Bot</span>
-                            <span class="text-xs bg-orange-500/30 px-2 py-0.5 rounded">SCALPER</span>
-                        </div>
-                        <span class="text-sm text-gray-400" id="aggressiveAccount">#----</span>
-                    </div>
-                </div>
-                <div class="p-4">
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div>
-                            <div class="text-gray-400 text-xs">Balance</div>
-                            <div class="text-xl font-bold text-orange-400" id="aggressiveBalance">$0.00</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Today's P&L</div>
-                            <div class="text-xl font-bold" id="aggressivePnl">$0.00</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Trades Today</div>
-                            <div class="text-lg font-semibold" id="aggressiveTrades">0</div>
-                        </div>
-                        <div>
-                            <div class="text-gray-400 text-xs">Win Rate</div>
-                            <div class="text-lg font-semibold" id="aggressiveWinRate">0%</div>
-                        </div>
-                    </div>
-                    <div class="border-t border-gray-700 pt-3">
-                        <div class="text-xs text-gray-400 mb-2">Recent Trades</div>
-                        <div class="space-y-1 max-h-32 overflow-y-auto" id="aggressiveRecentTrades">
-                            <div class="text-gray-500 text-sm">No trades yet</div>
-                        </div>
-                    </div>
+            <!-- Recent Trades -->
+            <div class="glass rounded-xl border border-gray-700 p-4">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <i class="fas fa-history text-emerald-400"></i>
+                    Recent Trades
+                </h3>
+                <div id="recentTrades" class="space-y-2 max-h-64 overflow-y-auto">
+                    <div class="text-gray-500 text-sm text-center py-4">No trades yet today</div>
                 </div>
             </div>
         </div>
 
-        <!-- Performance Comparison -->
-        <div class="grid md:grid-cols-2 gap-6 mb-6">
-            
-            <!-- Chart -->
-            <div class="glass rounded-xl border border-gray-700 p-4">
-                <h3 class="font-semibold mb-4">
-                    <i class="fas fa-chart-bar mr-2 text-purple-400"></i>
-                    Performance Comparison
-                </h3>
-                <canvas id="comparisonChart" height="200"></canvas>
-            </div>
-
-            <!-- Session Performance -->
-            <div class="glass rounded-xl border border-gray-700 p-4">
-                <h3 class="font-semibold mb-4">
-                    <i class="fas fa-clock mr-2 text-green-400"></i>
-                    Session Performance (UTC)
-                </h3>
-                <div class="space-y-2" id="sessionPerformance">
-                    <div class="flex items-center justify-between p-2 rounded bg-green-500/20 border border-green-500/30">
-                        <span>Hour 7 (London Open)</span>
-                        <span class="text-green-400">+$11.22</span>
-                    </div>
-                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
-                        <span>Hour 9</span>
-                        <span class="text-red-400">-$36.51 (Avoided)</span>
-                    </div>
-                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
-                        <span>Hour 10</span>
-                        <span class="text-red-400">-$18.35 (Avoided)</span>
-                    </div>
-                    <div class="flex items-center justify-between p-2 rounded bg-red-500/20 border border-red-500/30">
-                        <span>Hour 12</span>
-                        <span class="text-red-400">-$39.77 (Avoided)</span>
-                    </div>
-                    <div class="flex items-center justify-between p-2 rounded bg-green-500/20 border border-green-500/30">
-                        <span>Hour 13 (London/NY)</span>
-                        <span class="text-green-400">+$47.98</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Features Status -->
+        <!-- Bot Settings -->
         <div class="glass rounded-xl border border-gray-700 p-4 mb-6">
-            <h3 class="font-semibold mb-4">
-                <i class="fas fa-cogs mr-2 text-blue-400"></i>
-                v6.0 Features Status
+            <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                <i class="fas fa-cog text-emerald-400"></i>
+                AI Bot Settings
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Self-Tuning</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="botSettings">
+                <div class="bg-gray-800/50 rounded-lg p-3">
+                    <div class="text-xs text-gray-400">Daily Target</div>
+                    <div class="text-lg font-semibold text-emerald-400">1.5%</div>
                 </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">News Filter</span>
+                <div class="bg-gray-800/50 rounded-lg p-3">
+                    <div class="text-xs text-gray-400">Monthly Target</div>
+                    <div class="text-lg font-semibold text-emerald-400">33%</div>
                 </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Telegram Control</span>
+                <div class="bg-gray-800/50 rounded-lg p-3">
+                    <div class="text-xs text-gray-400">Risk/Trade</div>
+                    <div class="text-lg font-semibold">0.3%</div>
                 </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Daily Report</span>
+                <div class="bg-gray-800/50 rounded-lg p-3">
+                    <div class="text-xs text-gray-400">Confidence</div>
+                    <div class="text-lg font-semibold">65%+</div>
                 </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Drawdown Protection</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Multi-Timeframe</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Session Awareness</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Partial Profits</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Loss Recovery</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Support/Resistance</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Multi-Symbol Ready</span>
-                </div>
-                <div class="flex items-center gap-2 p-2 rounded bg-green-500/10 border border-green-500/30">
-                    <i class="fas fa-check-circle text-green-400"></i>
-                    <span class="text-sm">Spread Filter</span>
-                </div>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-4">
+                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
+                    <i class="fas fa-brain mr-1"></i>Claude AI
+                </span>
+                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
+                    <i class="fas fa-chart-bar mr-1"></i>Confidence Scaling
+                </span>
+                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
+                    <i class="fas fa-shield-alt mr-1"></i>Monthly Protection
+                </span>
+                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
+                    <i class="fas fa-graduation-cap mr-1"></i>Self-Learning
+                </span>
             </div>
         </div>
 
-        <!-- Open Positions -->
-        <div class="glass rounded-xl border border-gray-700 p-4">
-            <h3 class="font-semibold mb-4">
-                <i class="fas fa-exchange-alt mr-2 text-yellow-400"></i>
-                Open Positions
-            </h3>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm">
-                    <thead>
-                        <tr class="text-gray-400 border-b border-gray-700">
-                            <th class="text-left py-2">Bot</th>
-                            <th class="text-left py-2">Symbol</th>
-                            <th class="text-left py-2">Type</th>
-                            <th class="text-right py-2">Entry</th>
-                            <th class="text-right py-2">Current</th>
-                            <th class="text-right py-2">P&L</th>
-                        </tr>
-                    </thead>
-                    <tbody id="openPositions">
-                        <tr>
-                            <td colspan="6" class="text-center py-4 text-gray-500">No open positions</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm">
+            <p>TradeMind AI v6.1 | Halal Trading | Built for Consistent Profits</p>
+            <p class="text-xs mt-1">
+                <span id="timeUTC">UTC: --:--</span> | 
+                <span id="timeDubai">Dubai: --:--</span>
+            </p>
         </div>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 border-t border-gray-700 py-4 px-6 mt-6">
-        <div class="max-w-7xl mx-auto text-center text-sm text-gray-400">
-            TradeMind v6.0 - Universal AI Trading Bot | 11 Features | Halal Trading
-        </div>
-    </footer>
-
     <script>
-        // Initialize chart
-        let comparisonChart;
-
-        function initChart() {
-            const ctx = document.getElementById('comparisonChart').getContext('2d');
-            comparisonChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Trades', 'Wins', 'Losses', 'P&L ($)'],
-                    datasets: [
-                        {
-                            label: 'Safe Bot',
-                            data: [0, 0, 0, 0],
-                            backgroundColor: 'rgba(59, 130, 246, 0.5)',
-                            borderColor: 'rgba(59, 130, 246, 1)',
-                            borderWidth: 1
-                        },
-                        {
-                            label: 'Aggressive Bot',
-                            data: [0, 0, 0, 0],
-                            backgroundColor: 'rgba(249, 115, 22, 0.5)',
-                            borderColor: 'rgba(249, 115, 22, 1)',
-                            borderWidth: 1
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            labels: { color: '#9ca3af' }
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: { color: '#9ca3af' },
-                            grid: { color: '#374151' }
-                        },
-                        x: {
-                            ticks: { color: '#9ca3af' },
-                            grid: { color: '#374151' }
-                        }
-                    }
-                }
-            });
-        }
-
         function updateDashboard(data) {
             // Update timestamp
-            document.getElementById('lastUpdate').textContent = data.updated_at_display || new Date().toLocaleTimeString();
-
-            // Update market status
-            if (data.market_status) {
+            document.getElementById('lastUpdate').textContent = data.updated_at_display || '--:--:--';
+            
+            // Market status
+            if (data.market) {
                 const statusEl = document.getElementById('marketStatus');
-                const isOpen = data.market_status.is_open;
+                const isOpen = data.market.is_open;
                 statusEl.innerHTML = `
                     <span class="w-2 h-2 rounded-full ${isOpen ? 'bg-green-500' : 'bg-red-500'} pulse"></span>
-                    <span class="text-sm">${data.market_status.status}</span>
+                    <span class="text-sm">${data.market.status}</span>
                 `;
+                document.getElementById('timeUTC').textContent = `UTC: ${data.market.utc_time}`;
+                document.getElementById('timeDubai').textContent = `Dubai: ${data.market.dubai_time}`;
             }
-
-            // Update combined stats
-            if (data.combined) {
-                document.getElementById('totalBalance').textContent = `$${data.combined.total_balance.toFixed(2)}`;
-                document.getElementById('totalTrades').textContent = data.combined.total_trades_today;
+            
+            // Bot data
+            if (data.bot) {
+                const bot = data.bot;
                 
-                const pnlEl = document.getElementById('totalPnl');
-                pnlEl.textContent = `$${data.combined.total_pnl_today >= 0 ? '+' : ''}${data.combined.total_pnl_today.toFixed(2)}`;
-                pnlEl.className = `text-2xl font-bold ${data.combined.total_pnl_today >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                // Account info
+                document.getElementById('accountNumber').textContent = `#${bot.account}`;
+                document.getElementById('balance').textContent = `$${bot.balance.toFixed(2)}`;
+                document.getElementById('equity').textContent = `$${bot.equity.toFixed(2)}`;
                 
-                document.getElementById('totalWinRate').textContent = `${data.combined.combined_win_rate}%`;
-            }
-
-            // Update bot cards
-            if (data.bots) {
-                data.bots.forEach(bot => {
-                    const prefix = bot.mode === 'SAFE' ? 'safe' : 'aggressive';
-                    
-                    document.getElementById(`${prefix}Account`).textContent = `#${bot.account}`;
-                    document.getElementById(`${prefix}Balance`).textContent = `$${bot.balance.toFixed(2)}`;
-                    
-                    const pnlEl = document.getElementById(`${prefix}Pnl`);
-                    pnlEl.textContent = `$${bot.today.pnl >= 0 ? '+' : ''}${bot.today.pnl.toFixed(2)}`;
-                    pnlEl.className = `text-xl font-bold ${bot.today.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
-                    
-                    document.getElementById(`${prefix}Trades`).textContent = bot.today.trades;
-                    document.getElementById(`${prefix}WinRate`).textContent = `${bot.today.win_rate}%`;
-                    
-                    // Recent trades
-                    const tradesEl = document.getElementById(`${prefix}RecentTrades`);
-                    if (bot.recent_trades && bot.recent_trades.length > 0) {
-                        tradesEl.innerHTML = bot.recent_trades.map(t => `
-                            <div class="flex justify-between text-xs py-1 border-b border-gray-700">
-                                <span>${t.time} - ${t.type} ${t.symbol}</span>
-                                <span class="${t.profit >= 0 ? 'text-green-400' : 'text-red-400'}">
-                                    $${t.profit >= 0 ? '+' : ''}${t.profit.toFixed(2)}
-                                </span>
-                            </div>
-                        `).join('');
-                    } else {
-                        tradesEl.innerHTML = '<div class="text-gray-500 text-sm">No trades yet</div>';
-                    }
-                });
-
-                // Update chart
-                if (comparisonChart && data.bots.length >= 2) {
-                    const safeBot = data.bots.find(b => b.mode === 'SAFE') || { today: { trades: 0, wins: 0, losses: 0, pnl: 0 }};
-                    const aggrBot = data.bots.find(b => b.mode === 'AGGRESSIVE') || { today: { trades: 0, wins: 0, losses: 0, pnl: 0 }};
-                    
-                    comparisonChart.data.datasets[0].data = [
-                        safeBot.today.trades,
-                        safeBot.today.wins,
-                        safeBot.today.losses,
-                        safeBot.today.pnl
-                    ];
-                    comparisonChart.data.datasets[1].data = [
-                        aggrBot.today.trades,
-                        aggrBot.today.wins,
-                        aggrBot.today.losses,
-                        aggrBot.today.pnl
-                    ];
-                    comparisonChart.update();
+                // Ultra-safe badge
+                const badge = document.getElementById('ultraSafeBadge');
+                if (bot.ultra_safe_mode) {
+                    badge.classList.remove('hidden');
+                } else {
+                    badge.classList.add('hidden');
                 }
-
-                // Update open positions
-                const positionsEl = document.getElementById('openPositions');
-                let allPositions = [];
-                data.bots.forEach(bot => {
-                    if (bot.open_trades) {
-                        bot.open_trades.forEach(t => {
-                            allPositions.push({ ...t, botName: bot.name, botMode: bot.mode });
-                        });
-                    }
-                });
-
-                if (allPositions.length > 0) {
-                    positionsEl.innerHTML = allPositions.map(p => `
-                        <tr class="border-b border-gray-700">
-                            <td class="py-2">${p.botName}</td>
-                            <td class="py-2">${p.symbol}</td>
-                            <td class="py-2">
+                
+                // Today's stats
+                const todayPnlEl = document.getElementById('todayPnl');
+                todayPnlEl.textContent = `$${bot.today.pnl >= 0 ? '+' : ''}${bot.today.pnl.toFixed(2)}`;
+                todayPnlEl.className = `text-3xl font-bold ${bot.today.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                
+                document.getElementById('todayTrades').textContent = bot.today.trades;
+                document.getElementById('todayWins').textContent = bot.today.wins;
+                document.getElementById('todayLosses').textContent = bot.today.losses;
+                document.getElementById('winRate').textContent = `${bot.today.win_rate}%`;
+                
+                // Daily progress
+                document.getElementById('dailyProgress').textContent = `${bot.today.pnl_pct >= 0 ? '+' : ''}${bot.today.pnl_pct}%`;
+                document.getElementById('dailyProgressBar').style.width = `${Math.min(bot.today.progress, 100)}%`;
+                
+                // Month stats
+                const monthPnlEl = document.getElementById('monthPnl');
+                monthPnlEl.textContent = `$${bot.month.pnl >= 0 ? '+' : ''}${bot.month.pnl.toFixed(2)}`;
+                monthPnlEl.className = `text-3xl font-bold ${bot.month.pnl >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
+                
+                document.getElementById('monthTrades').textContent = bot.month.trades;
+                document.getElementById('monthWinRate').textContent = `${bot.month.win_rate}%`;
+                
+                // Monthly progress
+                document.getElementById('monthlyProgress').textContent = `${bot.month.pnl_pct >= 0 ? '+' : ''}${bot.month.pnl_pct}%`;
+                document.getElementById('monthlyProgressBar').style.width = `${Math.min(bot.month.progress, 100)}%`;
+                
+                // Open positions
+                const posEl = document.getElementById('openPositions');
+                if (bot.open_trades && bot.open_trades.length > 0) {
+                    posEl.innerHTML = bot.open_trades.map(p => `
+                        <div class="flex justify-between items-center bg-gray-800/50 rounded-lg p-3">
+                            <div>
                                 <span class="px-2 py-0.5 rounded text-xs ${p.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
                                     ${p.type}
                                 </span>
-                            </td>
-                            <td class="py-2 text-right">${p.entry_price.toFixed(2)}</td>
-                            <td class="py-2 text-right">${p.current_price.toFixed(2)}</td>
-                            <td class="py-2 text-right ${p.profit >= 0 ? 'text-green-400' : 'text-red-400'}">
-                                $${p.profit >= 0 ? '+' : ''}${p.profit.toFixed(2)}
-                            </td>
-                        </tr>
+                                <span class="ml-2 font-mono text-sm">${p.symbol}</span>
+                                <span class="text-xs text-gray-400 ml-2">${p.lot_size} lot</span>
+                            </div>
+                            <div class="text-right">
+                                <div class="${p.profit >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
+                                    $${p.profit >= 0 ? '+' : ''}${p.profit.toFixed(2)}
+                                </div>
+                                <div class="text-xs text-gray-400">${p.entry_price.toFixed(2)} → ${p.current_price.toFixed(2)}</div>
+                            </div>
+                        </div>
                     `).join('');
                 } else {
-                    positionsEl.innerHTML = '<tr><td colspan="6" class="text-center py-4 text-gray-500">No open positions</td></tr>';
+                    posEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No open positions</div>';
+                }
+                
+                // Recent trades
+                const tradesEl = document.getElementById('recentTrades');
+                if (bot.recent_trades && bot.recent_trades.length > 0) {
+                    tradesEl.innerHTML = bot.recent_trades.map(t => `
+                        <div class="flex justify-between items-center bg-gray-800/50 rounded-lg p-2">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs text-gray-400">${t.time}</span>
+                                <span class="px-2 py-0.5 rounded text-xs ${t.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
+                                    ${t.type}
+                                </span>
+                                <span class="font-mono text-sm">${t.symbol}</span>
+                            </div>
+                            <span class="${t.profit >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
+                                $${t.profit >= 0 ? '+' : ''}${t.profit.toFixed(2)}
+                            </span>
+                        </div>
+                    `).join('');
+                } else {
+                    tradesEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No trades yet today</div>';
                 }
             }
         }
@@ -464,7 +335,6 @@
         }
 
         // Initialize
-        initChart();
         fetchData();
         setInterval(fetchData, 5000); // Update every 5 seconds
     </script>
