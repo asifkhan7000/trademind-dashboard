@@ -2,55 +2,48 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-27T21:58:23.222840",
-  "updated_at_display": "2026-01-27 21:58:23",
+  "updated_at": "2026-01-27T22:03:25.941414",
+  "updated_at_display": "2026-01-27 22:03:25",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 1001.0,
-    "equity": 1002.0,
-    "profit": 1.0,
+    "balance": 1004.67,
+    "equity": 1004.63,
+    "profit": -0.04,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 9,
-      "wins": 7,
+      "trades": 10,
+      "wins": 8,
       "losses": 2,
-      "pnl": 7.05,
-      "pnl_pct": 0.71,
-      "win_rate": 77.8,
+      "pnl": 10.72,
+      "pnl_pct": 1.07,
+      "win_rate": 80.0,
       "target": 1.5,
-      "progress": 47.0
+      "progress": 71.5
     },
     "month": {
-      "trades": 9,
-      "wins": 7,
-      "pnl": 7.05,
-      "pnl_pct": 0.71,
-      "win_rate": 77.8,
+      "trades": 11,
+      "wins": 8,
+      "pnl": 10.72,
+      "pnl_pct": 1.07,
+      "win_rate": 72.7,
       "target": 33.0,
-      "progress": 2.1
+      "progress": 3.2
     },
     "ultra_safe_mode": false,
     "open_trades": [
       {
-        "ticket": 610336836,
+        "ticket": 610417482,
         "symbol": "XAUUSDm",
         "type": "BUY",
-        "profit": 1.0,
-        "entry_price": 5082.098,
-        "current_price": 5083.098,
+        "profit": -0.04,
+        "entry_price": 5086.717,
+        "current_price": 5086.679,
         "lot_size": 0.01
       }
     ],
-    "open_pnl": 1.0,
+    "open_pnl": -0.04,
     "recent_trades": [
-      {
-        "ticket": 609225203,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 3.6,
-        "time": "19:59:43"
-      },
       {
         "ticket": 609229377,
         "symbol": "XAUUSDm",
@@ -106,6 +99,20 @@
         "type": "SELL",
         "profit": 3.65,
         "time": "21:51:22"
+      },
+      {
+        "ticket": 610336836,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 0.0,
+        "time": "21:59:10"
+      },
+      {
+        "ticket": 610393384,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 3.67,
+        "time": "22:01:48"
       }
     ]
   },
@@ -113,20 +120,20 @@
     "strategies": [
       {
         "name": "Trend_Following",
-        "wins": 3,
-        "losses": 1,
-        "win_rate": 75.0,
-        "pnl": -1.81
+        "wins": 4,
+        "losses": 2,
+        "win_rate": 66.7,
+        "pnl": 1.86
       }
     ],
     "sessions": [
       {
         "hour": 21,
-        "trades": 4,
-        "wins": 3,
-        "win_rate": 75.0,
-        "pnl": -1.81,
-        "profitable": false
+        "trades": 6,
+        "wins": 4,
+        "win_rate": 66.7,
+        "pnl": 1.86,
+        "profitable": true
       }
     ],
     "total_learnings": 2
@@ -134,9 +141,9 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "17:58",
-    "dubai_time": "21:58",
-    "current_hour_utc": 17
+    "utc_time": "18:03",
+    "dubai_time": "22:03",
+    "current_hour_utc": 18
   },
   "settings": {
     "daily_target": "1.5%",
