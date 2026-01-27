@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T19:33:27.727248",
-  "updated_at_display": "2026-01-27 19:33:27",
+  "updated_at": "2026-01-27T19:39:02.393961",
+  "updated_at_display": "2026-01-27 19:39:02",
   "bots": [
     {
       "name": "Safe Bot",
@@ -31,25 +31,96 @@
       "equity": 975.18,
       "profit": 0.0,
       "today": {
-        "trades": 0,
-        "wins": 0,
-        "losses": 0,
-        "pnl": 0,
-        "win_rate": 0
+        "trades": 16,
+        "wins": 7,
+        "losses": 9,
+        "pnl": -72.37,
+        "win_rate": 43.8
       },
       "open_trades": [],
       "open_pnl": 0,
-      "recent_trades": []
+      "recent_trades": [
+        {
+          "ticket": 601510785,
+          "symbol": "XAUUSDm",
+          "type": "BUY",
+          "profit": 3.79,
+          "time": "00:35:14"
+        },
+        {
+          "ticket": 601557510,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.5,
+          "time": "00:38:48"
+        },
+        {
+          "ticket": 601545815,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.05,
+          "time": "00:40:34"
+        },
+        {
+          "ticket": 601546861,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.35,
+          "time": "00:40:34"
+        },
+        {
+          "ticket": 601549145,
+          "symbol": "XAGUSDm",
+          "type": "BUY",
+          "profit": -17.3,
+          "time": "00:40:34"
+        },
+        {
+          "ticket": 603269732,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -4.97,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603268959,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -5.0,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603276856,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -4.85,
+          "time": "07:27:07"
+        },
+        {
+          "ticket": 603268400,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -5.0,
+          "time": "07:27:13"
+        },
+        {
+          "ticket": 603420434,
+          "symbol": "XAUUSDm",
+          "type": "SELL",
+          "profit": -5.0,
+          "time": "08:11:13"
+        }
+      ]
     }
   ],
   "combined": {
     "total_balance": 1475.1799999999998,
     "total_equity": 1475.1799999999998,
-    "total_trades_today": 0,
-    "total_wins_today": 0,
-    "total_losses_today": 0,
-    "total_pnl_today": 0,
-    "combined_win_rate": 0
+    "total_trades_today": 16,
+    "total_wins_today": 7,
+    "total_losses_today": 9,
+    "total_pnl_today": -72.37,
+    "combined_win_rate": 43.8
   },
   "learning": {
     "safe": {
@@ -68,6 +139,6 @@
     "status": "Open (London/NY Overlap Session)",
     "current_hour_utc": 15,
     "hour_quality": "Good",
-    "timestamp": "2026-01-27T15:33:27.727248"
+    "timestamp": "2026-01-27T15:39:02.393961"
   }
 }
