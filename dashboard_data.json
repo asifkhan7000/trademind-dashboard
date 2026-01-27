@@ -1,7 +1,7 @@
 {
   "version": "6.0",
-  "updated_at": "2026-01-27T10:57:46.274657",
-  "updated_at_display": "2026-01-27 10:57:46",
+  "updated_at": "2026-01-27T11:03:17.837645",
+  "updated_at_display": "2026-01-27 11:03:17",
   "bots": [
     {
       "name": "Safe Bot",
@@ -136,9 +136,9 @@
   },
   "market_status": {
     "is_open": true,
-    "status": "Open (Asian Session)",
-    "current_hour_utc": 6,
-    "hour_quality": "Neutral",
-    "timestamp": "2026-01-27T06:57:46.274657"
+    "status": "Open (London Session)",
+    "current_hour_utc": 7,
+    "hour_quality": "Good",
+    "timestamp": "2026-01-27T07:03:17.837645"
   }
 }
