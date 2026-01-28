@@ -2,8 +2,8 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-28T21:05:59.779098",
-  "updated_at_display": "2026-01-28 21:05:59",
+  "updated_at": "2026-01-28T21:07:16.776701",
+  "updated_at_display": "2026-01-28 21:07:16",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
@@ -107,55 +107,15 @@
     ]
   },
   "learning": {
-    "strategies": [
-      {
-        "name": "MACD_Momentum",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -15.0
-      },
-      {
-        "name": "Trend_Following",
-        "wins": 4,
-        "losses": 3,
-        "win_rate": 57.1,
-        "pnl": -28.96
-      }
-    ],
-    "sessions": [
-      {
-        "hour": 11,
-        "trades": 1,
-        "wins": 0,
-        "win_rate": 0.0,
-        "pnl": -15.0,
-        "profitable": false
-      },
-      {
-        "hour": 12,
-        "trades": 2,
-        "wins": 2,
-        "win_rate": 100.0,
-        "pnl": 8.03,
-        "profitable": true
-      },
-      {
-        "hour": 13,
-        "trades": 5,
-        "wins": 2,
-        "win_rate": 40.0,
-        "pnl": -36.99,
-        "profitable": false
-      }
-    ],
-    "total_learnings": 5
+    "strategies": [],
+    "sessions": [],
+    "total_learnings": 0
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "17:05",
-    "dubai_time": "21:05",
+    "utc_time": "17:07",
+    "dubai_time": "21:07",
     "current_hour_utc": 17
   },
   "settings": {
