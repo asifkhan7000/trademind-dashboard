@@ -2,8 +2,8 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-28T07:37:59.852669",
-  "updated_at_display": "2026-01-28 07:37:59",
+  "updated_at": "2026-01-28T07:41:57.673588",
+  "updated_at_display": "2026-01-28 07:41:57",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
@@ -44,54 +44,15 @@
     ]
   },
   "learning": {
-    "strategies": [
-      {
-        "name": "EMA_Crossover",
-        "wins": 2,
-        "losses": 0,
-        "win_rate": 100.0,
-        "pnl": 22.08
-      },
-      {
-        "name": "Trend_Following",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -20.0
-      },
-      {
-        "name": "MACD_Momentum",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -21.07
-      }
-    ],
-    "sessions": [
-      {
-        "hour": 5,
-        "trades": 1,
-        "wins": 0,
-        "win_rate": 0.0,
-        "pnl": -21.07,
-        "profitable": false
-      },
-      {
-        "hour": 22,
-        "trades": 3,
-        "wins": 2,
-        "win_rate": 66.7,
-        "pnl": 2.08,
-        "profitable": true
-      }
-    ],
-    "total_learnings": 5
+    "strategies": [],
+    "sessions": [],
+    "total_learnings": 0
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "03:37",
-    "dubai_time": "07:37",
+    "utc_time": "03:41",
+    "dubai_time": "07:41",
     "current_hour_utc": 3
   },
   "settings": {
