@@ -2,49 +2,74 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-29T21:02:41.821879",
-  "updated_at_display": "2026-01-29 21:02:41",
+  "updated_at": "2026-01-29T21:07:45.029491",
+  "updated_at_display": "2026-01-29 21:07:45",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5000.0,
-    "equity": 5000.0,
+    "balance": 4985.12,
+    "equity": 4985.12,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 0,
+      "trades": 1,
       "wins": 0,
-      "losses": 0,
-      "pnl": 0,
-      "pnl_pct": 0.0,
-      "win_rate": 0,
+      "losses": 1,
+      "pnl": -14.88,
+      "pnl_pct": -1.49,
+      "win_rate": 0.0,
       "target": 1.5,
-      "progress": 0.0
+      "progress": -99.2
     },
     "month": {
-      "trades": 31,
+      "trades": 32,
       "wins": 20,
-      "pnl": -14.37,
-      "pnl_pct": -1.44,
-      "win_rate": 64.5,
+      "pnl": -29.25,
+      "pnl_pct": -2.93,
+      "win_rate": 62.5,
       "target": 33.0,
-      "progress": -4.4
+      "progress": -8.9
     },
     "ultra_safe_mode": false,
     "open_trades": [],
     "open_pnl": 0,
-    "recent_trades": []
+    "recent_trades": [
+      {
+        "ticket": 634371897,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": -14.88,
+        "time": "21:02:50"
+      }
+    ]
   },
   "learning": {
-    "strategies": [],
-    "sessions": [],
-    "total_learnings": 0
+    "strategies": [
+      {
+        "name": "SMC_Momentum",
+        "wins": 0,
+        "losses": 1,
+        "win_rate": 0.0,
+        "pnl": -14.88
+      }
+    ],
+    "sessions": [
+      {
+        "hour": 21,
+        "trades": 1,
+        "wins": 0,
+        "win_rate": 0.0,
+        "pnl": -14.88,
+        "profitable": false
+      }
+    ],
+    "total_learnings": 2
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "17:02",
-    "dubai_time": "21:02",
+    "utc_time": "17:07",
+    "dubai_time": "21:07",
     "current_hour_utc": 17
   },
   "settings": {
