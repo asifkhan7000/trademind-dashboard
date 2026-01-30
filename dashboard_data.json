@@ -2,45 +2,48 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T12:10:30.195169",
-  "updated_at_display": "2026-01-30 12:10:30",
+  "updated_at": "2026-01-30T12:15:32.640231",
+  "updated_at_display": "2026-01-30 12:15:32",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5015.41,
-    "equity": 5015.41,
-    "profit": 0.0,
+    "balance": 5025.58,
+    "equity": 5047.25,
+    "profit": 21.67,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 55,
-      "wins": 34,
+      "trades": 56,
+      "wins": 35,
       "losses": 21,
-      "pnl": 55.56,
-      "pnl_pct": 5.56,
-      "win_rate": 61.8,
+      "pnl": 65.73,
+      "pnl_pct": 6.57,
+      "win_rate": 62.5,
       "target": 1.5,
       "progress": 100
     },
     "month": {
-      "trades": 89,
-      "wins": 54,
-      "pnl": 1.04,
-      "pnl_pct": 0.1,
-      "win_rate": 60.7,
+      "trades": 90,
+      "wins": 55,
+      "pnl": 11.21,
+      "pnl_pct": 1.12,
+      "win_rate": 61.1,
       "target": 33.0,
-      "progress": 0.3
+      "progress": 3.4
     },
     "ultra_safe_mode": false,
-    "open_trades": [],
-    "open_pnl": 0,
-    "recent_trades": [
+    "open_trades": [
       {
-        "ticket": 641183694,
+        "ticket": 641607321,
         "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 11.25,
-        "time": "11:31:32"
-      },
+        "type": "SELL",
+        "profit": 21.67,
+        "entry_price": 5160.645,
+        "current_price": 5138.984,
+        "lot_size": 0.01
+      }
+    ],
+    "open_pnl": 21.67,
+    "recent_trades": [
       {
         "ticket": 641183694,
         "symbol": "XAUUSDm",
@@ -103,6 +106,13 @@
         "type": "BUY",
         "profit": 11.87,
         "time": "12:07:18"
+      },
+      {
+        "ticket": 641607321,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 10.17,
+        "time": "12:13:08"
       }
     ]
   },
@@ -110,10 +120,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 22,
+        "wins": 23,
         "losses": 15,
-        "win_rate": 59.5,
-        "pnl": 1.25
+        "win_rate": 60.5,
+        "pnl": 11.42
       },
       {
         "name": "SMC_Structure_Zone",
@@ -195,10 +205,10 @@
       },
       {
         "hour": 12,
-        "trades": 2,
-        "wins": 1,
-        "win_rate": 50.0,
-        "pnl": 2.2,
+        "trades": 3,
+        "wins": 2,
+        "win_rate": 66.7,
+        "pnl": 12.37,
         "profitable": true
       },
       {
@@ -215,8 +225,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7 London",
-    "utc_time": "08:10",
-    "dubai_time": "12:10",
+    "utc_time": "08:15",
+    "dubai_time": "12:15",
     "current_hour_utc": 8
   },
   "settings": {
