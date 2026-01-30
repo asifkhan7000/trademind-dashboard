@@ -2,55 +2,48 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T11:25:06.763803",
-  "updated_at_display": "2026-01-30 11:25:06",
+  "updated_at": "2026-01-30T11:30:09.395461",
+  "updated_at_display": "2026-01-30 11:30:09",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4968.6,
-    "equity": 4982.91,
-    "profit": 14.31,
+    "balance": 4978.21,
+    "equity": 4974.72,
+    "profit": -3.49,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 44,
-      "wins": 26,
+      "trades": 45,
+      "wins": 27,
       "losses": 18,
-      "pnl": 8.75,
-      "pnl_pct": 0.88,
-      "win_rate": 59.1,
+      "pnl": 18.36,
+      "pnl_pct": 1.84,
+      "win_rate": 60.0,
       "target": 1.5,
-      "progress": 58.3
+      "progress": 100
     },
     "month": {
-      "trades": 78,
-      "wins": 46,
-      "pnl": -45.77,
-      "pnl_pct": -4.58,
-      "win_rate": 59.0,
+      "trades": 79,
+      "wins": 47,
+      "pnl": -36.16,
+      "pnl_pct": -3.62,
+      "win_rate": 59.5,
       "target": 33.0,
-      "progress": -13.9
+      "progress": -11.0
     },
     "ultra_safe_mode": false,
     "open_trades": [
       {
-        "ticket": 641149533,
+        "ticket": 641183694,
         "symbol": "XAUUSDm",
         "type": "SELL",
-        "profit": 14.31,
-        "entry_price": 5183.35,
-        "current_price": 5176.197,
+        "profit": -3.49,
+        "entry_price": 5175.435,
+        "current_price": 5177.179,
         "lot_size": 0.02
       }
     ],
-    "open_pnl": 14.31,
+    "open_pnl": -3.49,
     "recent_trades": [
-      {
-        "ticket": 640743556,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 5.29,
-        "time": "10:42:10"
-      },
       {
         "ticket": 640785407,
         "symbol": "XAUUSDm",
@@ -113,6 +106,13 @@
         "type": "BUY",
         "profit": -20.12,
         "time": "11:22:03"
+      },
+      {
+        "ticket": 641149533,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 9.61,
+        "time": "11:26:10"
       }
     ]
   },
@@ -120,10 +120,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 17,
+        "wins": 18,
         "losses": 12,
-        "win_rate": 58.6,
-        "pnl": -2.23
+        "win_rate": 60.0,
+        "pnl": 7.38
       },
       {
         "name": "SMC_Structure_Zone",
@@ -197,10 +197,10 @@
       },
       {
         "hour": 11,
-        "trades": 3,
-        "wins": 1,
-        "win_rate": 33.3,
-        "pnl": -34.4,
+        "trades": 4,
+        "wins": 2,
+        "win_rate": 50.0,
+        "pnl": -24.79,
         "profitable": false
       },
       {
@@ -217,8 +217,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7 London",
-    "utc_time": "07:25",
-    "dubai_time": "11:25",
+    "utc_time": "07:30",
+    "dubai_time": "11:30",
     "current_hour_utc": 7
   },
   "settings": {
