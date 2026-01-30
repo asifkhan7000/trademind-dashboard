@@ -2,33 +2,33 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T06:27:18.460738",
-  "updated_at_display": "2026-01-30 06:27:18",
+  "updated_at": "2026-01-30T06:33:29.753954",
+  "updated_at_display": "2026-01-30 06:33:29",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4950.22,
-    "equity": 4950.22,
+    "balance": 4965.22,
+    "equity": 4965.22,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 7,
-      "wins": 3,
+      "trades": 8,
+      "wins": 4,
       "losses": 4,
-      "pnl": -9.63,
-      "pnl_pct": -0.96,
-      "win_rate": 42.9,
+      "pnl": 5.37,
+      "pnl_pct": 0.54,
+      "win_rate": 50.0,
       "target": 1.5,
-      "progress": -64.2
+      "progress": 35.8
     },
     "month": {
-      "trades": 41,
-      "wins": 23,
-      "pnl": -64.15,
-      "pnl_pct": -6.42,
-      "win_rate": 56.1,
+      "trades": 42,
+      "wins": 24,
+      "pnl": -49.15,
+      "pnl_pct": -4.92,
+      "win_rate": 57.1,
       "target": 33.0,
-      "progress": -19.4
+      "progress": -14.9
     },
     "ultra_safe_mode": false,
     "open_trades": [],
@@ -82,24 +82,31 @@
         "type": "BUY",
         "profit": -18.54,
         "time": "06:26:50"
+      },
+      {
+        "ticket": 638916958,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 15.0,
+        "time": "06:27:46"
       }
     ]
   },
   "learning": {
     "strategies": [
       {
+        "name": "SMC_CHoCH",
+        "wins": 4,
+        "losses": 4,
+        "win_rate": 50.0,
+        "pnl": 5.37
+      },
+      {
         "name": "SMC_Structure_Zone",
         "wins": 0,
         "losses": 1,
         "win_rate": 0.0,
         "pnl": -4.99
-      },
-      {
-        "name": "SMC_CHoCH",
-        "wins": 3,
-        "losses": 4,
-        "win_rate": 42.9,
-        "pnl": -9.63
       },
       {
         "name": "SMC_Momentum",
@@ -119,11 +126,11 @@
     "sessions": [
       {
         "hour": 6,
-        "trades": 7,
-        "wins": 3,
-        "win_rate": 42.9,
-        "pnl": -9.63,
-        "profitable": false
+        "trades": 8,
+        "wins": 4,
+        "win_rate": 50.0,
+        "pnl": 5.37,
+        "profitable": true
       },
       {
         "hour": 21,
@@ -139,8 +146,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "02:27",
-    "dubai_time": "06:27",
+    "utc_time": "02:33",
+    "dubai_time": "06:33",
     "current_hour_utc": 2
   },
   "settings": {
