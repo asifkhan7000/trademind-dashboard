@@ -2,45 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T10:14:30.449887",
-  "updated_at_display": "2026-01-30 10:14:30",
+  "updated_at": "2026-01-30T10:19:33.128307",
+  "updated_at_display": "2026-01-30 10:19:33",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4962.84,
-    "equity": 4962.84,
+    "balance": 4972.02,
+    "equity": 4972.02,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 30,
-      "wins": 17,
+      "trades": 31,
+      "wins": 18,
       "losses": 13,
-      "pnl": 2.99,
-      "pnl_pct": 0.3,
-      "win_rate": 56.7,
+      "pnl": 12.17,
+      "pnl_pct": 1.22,
+      "win_rate": 58.1,
       "target": 1.5,
-      "progress": 19.9
+      "progress": 81.1
     },
     "month": {
-      "trades": 64,
-      "wins": 37,
-      "pnl": -51.53,
-      "pnl_pct": -5.15,
-      "win_rate": 57.8,
+      "trades": 65,
+      "wins": 38,
+      "pnl": -42.35,
+      "pnl_pct": -4.24,
+      "win_rate": 58.5,
       "target": 33.0,
-      "progress": -15.6
+      "progress": -12.8
     },
     "ultra_safe_mode": false,
     "open_trades": [],
     "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 640093059,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -9.66,
-        "time": "09:16:10"
-      },
       {
         "ticket": 640131253,
         "symbol": "XAUUSDm",
@@ -103,6 +96,13 @@
         "type": "BUY",
         "profit": 5.18,
         "time": "10:13:14"
+      },
+      {
+        "ticket": 640578949,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 9.18,
+        "time": "10:18:54"
       }
     ]
   },
@@ -110,10 +110,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 10,
+        "wins": 11,
         "losses": 7,
-        "win_rate": 58.8,
-        "pnl": 21.54
+        "win_rate": 61.1,
+        "pnl": 30.72
       },
       {
         "name": "SMC_Structure_Zone",
@@ -179,10 +179,10 @@
       },
       {
         "hour": 10,
-        "trades": 3,
-        "wins": 3,
+        "trades": 4,
+        "wins": 4,
         "win_rate": 100.0,
-        "pnl": 34.47,
+        "pnl": 43.65,
         "profitable": true
       },
       {
@@ -199,8 +199,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "06:14",
-    "dubai_time": "10:14",
+    "utc_time": "06:19",
+    "dubai_time": "10:19",
     "current_hour_utc": 6
   },
   "settings": {
