@@ -2,45 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T08:43:43.658625",
-  "updated_at_display": "2026-01-30 08:43:43",
+  "updated_at": "2026-01-30T08:48:46.272768",
+  "updated_at_display": "2026-01-30 08:48:46",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4909.19,
-    "equity": 4909.19,
+    "balance": 4913.99,
+    "equity": 4913.99,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 19,
-      "wins": 8,
+      "trades": 20,
+      "wins": 9,
       "losses": 11,
-      "pnl": -50.66,
-      "pnl_pct": -5.07,
-      "win_rate": 42.1,
+      "pnl": -45.86,
+      "pnl_pct": -4.59,
+      "win_rate": 45.0,
       "target": 1.5,
-      "progress": -337.7
+      "progress": -305.7
     },
     "month": {
-      "trades": 53,
-      "wins": 28,
-      "pnl": -105.18,
-      "pnl_pct": -10.52,
-      "win_rate": 52.8,
+      "trades": 54,
+      "wins": 29,
+      "pnl": -100.38,
+      "pnl_pct": -10.04,
+      "win_rate": 53.7,
       "target": 33.0,
-      "progress": -31.9
+      "progress": -30.4
     },
     "ultra_safe_mode": false,
     "open_trades": [],
     "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 639046233,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 15.88,
-        "time": "06:43:50"
-      },
       {
         "ticket": 639058870,
         "symbol": "XAUUSDm",
@@ -103,6 +96,13 @@
         "type": "BUY",
         "profit": 10.67,
         "time": "08:41:05"
+      },
+      {
+        "ticket": 639913163,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 4.8,
+        "time": "08:46:51"
       }
     ]
   },
@@ -131,10 +131,10 @@
       },
       {
         "name": "Trend_Follow",
-        "wins": 2,
+        "wins": 3,
         "losses": 5,
-        "win_rate": 28.6,
-        "pnl": -26.93
+        "win_rate": 37.5,
+        "pnl": -22.13
       },
       {
         "name": "SMC_CHoCH",
@@ -163,10 +163,10 @@
       },
       {
         "hour": 8,
-        "trades": 1,
-        "wins": 1,
+        "trades": 2,
+        "wins": 2,
         "win_rate": 100.0,
-        "pnl": 10.67,
+        "pnl": 15.47,
         "profitable": true
       },
       {
@@ -183,8 +183,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "04:43",
-    "dubai_time": "08:43",
+    "utc_time": "04:48",
+    "dubai_time": "08:48",
     "current_hour_utc": 4
   },
   "settings": {
