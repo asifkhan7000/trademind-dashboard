@@ -2,55 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T06:48:52.555546",
-  "updated_at_display": "2026-01-30 06:48:52",
+  "updated_at": "2026-01-30T07:05:39.636435",
+  "updated_at_display": "2026-01-30 07:05:39",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4906.18,
-    "equity": 4896.69,
-    "profit": -9.49,
+    "balance": 4936.12,
+    "equity": 4936.12,
+    "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 11,
-      "wins": 5,
+      "trades": 12,
+      "wins": 6,
       "losses": 6,
-      "pnl": -53.67,
-      "pnl_pct": -5.37,
-      "win_rate": 45.5,
+      "pnl": -23.73,
+      "pnl_pct": -2.37,
+      "win_rate": 50.0,
       "target": 1.5,
-      "progress": -357.8
+      "progress": -158.2
     },
     "month": {
-      "trades": 45,
-      "wins": 25,
-      "pnl": -108.19,
-      "pnl_pct": -10.82,
-      "win_rate": 55.6,
+      "trades": 46,
+      "wins": 26,
+      "pnl": -78.25,
+      "pnl_pct": -7.83,
+      "win_rate": 56.5,
       "target": 33.0,
-      "progress": -32.8
+      "progress": -23.7
     },
     "ultra_safe_mode": false,
-    "open_trades": [
-      {
-        "ticket": 639086353,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -9.49,
-        "entry_price": 5234.13,
-        "current_price": 5243.62,
-        "lot_size": 0.01
-      }
-    ],
-    "open_pnl": -9.49,
+    "open_trades": [],
+    "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 638867253,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 38.56,
-        "time": "06:23:15"
-      },
       {
         "ticket": 638879047,
         "symbol": "XAUUSDm",
@@ -113,6 +96,13 @@
         "type": "BUY",
         "profit": -15.55,
         "time": "06:48:25"
+      },
+      {
+        "ticket": 639086353,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 29.94,
+        "time": "06:58:29"
       }
     ]
   },
@@ -170,9 +160,9 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "02:48",
-    "dubai_time": "06:48",
-    "current_hour_utc": 2
+    "utc_time": "03:05",
+    "dubai_time": "07:05",
+    "current_hour_utc": 3
   },
   "settings": {
     "daily_target": "1.5%",
