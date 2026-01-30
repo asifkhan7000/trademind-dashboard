@@ -2,117 +2,44 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T23:56:37.229115",
-  "updated_at_display": "2026-01-30 23:56:37",
+  "updated_at": "2026-01-31T00:01:40.712488",
+  "updated_at_display": "2026-01-31 00:01:40",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5188.36,
-    "equity": 5173.23,
-    "profit": -15.13,
+    "balance": 5197.5,
+    "equity": 5197.5,
+    "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 125,
-      "wins": 73,
-      "losses": 52,
-      "pnl": 245.76,
-      "pnl_pct": 24.58,
-      "win_rate": 58.4,
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 30.67,
+      "pnl_pct": 3.07,
+      "win_rate": 100.0,
       "target": 1.5,
       "progress": 100
     },
     "month": {
-      "trades": 153,
-      "wins": 87,
-      "pnl": 191.24,
-      "pnl_pct": 19.12,
-      "win_rate": 56.9,
+      "trades": 155,
+      "wins": 88,
+      "pnl": 200.38,
+      "pnl_pct": 20.04,
+      "win_rate": 56.8,
       "target": 33.0,
-      "progress": 58.0
+      "progress": 60.7
     },
     "ultra_safe_mode": false,
-    "open_trades": [
-      {
-        "ticket": 651733546,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -15.13,
-        "entry_price": 4936.36,
-        "current_price": 4943.926,
-        "lot_size": 0.02
-      }
-    ],
-    "open_pnl": -15.13,
+    "open_trades": [],
+    "open_pnl": 0,
     "recent_trades": [
       {
-        "ticket": 648545284,
+        "ticket": 651781346,
         "symbol": "XAUUSDm",
         "type": "BUY",
-        "profit": 0.01,
-        "time": "20:45:21"
-      },
-      {
-        "ticket": 648624813,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 25.43,
-        "time": "20:48:06"
-      },
-      {
-        "ticket": 648730024,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -20.23,
-        "time": "20:53:03"
-      },
-      {
-        "ticket": 648817777,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 7.37,
-        "time": "21:01:27"
-      },
-      {
-        "ticket": 648892476,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -20.12,
-        "time": "21:03:26"
-      },
-      {
-        "ticket": 649328108,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 19.81,
-        "time": "21:27:00"
-      },
-      {
-        "ticket": 651536022,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 25.63,
-        "time": "23:35:04"
-      },
-      {
-        "ticket": 651586492,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 21.34,
-        "time": "23:39:26"
-      },
-      {
-        "ticket": 651635090,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -20.0,
-        "time": "23:45:40"
-      },
-      {
-        "ticket": 651691583,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 8.01,
-        "time": "23:50:03"
+        "profit": 30.67,
+        "time": "00:00:05"
       }
     ]
   },
@@ -120,10 +47,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 15,
-        "losses": 7,
-        "win_rate": 68.2,
-        "pnl": 74.51
+        "wins": 16,
+        "losses": 8,
+        "win_rate": 66.7,
+        "pnl": 83.65
       },
       {
         "name": "MACD_Momentum",
@@ -168,10 +95,10 @@
       },
       {
         "hour": 23,
-        "trades": 4,
-        "wins": 3,
-        "win_rate": 75.0,
-        "pnl": 34.98,
+        "trades": 6,
+        "wins": 4,
+        "win_rate": 66.7,
+        "pnl": 44.12,
         "profitable": true
       }
     ],
@@ -180,9 +107,9 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "19:56",
-    "dubai_time": "23:56",
-    "current_hour_utc": 19
+    "utc_time": "20:01",
+    "dubai_time": "00:01",
+    "current_hour_utc": 20
   },
   "settings": {
     "daily_target": "1.5%",
