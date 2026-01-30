@@ -2,45 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-01-30T18:40:49.140814",
-  "updated_at_display": "2026-01-30 18:40:49",
+  "updated_at": "2026-01-30T18:44:09.707104",
+  "updated_at_display": "2026-01-30 18:44:09",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 4996.11,
-    "equity": 4996.11,
+    "balance": 5000.0,
+    "equity": 5000.0,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 107,
-      "wins": 64,
+      "trades": 108,
+      "wins": 65,
       "losses": 43,
-      "pnl": 36.26,
-      "pnl_pct": 3.63,
-      "win_rate": 59.8,
+      "pnl": 57.4,
+      "pnl_pct": 5.74,
+      "win_rate": 60.2,
       "target": 1.5,
       "progress": 100
     },
     "month": {
-      "trades": 141,
-      "wins": 84,
-      "pnl": -18.26,
-      "pnl_pct": -1.83,
-      "win_rate": 59.6,
+      "trades": 142,
+      "wins": 85,
+      "pnl": 2.88,
+      "pnl_pct": 0.29,
+      "win_rate": 59.9,
       "target": 33.0,
-      "progress": -5.5
+      "progress": 0.9
     },
     "ultra_safe_mode": false,
     "open_trades": [],
     "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 645891552,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 18.42,
-        "time": "17:50:12"
-      },
       {
         "ticket": 645991369,
         "symbol": "XAUUSDm",
@@ -103,167 +96,26 @@
         "type": "BUY",
         "profit": 12.31,
         "time": "18:35:12"
+      },
+      {
+        "ticket": 646733206,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 21.14,
+        "time": "18:42:53"
       }
     ]
   },
   "learning": {
-    "strategies": [
-      {
-        "name": "EMA_Cross",
-        "wins": 2,
-        "losses": 1,
-        "win_rate": 66.7,
-        "pnl": 1.37
-      },
-      {
-        "name": "SMC_Structure_Zone",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -4.99
-      },
-      {
-        "name": "SMC_Momentum",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -14.88
-      },
-      {
-        "name": "SMC_Order_Block",
-        "wins": 0,
-        "losses": 1,
-        "win_rate": 0.0,
-        "pnl": -20.28
-      },
-      {
-        "name": "SMC_CHoCH",
-        "wins": 4,
-        "losses": 6,
-        "win_rate": 40.0,
-        "pnl": -69.55
-      },
-      {
-        "name": "Trend_Follow",
-        "wins": 45,
-        "losses": 36,
-        "win_rate": 55.6,
-        "pnl": -81.05
-      }
-    ],
-    "sessions": [
-      {
-        "hour": 6,
-        "trades": 10,
-        "wins": 4,
-        "win_rate": 40.0,
-        "pnl": -69.55,
-        "profitable": false
-      },
-      {
-        "hour": 7,
-        "trades": 6,
-        "wins": 1,
-        "win_rate": 16.7,
-        "pnl": -37.6,
-        "profitable": false
-      },
-      {
-        "hour": 8,
-        "trades": 2,
-        "wins": 2,
-        "win_rate": 100.0,
-        "pnl": 15.47,
-        "profitable": true
-      },
-      {
-        "hour": 9,
-        "trades": 6,
-        "wins": 4,
-        "win_rate": 66.7,
-        "pnl": 9.2,
-        "profitable": true
-      },
-      {
-        "hour": 10,
-        "trades": 12,
-        "wins": 9,
-        "win_rate": 75.0,
-        "pnl": 45.1,
-        "profitable": true
-      },
-      {
-        "hour": 11,
-        "trades": 9,
-        "wins": 5,
-        "win_rate": 55.6,
-        "pnl": -33.12,
-        "profitable": false
-      },
-      {
-        "hour": 12,
-        "trades": 6,
-        "wins": 4,
-        "win_rate": 66.7,
-        "pnl": 10.33,
-        "profitable": true
-      },
-      {
-        "hour": 14,
-        "trades": 11,
-        "wins": 4,
-        "win_rate": 36.4,
-        "pnl": -64.9,
-        "profitable": false
-      },
-      {
-        "hour": 15,
-        "trades": 10,
-        "wins": 5,
-        "win_rate": 50.0,
-        "pnl": -12.29,
-        "profitable": false
-      },
-      {
-        "hour": 16,
-        "trades": 7,
-        "wins": 4,
-        "win_rate": 57.1,
-        "pnl": 2.46,
-        "profitable": true
-      },
-      {
-        "hour": 17,
-        "trades": 8,
-        "wins": 5,
-        "win_rate": 62.5,
-        "pnl": -7.57,
-        "profitable": false
-      },
-      {
-        "hour": 18,
-        "trades": 7,
-        "wins": 4,
-        "win_rate": 57.1,
-        "pnl": -6.76,
-        "profitable": false
-      },
-      {
-        "hour": 21,
-        "trades": 3,
-        "wins": 0,
-        "win_rate": 0.0,
-        "pnl": -40.15,
-        "profitable": false
-      }
-    ],
-    "total_learnings": 19
+    "strategies": [],
+    "sessions": [],
+    "total_learnings": 0
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\uddf8 London/NY Overlap",
-    "utc_time": "14:40",
-    "dubai_time": "18:40",
+    "utc_time": "14:44",
+    "dubai_time": "18:44",
     "current_hour_utc": 14
   },
   "settings": {
