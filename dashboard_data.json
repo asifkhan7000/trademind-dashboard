@@ -2,8 +2,8 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-01T21:58:57.494305",
-  "updated_at_display": "2026-02-01 21:58:57",
+  "updated_at": "2026-02-01T22:04:00.166527",
+  "updated_at_display": "2026-02-01 22:04:00",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
@@ -107,9 +107,9 @@
   "market": {
     "is_open": false,
     "status": "Opens Sunday 10 PM UTC",
-    "utc_time": "17:58",
-    "dubai_time": "21:58",
-    "current_hour_utc": 17
+    "utc_time": "18:04",
+    "dubai_time": "22:04",
+    "current_hour_utc": 18
   },
   "settings": {
     "daily_target": "1.5%",
