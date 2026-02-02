@@ -2,45 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-02T11:46:32.656782",
-  "updated_at_display": "2026-02-02 11:46:32",
+  "updated_at": "2026-02-02T11:51:35.351555",
+  "updated_at_display": "2026-02-02 11:51:35",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5245.4,
-    "equity": 5245.4,
+    "balance": 5259.97,
+    "equity": 5259.97,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 16,
-      "wins": 7,
+      "trades": 17,
+      "wins": 8,
       "losses": 9,
-      "pnl": -5.31,
-      "pnl_pct": -0.53,
-      "win_rate": 43.8,
+      "pnl": 9.26,
+      "pnl_pct": 0.93,
+      "win_rate": 47.1,
       "target": 1.5,
-      "progress": -35.4
+      "progress": 61.7
     },
     "month": {
-      "trades": 16,
-      "wins": 7,
-      "pnl": -5.31,
-      "pnl_pct": -0.53,
-      "win_rate": 43.8,
+      "trades": 17,
+      "wins": 8,
+      "pnl": 9.26,
+      "pnl_pct": 0.93,
+      "win_rate": 47.1,
       "target": 33.0,
-      "progress": -1.6
+      "progress": 2.8
     },
     "ultra_safe_mode": false,
     "open_trades": [],
     "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 658982083,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -10.0,
-        "time": "08:51:25"
-      },
       {
         "ticket": 659020309,
         "symbol": "XAUUSDm",
@@ -103,6 +96,13 @@
         "type": "BUY",
         "profit": -10.0,
         "time": "11:45:16"
+      },
+      {
+        "ticket": 661190720,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": 14.57,
+        "time": "11:50:12"
       }
     ]
   },
@@ -110,10 +110,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 28,
+        "wins": 29,
         "losses": 20,
-        "win_rate": 58.3,
-        "pnl": 102.16
+        "win_rate": 59.2,
+        "pnl": 116.73
       },
       {
         "name": "MACD_Momentum",
@@ -166,11 +166,11 @@
       },
       {
         "hour": 11,
-        "trades": 5,
-        "wins": 2,
-        "win_rate": 40.0,
-        "pnl": -2.18,
-        "profitable": false
+        "trades": 6,
+        "wins": 3,
+        "win_rate": 50.0,
+        "pnl": 12.39,
+        "profitable": true
       },
       {
         "hour": 18,
@@ -218,8 +218,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7 London",
-    "utc_time": "07:46",
-    "dubai_time": "11:46",
+    "utc_time": "07:51",
+    "dubai_time": "11:51",
     "current_hour_utc": 7
   },
   "settings": {
