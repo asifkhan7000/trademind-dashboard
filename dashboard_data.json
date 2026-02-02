@@ -2,33 +2,33 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-02T04:07:14.787079",
-  "updated_at_display": "2026-02-02 04:07:14",
+  "updated_at": "2026-02-02T04:12:17.286963",
+  "updated_at_display": "2026-02-02 04:12:17",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5261.67,
-    "equity": 5261.67,
+    "balance": 5251.63,
+    "equity": 5251.63,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 1,
+      "trades": 2,
       "wins": 1,
-      "losses": 0,
-      "pnl": 10.96,
-      "pnl_pct": 1.1,
-      "win_rate": 100.0,
+      "losses": 1,
+      "pnl": 0.92,
+      "pnl_pct": 0.09,
+      "win_rate": 50.0,
       "target": 1.5,
-      "progress": 73.1
+      "progress": 6.1
     },
     "month": {
-      "trades": 1,
+      "trades": 2,
       "wins": 1,
-      "pnl": 10.96,
-      "pnl_pct": 1.1,
-      "win_rate": 100.0,
+      "pnl": 0.92,
+      "pnl_pct": 0.09,
+      "win_rate": 50.0,
       "target": 33.0,
-      "progress": 3.3
+      "progress": 0.3
     },
     "ultra_safe_mode": false,
     "open_trades": [],
@@ -40,6 +40,13 @@
         "type": "BUY",
         "profit": 10.96,
         "time": "03:41:38"
+      },
+      {
+        "ticket": 656575566,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": -10.04,
+        "time": "04:09:32"
       }
     ]
   },
@@ -48,9 +55,9 @@
       {
         "name": "Trend_Follow",
         "wins": 22,
-        "losses": 11,
-        "win_rate": 66.7,
-        "pnl": 127.82
+        "losses": 12,
+        "win_rate": 64.7,
+        "pnl": 117.78
       },
       {
         "name": "MACD_Momentum",
@@ -76,6 +83,14 @@
         "win_rate": 100.0,
         "pnl": 10.96,
         "profitable": true
+      },
+      {
+        "hour": 4,
+        "trades": 1,
+        "wins": 0,
+        "win_rate": 0.0,
+        "pnl": -10.04,
+        "profitable": false
       },
       {
         "hour": 18,
@@ -118,13 +133,13 @@
         "profitable": true
       }
     ],
-    "total_learnings": 9
+    "total_learnings": 10
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "00:07",
-    "dubai_time": "04:07",
+    "utc_time": "00:12",
+    "dubai_time": "04:12",
     "current_hour_utc": 0
   },
   "settings": {
