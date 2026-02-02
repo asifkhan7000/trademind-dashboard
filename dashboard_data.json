@@ -2,33 +2,33 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-02T08:44:55.699398",
-  "updated_at_display": "2026-02-02 08:44:55",
+  "updated_at": "2026-02-02T08:49:58.332250",
+  "updated_at_display": "2026-02-02 08:49:58",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5235.8,
-    "equity": 5235.8,
+    "balance": 5215.8,
+    "equity": 5215.8,
     "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 5,
+      "trades": 6,
       "wins": 2,
-      "losses": 3,
-      "pnl": -14.91,
-      "pnl_pct": -1.49,
-      "win_rate": 40.0,
+      "losses": 4,
+      "pnl": -34.91,
+      "pnl_pct": -3.49,
+      "win_rate": 33.3,
       "target": 1.5,
-      "progress": -99.4
+      "progress": -232.7
     },
     "month": {
-      "trades": 5,
+      "trades": 6,
       "wins": 2,
-      "pnl": -14.91,
-      "pnl_pct": -1.49,
-      "win_rate": 40.0,
+      "pnl": -34.91,
+      "pnl_pct": -3.49,
+      "win_rate": 33.3,
       "target": 33.0,
-      "progress": -4.5
+      "progress": -10.6
     },
     "ultra_safe_mode": false,
     "open_trades": [],
@@ -68,6 +68,13 @@
         "type": "BUY",
         "profit": -20.15,
         "time": "08:41:57"
+      },
+      {
+        "ticket": 658937542,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": -20.0,
+        "time": "08:46:00"
       }
     ]
   },
@@ -76,9 +83,9 @@
       {
         "name": "Trend_Follow",
         "wins": 23,
-        "losses": 14,
-        "win_rate": 62.2,
-        "pnl": 101.95
+        "losses": 15,
+        "win_rate": 60.5,
+        "pnl": 81.95
       },
       {
         "name": "MACD_Momentum",
@@ -115,10 +122,10 @@
       },
       {
         "hour": 8,
-        "trades": 1,
+        "trades": 2,
         "wins": 0,
         "win_rate": 0.0,
-        "pnl": -20.15,
+        "pnl": -40.15,
         "profitable": false
       },
       {
@@ -167,8 +174,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "04:44",
-    "dubai_time": "08:44",
+    "utc_time": "04:49",
+    "dubai_time": "08:49",
     "current_hour_utc": 4
   },
   "settings": {
