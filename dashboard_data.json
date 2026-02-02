@@ -2,55 +2,38 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-02T16:08:54.779888",
-  "updated_at_display": "2026-02-02 16:08:54",
+  "updated_at": "2026-02-02T16:13:57.701575",
+  "updated_at_display": "2026-02-02 16:13:57",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5233.55,
-    "equity": 5227.31,
-    "profit": -6.24,
+    "balance": 5212.87,
+    "equity": 5212.87,
+    "profit": 0.0,
     "initial_balance": 1000.0,
     "today": {
-      "trades": 31,
+      "trades": 32,
       "wins": 15,
-      "losses": 16,
-      "pnl": -17.16,
-      "pnl_pct": -1.72,
-      "win_rate": 48.4,
+      "losses": 17,
+      "pnl": -37.84,
+      "pnl_pct": -3.78,
+      "win_rate": 46.9,
       "target": 1.5,
-      "progress": -114.4
+      "progress": -252.3
     },
     "month": {
-      "trades": 31,
+      "trades": 32,
       "wins": 15,
-      "pnl": -17.16,
-      "pnl_pct": -1.72,
-      "win_rate": 48.4,
+      "pnl": -37.84,
+      "pnl_pct": -3.78,
+      "win_rate": 46.9,
       "target": 33.0,
-      "progress": -5.2
+      "progress": -11.5
     },
     "ultra_safe_mode": false,
-    "open_trades": [
-      {
-        "ticket": 664263485,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -6.24,
-        "entry_price": 4748.818,
-        "current_price": 4751.939,
-        "lot_size": 0.02
-      }
-    ],
-    "open_pnl": -6.24,
+    "open_trades": [],
+    "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 661497627,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": -20.0,
-        "time": "12:19:49"
-      },
       {
         "ticket": 661553961,
         "symbol": "XAUUSDm",
@@ -113,6 +96,13 @@
         "type": "BUY",
         "profit": -20.12,
         "time": "14:48:23"
+      },
+      {
+        "ticket": 664263485,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": -20.68,
+        "time": "16:09:46"
       }
     ]
   },
@@ -135,9 +125,9 @@
       {
         "name": "RSI_Reversal",
         "wins": 0,
-        "losses": 1,
+        "losses": 2,
         "win_rate": 0.0,
-        "pnl": -20.12
+        "pnl": -40.8
       }
     ],
     "sessions": [
@@ -206,6 +196,14 @@
         "profitable": false
       },
       {
+        "hour": 16,
+        "trades": 1,
+        "wins": 0,
+        "win_rate": 0.0,
+        "pnl": -20.68,
+        "profitable": false
+      },
+      {
         "hour": 18,
         "trades": 3,
         "wins": 3,
@@ -246,13 +244,13 @@
         "profitable": true
       }
     ],
-    "total_learnings": 16
+    "total_learnings": 17
   },
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\uddf8 London/NY Overlap",
-    "utc_time": "12:08",
-    "dubai_time": "16:08",
+    "utc_time": "12:13",
+    "dubai_time": "16:13",
     "current_hour_utc": 12
   },
   "settings": {
