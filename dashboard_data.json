@@ -2,8 +2,8 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-03T21:50:39.552390",
-  "updated_at_display": "2026-02-03 21:50:39",
+  "updated_at": "2026-02-03T21:55:42.270179",
+  "updated_at_display": "2026-02-03 21:55:42",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
@@ -22,11 +22,11 @@
       "progress": -83.7
     },
     "month": {
-      "trades": 155,
+      "trades": 156,
       "wins": 95,
       "pnl": -63.92,
       "pnl_pct": -1.22,
-      "win_rate": 61.3,
+      "win_rate": 60.9,
       "target": 33.0,
       "progress": -3.7
     },
@@ -34,13 +34,6 @@
     "open_trades": [],
     "open_pnl": 0,
     "recent_trades": [
-      {
-        "ticket": 679265795,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -10.0,
-        "time": "19:20:01"
-      },
       {
         "ticket": 679494732,
         "symbol": "XAUUSDm",
@@ -103,6 +96,13 @@
         "type": "SELL",
         "profit": -20.32,
         "time": "21:23:08"
+      },
+      {
+        "ticket": 681211908,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 0.0,
+        "time": "21:54:02"
       }
     ]
   },
@@ -111,8 +111,8 @@
       {
         "name": "Trend_Follow",
         "wins": 75,
-        "losses": 61,
-        "win_rate": 55.1,
+        "losses": 62,
+        "win_rate": 54.7,
         "pnl": 61.89
       },
       {
@@ -275,9 +275,9 @@
       },
       {
         "hour": 21,
-        "trades": 17,
+        "trades": 18,
         "wins": 7,
-        "win_rate": 41.2,
+        "win_rate": 38.9,
         "pnl": -81.09,
         "profitable": false
       },
@@ -303,8 +303,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "17:50",
-    "dubai_time": "21:50",
+    "utc_time": "17:55",
+    "dubai_time": "21:55",
     "current_hour_utc": 17
   },
   "settings": {
