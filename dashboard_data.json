@@ -2,33 +2,33 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-03T23:31:38.966083",
-  "updated_at_display": "2026-02-03 23:31:38",
+  "updated_at": "2026-02-03T23:36:41.589828",
+  "updated_at_display": "2026-02-03 23:36:41",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5181.69,
-    "equity": 5180.13,
-    "profit": -1.56,
+    "balance": 5192.13,
+    "equity": 5201.43,
+    "profit": 9.3,
     "initial_balance": 5252.77,
     "today": {
-      "trades": 65,
-      "wins": 39,
+      "trades": 66,
+      "wins": 40,
       "losses": 26,
-      "pnl": -71.08,
-      "pnl_pct": -1.35,
-      "win_rate": 60.0,
+      "pnl": -60.64,
+      "pnl_pct": -1.15,
+      "win_rate": 60.6,
       "target": 1.5,
-      "progress": -90.2
+      "progress": -77.0
     },
     "month": {
-      "trades": 162,
-      "wins": 99,
-      "pnl": -69.02,
-      "pnl_pct": -1.31,
-      "win_rate": 61.1,
+      "trades": 163,
+      "wins": 100,
+      "pnl": -58.58,
+      "pnl_pct": -1.12,
+      "win_rate": 61.3,
       "target": 33.0,
-      "progress": -4.0
+      "progress": -3.4
     },
     "ultra_safe_mode": false,
     "open_trades": [
@@ -36,21 +36,14 @@
         "ticket": 682260594,
         "symbol": "XAUUSDm",
         "type": "BUY",
-        "profit": -1.56,
+        "profit": 9.3,
         "entry_price": 4926.673,
-        "current_price": 4925.894,
-        "lot_size": 0.02
+        "current_price": 4935.965,
+        "lot_size": 0.01
       }
     ],
-    "open_pnl": -1.56,
+    "open_pnl": 9.3,
     "recent_trades": [
-      {
-        "ticket": 680513625,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 6.13,
-        "time": "21:03:44"
-      },
       {
         "ticket": 680643106,
         "symbol": "XAUUSDm",
@@ -113,6 +106,13 @@
         "type": "SELL",
         "profit": 9.83,
         "time": "23:14:09"
+      },
+      {
+        "ticket": 682260594,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 10.44,
+        "time": "23:36:08"
       }
     ]
   },
@@ -313,8 +313,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "19:31",
-    "dubai_time": "23:31",
+    "utc_time": "19:36",
+    "dubai_time": "23:36",
     "current_hour_utc": 19
   },
   "settings": {
