@@ -2,14 +2,14 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-03T16:21:51.424594",
-  "updated_at_display": "2026-02-03 16:21:51",
+  "updated_at": "2026-02-03T16:26:54.929946",
+  "updated_at_display": "2026-02-03 16:26:54",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
     "balance": 5232.02,
-    "equity": 5232.02,
-    "profit": 0.0,
+    "equity": 5231.61,
+    "profit": -0.41,
     "initial_balance": 5252.77,
     "today": {
       "trades": 35,
@@ -31,8 +31,18 @@
       "progress": -1.1
     },
     "ultra_safe_mode": false,
-    "open_trades": [],
-    "open_pnl": 0,
+    "open_trades": [
+      {
+        "ticket": 677310604,
+        "symbol": "XAUUSDm",
+        "type": "BUY",
+        "profit": -0.41,
+        "entry_price": 4901.325,
+        "current_price": 4901.122,
+        "lot_size": 0.02
+      }
+    ],
+    "open_pnl": -0.41,
     "recent_trades": [
       {
         "ticket": 675996119,
@@ -303,8 +313,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\uddec\ud83c\udde7\ud83c\uddfa\ud83c\uddf8 London/NY Overlap",
-    "utc_time": "12:21",
-    "dubai_time": "16:21",
+    "utc_time": "12:26",
+    "dubai_time": "16:26",
     "current_hour_utc": 12
   },
   "settings": {
