@@ -2,33 +2,33 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-04T03:39:02.237670",
-  "updated_at_display": "2026-02-04 03:39:02",
+  "updated_at": "2026-02-04T03:44:05.062751",
+  "updated_at_display": "2026-02-04 03:44:05",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5196.57,
-    "equity": 5207.73,
-    "profit": 11.16,
+    "balance": 5206.58,
+    "equity": 5224.16,
+    "profit": 17.58,
     "initial_balance": 5217.34,
     "today": {
-      "trades": 8,
-      "wins": 5,
+      "trades": 9,
+      "wins": 6,
       "losses": 3,
-      "pnl": -20.77,
-      "pnl_pct": -0.4,
-      "win_rate": 62.5,
+      "pnl": -10.76,
+      "pnl_pct": -0.21,
+      "win_rate": 66.7,
       "target": 1.5,
-      "progress": -26.5
+      "progress": -13.7
     },
     "month": {
-      "trades": 174,
-      "wins": 108,
-      "pnl": -54.14,
-      "pnl_pct": -1.03,
-      "win_rate": 62.1,
+      "trades": 175,
+      "wins": 109,
+      "pnl": -44.13,
+      "pnl_pct": -0.84,
+      "win_rate": 62.3,
       "target": 33.0,
-      "progress": -3.1
+      "progress": -2.5
     },
     "ultra_safe_mode": false,
     "open_trades": [
@@ -36,13 +36,13 @@
         "ticket": 683624450,
         "symbol": "XAUUSDm",
         "type": "BUY",
-        "profit": 11.16,
+        "profit": 17.58,
         "entry_price": 4931.7,
-        "current_price": 4937.279,
-        "lot_size": 0.02
+        "current_price": 4949.279,
+        "lot_size": 0.01
       }
     ],
-    "open_pnl": 11.16,
+    "open_pnl": 17.58,
     "recent_trades": [
       {
         "ticket": 682859736,
@@ -99,6 +99,13 @@
         "type": "SELL",
         "profit": -20.0,
         "time": "03:29:18"
+      },
+      {
+        "ticket": 683624450,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 10.01,
+        "time": "03:39:53"
       }
     ]
   },
@@ -299,8 +306,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "23:39",
-    "dubai_time": "03:39",
+    "utc_time": "23:44",
+    "dubai_time": "03:44",
     "current_hour_utc": 23
   },
   "settings": {
