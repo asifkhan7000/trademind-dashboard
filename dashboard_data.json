@@ -2,47 +2,37 @@
   "version": "6.1",
   "bot_name": "TradeMind AI",
   "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-04T03:44:05.062751",
-  "updated_at_display": "2026-02-04 03:44:05",
+  "updated_at": "2026-02-04T03:49:07.617788",
+  "updated_at_display": "2026-02-04 03:49:07",
   "bot": {
     "name": "TradeMind AI",
     "account": 262112946,
-    "balance": 5206.58,
-    "equity": 5224.16,
-    "profit": 17.58,
+    "balance": 5226.58,
+    "equity": 5226.58,
+    "profit": 0.0,
     "initial_balance": 5217.34,
     "today": {
-      "trades": 9,
-      "wins": 6,
+      "trades": 10,
+      "wins": 7,
       "losses": 3,
-      "pnl": -10.76,
-      "pnl_pct": -0.21,
-      "win_rate": 66.7,
+      "pnl": 9.24,
+      "pnl_pct": 0.18,
+      "win_rate": 70.0,
       "target": 1.5,
-      "progress": -13.7
+      "progress": 11.8
     },
     "month": {
-      "trades": 175,
-      "wins": 109,
-      "pnl": -44.13,
-      "pnl_pct": -0.84,
-      "win_rate": 62.3,
+      "trades": 176,
+      "wins": 110,
+      "pnl": -24.13,
+      "pnl_pct": -0.46,
+      "win_rate": 62.5,
       "target": 33.0,
-      "progress": -2.5
+      "progress": -1.4
     },
     "ultra_safe_mode": false,
-    "open_trades": [
-      {
-        "ticket": 683624450,
-        "symbol": "XAUUSDm",
-        "type": "BUY",
-        "profit": 17.58,
-        "entry_price": 4931.7,
-        "current_price": 4949.279,
-        "lot_size": 0.01
-      }
-    ],
-    "open_pnl": 17.58,
+    "open_trades": [],
+    "open_pnl": 0,
     "recent_trades": [
       {
         "ticket": 682859736,
@@ -106,6 +96,13 @@
         "type": "SELL",
         "profit": 10.01,
         "time": "03:39:53"
+      },
+      {
+        "ticket": 683624450,
+        "symbol": "XAUUSDm",
+        "type": "SELL",
+        "profit": 20.0,
+        "time": "03:45:37"
       }
     ]
   },
@@ -113,10 +110,10 @@
     "strategies": [
       {
         "name": "Trend_Follow",
-        "wins": 82,
+        "wins": 83,
         "losses": 67,
-        "win_rate": 55.0,
-        "pnl": 47.3
+        "win_rate": 55.3,
+        "pnl": 77.31
       },
       {
         "name": "EMA_Cross",
@@ -166,10 +163,10 @@
       },
       {
         "hour": 3,
-        "trades": 8,
-        "wins": 4,
-        "win_rate": 50.0,
-        "pnl": -55.72,
+        "trades": 9,
+        "wins": 5,
+        "win_rate": 55.6,
+        "pnl": -25.71,
         "profitable": false
       },
       {
@@ -306,8 +303,8 @@
   "market": {
     "is_open": true,
     "status": "Open - \ud83c\udf0f Asian",
-    "utc_time": "23:44",
-    "dubai_time": "03:44",
+    "utc_time": "23:49",
+    "dubai_time": "03:49",
     "current_hour_utc": 23
   },
   "settings": {
