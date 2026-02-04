@@ -1,331 +1,737 @@
 {
-  "version": "6.1",
-  "bot_name": "TradeMind AI",
-  "tagline": "Universal Safe AI Trading Bot",
-  "updated_at": "2026-02-04T22:59:57.116771",
-  "updated_at_display": "2026-02-04 22:59:57",
-  "bot": {
-    "name": "TradeMind AI",
-    "account": 262112946,
+  "version": "6.6",
+  "bot_name": "TradeMind v6.6",
+  "mode": "SAFE",
+  "last_updated": "2026-02-05T00:00:34.796025",
+  "timestamp_utc": "2026-02-04T20:00:34.796025",
+  "account": {
+    "number": 262112946,
     "balance": 5290.88,
     "equity": 5290.88,
-    "profit": 0.0,
-    "initial_balance": 5217.34,
-    "today": {
-      "trades": 18,
+    "margin_used": 0.0,
+    "free_margin": 5290.88,
+    "floating_pnl": 0.0,
+    "leverage": 2000
+  },
+  "today": {
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "win_rate": 0,
+    "target_pct": 1.5,
+    "target_hit": false
+  },
+  "weekly": {
+    "pnl": -5.57
+  },
+  "monthly": {
+    "pnl": -5.57,
+    "target_pct": 25
+  },
+  "positions": [],
+  "recent_trades": [
+    {
+      "time": "2026-02-03T17:01:40",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4906.9,
+      "pnl": -19.61,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T17:29:08",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4938.28,
+      "pnl": 11.65,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T17:30:21",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4933.34,
+      "pnl": 6.71,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T17:45:32",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4945.88,
+      "pnl": 10.01,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T17:46:49",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4945.68,
+      "pnl": 9.81,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T17:53:30",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4930.62,
+      "pnl": -19.85,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T18:03:57",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4923.12,
+      "pnl": 8.4,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T18:16:07",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4913.75,
+      "pnl": -19.71,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T18:32:27",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4914.49,
+      "pnl": -20.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T18:58:04",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4914.64,
+      "pnl": -9.9,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T19:02:05",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4912.19,
+      "pnl": -10.56,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T19:20:01",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4927.68,
+      "pnl": -10.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T19:35:54",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4911.42,
+      "pnl": -10.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T20:01:06",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4939.61,
+      "pnl": 10.87,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T20:16:14",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4948.77,
+      "pnl": 12.89,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T20:16:21",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4956.03,
+      "pnl": 20.15,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T20:54:23",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4953.31,
+      "pnl": -20.46,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T21:02:47",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4962.21,
+      "pnl": 11.13,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T21:03:44",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4957.21,
+      "pnl": 6.13,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T21:11:46",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4924.45,
+      "pnl": -20.3,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T21:23:08",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4953.54,
+      "pnl": -20.32,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T21:54:02",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4940.73,
+      "pnl": 0.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T22:07:35",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4949.33,
+      "pnl": 10.95,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T22:08:05",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4944.37,
+      "pnl": 5.99,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T22:13:20",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4949.01,
+      "pnl": 8.31,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T22:24:05",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4932.71,
+      "pnl": -20.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:01:16",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4897.73,
+      "pnl": -20.18,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:14:09",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4915.54,
+      "pnl": 9.83,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:36:08",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4937.11,
+      "pnl": 10.44,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:36:47",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4932.11,
+      "pnl": 5.44,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:41:15",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4945.65,
+      "pnl": 10.93,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-03T23:42:39",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4943.56,
+      "pnl": 8.84,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T00:32:00",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4946.82,
+      "pnl": 10.14,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T00:36:45",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4950.91,
+      "pnl": 14.23,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T00:49:30",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4943.31,
+      "pnl": -20.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T00:58:01",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4945.95,
+      "pnl": 9.96,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T00:59:40",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4941.05,
+      "pnl": 5.06,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T03:07:31",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4925.55,
+      "pnl": -20.17,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T03:19:42",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4937.2,
+      "pnl": 0.01,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T03:29:18",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.02,
+      "price": 4924.35,
+      "pnl": -20.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T03:39:53",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4941.71,
+      "pnl": 10.01,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T03:45:37",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4951.7,
+      "pnl": 20.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T04:13:04",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4972.68,
+      "pnl": 11.52,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T04:13:51",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4981.08,
+      "pnl": 19.92,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T05:00:35",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5006.72,
+      "pnl": 11.13,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T05:01:19",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5007.22,
+      "pnl": 11.63,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T05:40:31",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5022.25,
+      "pnl": 9.92,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T05:41:54",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5032.51,
+      "pnl": 20.18,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T16:53:29",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5048.23,
+      "pnl": -10.0,
+      "commission": 0.0,
+      "swap": 0.0
+    },
+    {
+      "time": "2026-02-04T17:00:15",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5035.29,
+      "pnl": -10.0,
+      "commission": 0.0,
+      "swap": 0.0
+    }
+  ],
+  "strategy_performance": [
+    {
+      "strategy": "Trend_Follow",
+      "trades": 155,
+      "wins": 86,
+      "win_rate": 55.5,
+      "total_pnl": 141.61
+    },
+    {
+      "strategy": "EMA_Cross",
+      "trades": 5,
+      "wins": 3,
+      "win_rate": 60.0,
+      "total_pnl": 29.37
+    },
+    {
+      "strategy": "MACD_Momentum",
+      "trades": 3,
+      "wins": 1,
+      "win_rate": 33.3,
+      "total_pnl": -9.09
+    },
+    {
+      "strategy": "RSI_Reversal",
+      "trades": 7,
+      "wins": 3,
+      "win_rate": 42.9,
+      "total_pnl": -23.13
+    },
+    {
+      "strategy": "BB_Bounce",
+      "trades": 4,
+      "wins": 2,
+      "win_rate": 50.0,
+      "total_pnl": -26.52
+    }
+  ],
+  "session_performance": [
+    {
+      "hour": 0,
+      "trades": 20,
       "wins": 13,
-      "losses": 5,
-      "pnl": 73.54,
-      "pnl_pct": 1.41,
-      "win_rate": 72.2,
-      "target": 1.5,
-      "progress": 94.0
+      "win_rate": 65.0,
+      "total_pnl": 97.32
     },
-    "month": {
-      "trades": 184,
-      "wins": 116,
-      "pnl": 40.17,
-      "pnl_pct": 0.77,
-      "win_rate": 63.0,
-      "target": 33.0,
-      "progress": 2.3
+    {
+      "hour": 23,
+      "trades": 19,
+      "wins": 13,
+      "win_rate": 68.4,
+      "total_pnl": 73.03
     },
-    "ultra_safe_mode": false,
-    "open_trades": [],
-    "open_pnl": 0,
-    "recent_trades": [
-      {
-        "ticket": 683624450,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 10.01,
-        "time": "03:39:53"
-      },
-      {
-        "ticket": 683624450,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 20.0,
-        "time": "03:45:37"
-      },
-      {
-        "ticket": 683752052,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 11.52,
-        "time": "04:13:04"
-      },
-      {
-        "ticket": 683752052,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 19.92,
-        "time": "04:13:51"
-      },
-      {
-        "ticket": 684040804,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 11.13,
-        "time": "05:00:35"
-      },
-      {
-        "ticket": 684040804,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 11.63,
-        "time": "05:01:19"
-      },
-      {
-        "ticket": 684277583,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 9.92,
-        "time": "05:40:31"
-      },
-      {
-        "ticket": 684277583,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": 20.18,
-        "time": "05:41:54"
-      },
-      {
-        "ticket": 688111923,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -10.0,
-        "time": "16:53:29"
-      },
-      {
-        "ticket": 688282258,
-        "symbol": "XAUUSDm",
-        "type": "SELL",
-        "profit": -10.0,
-        "time": "17:00:15"
-      }
-    ]
-  },
-  "learning": {
-    "strategies": [
-      {
-        "name": "Trend_Follow",
-        "wins": 86,
-        "losses": 69,
-        "win_rate": 55.5,
-        "pnl": 141.61
-      },
-      {
-        "name": "EMA_Cross",
-        "wins": 3,
-        "losses": 2,
-        "win_rate": 60.0,
-        "pnl": 29.37
-      },
-      {
-        "name": "MACD_Momentum",
-        "wins": 1,
-        "losses": 2,
-        "win_rate": 33.3,
-        "pnl": -9.09
-      },
-      {
-        "name": "RSI_Reversal",
-        "wins": 3,
-        "losses": 4,
-        "win_rate": 42.9,
-        "pnl": -23.13
-      },
-      {
-        "name": "BB_Bounce",
-        "wins": 2,
-        "losses": 2,
-        "win_rate": 50.0,
-        "pnl": -26.52
-      }
-    ],
-    "sessions": [
-      {
-        "hour": 0,
-        "trades": 20,
-        "wins": 13,
-        "win_rate": 65.0,
-        "pnl": 97.32,
-        "profitable": true
-      },
-      {
-        "hour": 1,
-        "trades": 3,
-        "wins": 1,
-        "win_rate": 33.3,
-        "pnl": -19.63,
-        "profitable": false
-      },
-      {
-        "hour": 3,
-        "trades": 9,
-        "wins": 5,
-        "win_rate": 55.6,
-        "pnl": -25.71,
-        "profitable": false
-      },
-      {
-        "hour": 4,
-        "trades": 4,
-        "wins": 2,
-        "win_rate": 50.0,
-        "pnl": 25.72,
-        "profitable": true
-      },
-      {
-        "hour": 5,
-        "trades": 2,
-        "wins": 2,
-        "win_rate": 100.0,
-        "pnl": 52.86,
-        "profitable": true
-      },
-      {
-        "hour": 8,
-        "trades": 4,
-        "wins": 1,
-        "win_rate": 25.0,
-        "pnl": -39.35,
-        "profitable": false
-      },
-      {
-        "hour": 9,
-        "trades": 3,
-        "wins": 2,
-        "win_rate": 66.7,
-        "pnl": 21.59,
-        "profitable": true
-      },
-      {
-        "hour": 11,
-        "trades": 8,
-        "wins": 3,
-        "win_rate": 37.5,
-        "pnl": -27.72,
-        "profitable": false
-      },
-      {
-        "hour": 12,
-        "trades": 11,
-        "wins": 7,
-        "win_rate": 63.6,
-        "pnl": 26.64,
-        "profitable": true
-      },
-      {
-        "hour": 13,
-        "trades": 2,
-        "wins": 2,
-        "win_rate": 100.0,
-        "pnl": 41.64,
-        "profitable": true
-      },
-      {
-        "hour": 14,
-        "trades": 3,
-        "wins": 0,
-        "win_rate": 0.0,
-        "pnl": -60.12,
-        "profitable": false
-      },
-      {
-        "hour": 15,
-        "trades": 3,
-        "wins": 1,
-        "win_rate": 33.3,
-        "pnl": -19.67,
-        "profitable": false
-      },
-      {
-        "hour": 16,
-        "trades": 10,
-        "wins": 6,
-        "win_rate": 60.0,
-        "pnl": 42.18,
-        "profitable": true
-      },
-      {
-        "hour": 17,
-        "trades": 7,
-        "wins": 2,
-        "win_rate": 28.6,
-        "pnl": -56.63,
-        "profitable": false
-      },
-      {
-        "hour": 18,
-        "trades": 8,
-        "wins": 4,
-        "win_rate": 50.0,
-        "pnl": -17.56,
-        "profitable": false
-      },
-      {
-        "hour": 19,
-        "trades": 10,
-        "wins": 4,
-        "win_rate": 40.0,
-        "pnl": -35.64,
-        "profitable": false
-      },
-      {
-        "hour": 20,
-        "trades": 17,
-        "wins": 11,
-        "win_rate": 64.7,
-        "pnl": 60.58,
-        "profitable": true
-      },
-      {
-        "hour": 21,
-        "trades": 18,
-        "wins": 7,
-        "win_rate": 38.9,
-        "pnl": -81.09,
-        "profitable": false
-      },
-      {
-        "hour": 22,
-        "trades": 13,
-        "wins": 9,
-        "win_rate": 69.2,
-        "pnl": 53.8,
-        "profitable": true
-      },
-      {
-        "hour": 23,
-        "trades": 19,
-        "wins": 13,
-        "win_rate": 68.4,
-        "pnl": 73.03,
-        "profitable": true
-      }
-    ],
-    "total_learnings": 25
-  },
+    {
+      "hour": 20,
+      "trades": 17,
+      "wins": 11,
+      "win_rate": 64.7,
+      "total_pnl": 60.58
+    },
+    {
+      "hour": 22,
+      "trades": 13,
+      "wins": 9,
+      "win_rate": 69.2,
+      "total_pnl": 53.8
+    },
+    {
+      "hour": 5,
+      "trades": 2,
+      "wins": 2,
+      "win_rate": 100.0,
+      "total_pnl": 52.86
+    },
+    {
+      "hour": 16,
+      "trades": 10,
+      "wins": 6,
+      "win_rate": 60.0,
+      "total_pnl": 42.18
+    },
+    {
+      "hour": 13,
+      "trades": 2,
+      "wins": 2,
+      "win_rate": 100.0,
+      "total_pnl": 41.64
+    },
+    {
+      "hour": 12,
+      "trades": 11,
+      "wins": 7,
+      "win_rate": 63.6,
+      "total_pnl": 26.64
+    },
+    {
+      "hour": 4,
+      "trades": 4,
+      "wins": 2,
+      "win_rate": 50.0,
+      "total_pnl": 25.72
+    },
+    {
+      "hour": 9,
+      "trades": 3,
+      "wins": 2,
+      "win_rate": 66.7,
+      "total_pnl": 21.59
+    },
+    {
+      "hour": 18,
+      "trades": 8,
+      "wins": 4,
+      "win_rate": 50.0,
+      "total_pnl": -17.56
+    },
+    {
+      "hour": 1,
+      "trades": 3,
+      "wins": 1,
+      "win_rate": 33.3,
+      "total_pnl": -19.63
+    },
+    {
+      "hour": 15,
+      "trades": 3,
+      "wins": 1,
+      "win_rate": 33.3,
+      "total_pnl": -19.67
+    },
+    {
+      "hour": 3,
+      "trades": 9,
+      "wins": 5,
+      "win_rate": 55.6,
+      "total_pnl": -25.71
+    },
+    {
+      "hour": 11,
+      "trades": 8,
+      "wins": 3,
+      "win_rate": 37.5,
+      "total_pnl": -27.72
+    },
+    {
+      "hour": 19,
+      "trades": 10,
+      "wins": 4,
+      "win_rate": 40.0,
+      "total_pnl": -35.64
+    },
+    {
+      "hour": 8,
+      "trades": 4,
+      "wins": 1,
+      "win_rate": 25.0,
+      "total_pnl": -39.35
+    },
+    {
+      "hour": 17,
+      "trades": 7,
+      "wins": 2,
+      "win_rate": 28.6,
+      "total_pnl": -56.63
+    },
+    {
+      "hour": 14,
+      "trades": 3,
+      "wins": 0,
+      "win_rate": 0.0,
+      "total_pnl": -60.12
+    },
+    {
+      "hour": 21,
+      "trades": 18,
+      "wins": 7,
+      "win_rate": 38.9,
+      "total_pnl": -81.09
+    }
+  ],
+  "total_trades_all_time": 174,
   "market": {
     "is_open": true,
-    "status": "Open - \ud83c\uddfa\ud83c\uddf8 New York",
-    "utc_time": "18:59",
-    "dubai_time": "22:59",
-    "current_hour_utc": 18
+    "status": "Open (New York)",
+    "session": "New York",
+    "hour_utc": 20,
+    "trading_active": false,
+    "trading_note": "Late session blocked (v6.6)"
   },
-  "settings": {
-    "daily_target": "1.5%",
-    "monthly_target": "33.0%",
-    "risk_per_trade": "0.3%",
-    "confidence_threshold": "65%",
-    "max_open_trades": 1,
-    "features": [
-      "Claude AI Decision Making",
-      "Confidence-Based Scaling",
-      "Monthly Target Protection",
-      "Self-Learning System"
-    ]
+  "features": {
+    "claude_ai": true,
+    "dynamic_sltp": true,
+    "vwap_filter": true,
+    "fvg_detection": true,
+    "session_filter": true,
+    "loss_recovery": true,
+    "self_tuning": true,
+    "partial_profits": true,
+    "protection_system": true,
+    "strategy_cap": true,
+    "hourly_limit": true
   }
 }
