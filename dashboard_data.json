@@ -2,8 +2,8 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-05T22:55:29.736561",
-  "timestamp_utc": "2026-02-05T18:55:29.736561",
+  "last_updated": "2026-02-05T23:00:32.661272",
+  "timestamp_utc": "2026-02-05T19:00:32.661272",
   "account": {
     "number": 262112946,
     "balance": 5297.14,
@@ -717,7 +717,7 @@
     "is_open": true,
     "status": "Open (New York)",
     "session": "New York",
-    "hour_utc": 18,
+    "hour_utc": 19,
     "trading_active": false,
     "trading_note": "Late session blocked (v6.6)"
   },
