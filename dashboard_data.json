@@ -2,8 +2,8 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-05T23:56:11.910521",
-  "timestamp_utc": "2026-02-05T19:56:11.910521",
+  "last_updated": "2026-02-06T00:01:15.971511",
+  "timestamp_utc": "2026-02-05T20:01:15.971511",
   "account": {
     "number": 262112946,
     "balance": 5297.14,
@@ -14,12 +14,12 @@
     "leverage": 2000
   },
   "today": {
-    "trades": 5,
-    "wins": 3,
-    "losses": 2,
-    "pnl": 6.26,
-    "pnl_pct": 0.12,
-    "win_rate": 60.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "win_rate": 0,
     "target_pct": 1.5,
     "target_hit": false
   },
@@ -717,7 +717,7 @@
     "is_open": true,
     "status": "Open (New York)",
     "session": "New York",
-    "hour_utc": 19,
+    "hour_utc": 20,
     "trading_active": false,
     "trading_note": "Late session blocked (v6.6)"
   },
