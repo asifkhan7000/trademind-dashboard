@@ -2,46 +2,36 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-05T18:58:06.477838",
-  "timestamp_utc": "2026-02-05T14:58:06.477838",
+  "last_updated": "2026-02-05T19:03:09.355596",
+  "timestamp_utc": "2026-02-05T15:03:09.355596",
   "account": {
     "number": 262112946,
-    "balance": 5276.69,
-    "equity": 5276.69,
+    "balance": 5285.97,
+    "equity": 5285.97,
     "margin_used": 0.0,
-    "free_margin": 5276.69,
+    "free_margin": 5285.97,
     "floating_pnl": 0.0,
     "leverage": 2000
   },
   "today": {
-    "trades": 3,
-    "wins": 1,
+    "trades": 4,
+    "wins": 2,
     "losses": 2,
-    "pnl": -14.19,
-    "pnl_pct": -0.27,
-    "win_rate": 33.3,
+    "pnl": -4.91,
+    "pnl_pct": -0.09,
+    "win_rate": 50.0,
     "target_pct": 1.5,
     "target_hit": false
   },
   "weekly": {
-    "pnl": -19.76
+    "pnl": -10.48
   },
   "monthly": {
-    "pnl": -19.76,
+    "pnl": -10.48,
     "target_pct": 25
   },
   "positions": [],
   "recent_trades": [
-    {
-      "time": "2026-02-03T17:45:32",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "price": 4945.88,
-      "pnl": 10.01,
-      "commission": 0.0,
-      "swap": 0.0
-    },
     {
       "time": "2026-02-03T17:46:49",
       "symbol": "XAUUSDm",
@@ -531,15 +521,25 @@
       "pnl": -18.0,
       "commission": 0.0,
       "swap": 0.0
+    },
+    {
+      "time": "2026-02-05T19:02:33",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "price": 4835.35,
+      "pnl": 9.28,
+      "commission": 0.0,
+      "swap": 0.0
     }
   ],
   "strategy_performance": [
     {
       "strategy": "Trend_Follow",
-      "trades": 158,
-      "wins": 87,
-      "win_rate": 55.1,
-      "total_pnl": 127.42
+      "trades": 159,
+      "wins": 88,
+      "win_rate": 55.3,
+      "total_pnl": 136.7
     },
     {
       "strategy": "EMA_Cross",
@@ -663,6 +663,13 @@
       "total_pnl": -25.71
     },
     {
+      "hour": 19,
+      "trades": 11,
+      "wins": 5,
+      "win_rate": 45.5,
+      "total_pnl": -26.36
+    },
+    {
       "hour": 11,
       "trades": 8,
       "wins": 3,
@@ -675,13 +682,6 @@
       "wins": 5,
       "win_rate": 45.5,
       "total_pnl": -31.75
-    },
-    {
-      "hour": 19,
-      "trades": 10,
-      "wins": 4,
-      "win_rate": 40.0,
-      "total_pnl": -35.64
     },
     {
       "hour": 8,
@@ -712,12 +712,12 @@
       "total_pnl": -81.09
     }
   ],
-  "total_trades_all_time": 177,
+  "total_trades_all_time": 178,
   "market": {
     "is_open": true,
     "status": "Open (London/NY Overlap)",
     "session": "London/NY Overlap",
-    "hour_utc": 14,
+    "hour_utc": 15,
     "trading_active": true,
     "trading_note": "Bot active"
   },
