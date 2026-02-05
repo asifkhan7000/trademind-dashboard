@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeMind AI - Universal Safe AI Trading Bot</title>
+    <title>TradeMind v6.6 - AI Trading Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
@@ -34,14 +33,14 @@
                 </div>
                 <div>
                     <h1 class="text-2xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                        TradeMind AI
+                        TradeMind v6.6
                     </h1>
-                    <p class="text-xs text-gray-400">Universal Safe AI Trading Bot</p>
+                    <p class="text-xs text-gray-400">AI-Powered Gold Trading Bot</p>
                 </div>
             </div>
             <div class="flex items-center gap-4">
                 <div id="marketStatus" class="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-700/50">
-                    <span class="w-2 h-2 rounded-full bg-green-500 pulse"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-500"></span>
                     <span class="text-sm">Loading...</span>
                 </div>
                 <div class="text-right">
@@ -61,8 +60,8 @@
                     <div class="flex items-center gap-2 mb-1">
                         <span class="text-gray-400 text-sm">Account</span>
                         <span class="text-sm font-mono text-emerald-400" id="accountNumber">#------</span>
-                        <span id="ultraSafeBadge" class="hidden px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded-full">
-                            🛡️ Ultra-Safe Mode
+                        <span id="modeBadge" class="px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded-full">
+                            SAFE
                         </span>
                     </div>
                     <div class="text-4xl font-bold" id="balance">$0.00</div>
@@ -84,7 +83,7 @@
             <div class="grid md:grid-cols-2 gap-6">
                 <div>
                     <div class="flex justify-between text-sm mb-2">
-                        <span class="text-gray-400">Daily Target (1.5%)</span>
+                        <span class="text-gray-400">Daily Target (<span id="dailyTargetPct">1.5</span>%)</span>
                         <span id="dailyProgress" class="text-emerald-400">0%</span>
                     </div>
                     <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
@@ -93,7 +92,7 @@
                 </div>
                 <div>
                     <div class="flex justify-between text-sm mb-2">
-                        <span class="text-gray-400">Monthly Target (33%)</span>
+                        <span class="text-gray-400">Monthly Target (<span id="monthlyTargetPct">25</span>%)</span>
                         <span id="monthlyProgress" class="text-emerald-400">0%</span>
                     </div>
                     <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
@@ -124,18 +123,18 @@
             <div class="glass rounded-xl p-4 border border-gray-700">
                 <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
                     <i class="fas fa-calendar text-emerald-400"></i>
-                    Month Trades
+                    All Time Trades
                 </div>
-                <div class="text-2xl font-bold" id="monthTrades">0</div>
-                <div class="text-xs text-gray-500">This month</div>
+                <div class="text-2xl font-bold" id="totalTrades">0</div>
+                <div class="text-xs text-gray-500">Total</div>
             </div>
             <div class="glass rounded-xl p-4 border border-gray-700">
                 <div class="flex items-center gap-2 text-gray-400 text-sm mb-1">
-                    <i class="fas fa-trophy text-emerald-400"></i>
-                    Month Win Rate
+                    <i class="fas fa-bolt text-emerald-400"></i>
+                    Weekly P&L
                 </div>
-                <div class="text-2xl font-bold" id="monthWinRate">0%</div>
-                <div class="text-xs text-gray-500">This month</div>
+                <div class="text-2xl font-bold" id="weeklyPnl">$0</div>
+                <div class="text-xs text-gray-500">This week</div>
             </div>
         </div>
 
@@ -159,58 +158,36 @@
                     Recent Trades
                 </h3>
                 <div id="recentTrades" class="space-y-2 max-h-64 overflow-y-auto">
-                    <div class="text-gray-500 text-sm text-center py-4">No trades yet today</div>
+                    <div class="text-gray-500 text-sm text-center py-4">No trades yet</div>
                 </div>
             </div>
         </div>
 
-        <!-- Bot Settings -->
+        <!-- Strategy Performance -->
         <div class="glass rounded-xl border border-gray-700 p-4 mb-6">
             <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
-                <i class="fas fa-cog text-emerald-400"></i>
-                AI Bot Settings
+                <i class="fas fa-chess text-emerald-400"></i>
+                Strategy Performance
             </h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="botSettings">
-                <div class="bg-gray-800/50 rounded-lg p-3">
-                    <div class="text-xs text-gray-400">Daily Target</div>
-                    <div class="text-lg font-semibold text-emerald-400">1.5%</div>
-                </div>
-                <div class="bg-gray-800/50 rounded-lg p-3">
-                    <div class="text-xs text-gray-400">Monthly Target</div>
-                    <div class="text-lg font-semibold text-emerald-400">33%</div>
-                </div>
-                <div class="bg-gray-800/50 rounded-lg p-3">
-                    <div class="text-xs text-gray-400">Risk/Trade</div>
-                    <div class="text-lg font-semibold">0.3%</div>
-                </div>
-                <div class="bg-gray-800/50 rounded-lg p-3">
-                    <div class="text-xs text-gray-400">Confidence</div>
-                    <div class="text-lg font-semibold">65%+</div>
-                </div>
+            <div id="strategyPerf" class="grid grid-cols-2 md:grid-cols-5 gap-3">
+                <div class="text-gray-500 text-sm text-center py-4">Loading...</div>
             </div>
-            <div class="flex flex-wrap gap-2 mt-4">
-                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
-                    <i class="fas fa-brain mr-1"></i>Claude AI
-                </span>
-                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
-                    <i class="fas fa-chart-bar mr-1"></i>Confidence Scaling
-                </span>
-                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
-                    <i class="fas fa-shield-alt mr-1"></i>Monthly Protection
-                </span>
-                <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
-                    <i class="fas fa-graduation-cap mr-1"></i>Self-Learning
-                </span>
+        </div>
+
+        <!-- AI Features -->
+        <div class="glass rounded-xl border border-gray-700 p-4 mb-6">
+            <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                <i class="fas fa-robot text-emerald-400"></i>
+                AI Bot Features
+            </h3>
+            <div id="features" class="flex flex-wrap gap-2">
             </div>
         </div>
 
         <!-- Footer -->
         <div class="text-center text-gray-500 text-sm">
-            <p>TradeMind AI v6.5 | Halal Trading | Built for Consistent Profits</p>
-            <p class="text-xs mt-1">
-                <span id="timeUTC">UTC: --:--</span> | 
-                <span id="timeDubai">Dubai: --:--</span>
-            </p>
+            <p>TradeMind v6.6 | Halal Trading | Built for Consistent Profits</p>
+            <p class="text-xs mt-1" id="tradingNote">Bot Status: Loading...</p>
         </div>
 
     </main>
@@ -218,7 +195,10 @@
     <script>
         function updateDashboard(data) {
             // Update timestamp
-            document.getElementById('lastUpdate').textContent = data.updated_at_display || '--:--:--';
+            if (data.last_updated) {
+                const dt = new Date(data.last_updated);
+                document.getElementById('lastUpdate').textContent = dt.toLocaleTimeString();
+            }
             
             // Market status
             if (data.market) {
@@ -226,99 +206,162 @@
                 const isOpen = data.market.is_open;
                 statusEl.innerHTML = `
                     <span class="w-2 h-2 rounded-full ${isOpen ? 'bg-green-500' : 'bg-red-500'} pulse"></span>
-                    <span class="text-sm">${data.market.status}</span>
+                    <span class="text-sm">${data.market.session || data.market.status}</span>
                 `;
-                document.getElementById('timeUTC').textContent = `UTC: ${data.market.utc_time}`;
-                document.getElementById('timeDubai').textContent = `Dubai: ${data.market.dubai_time}`;
+                document.getElementById('tradingNote').textContent = 
+                    `Bot Status: ${data.market.trading_note || (data.market.trading_active ? 'Active' : 'Paused')}`;
             }
             
-            // Bot data
-            if (data.bot) {
-                const bot = data.bot;
-                
-                // Account info
-                document.getElementById('accountNumber').textContent = `#${bot.account}`;
-                document.getElementById('balance').textContent = `$${bot.balance.toFixed(2)}`;
-                document.getElementById('equity').textContent = `$${bot.equity.toFixed(2)}`;
-                
-                // Ultra-safe badge
-                const badge = document.getElementById('ultraSafeBadge');
-                if (bot.ultra_safe_mode) {
-                    badge.classList.remove('hidden');
-                } else {
-                    badge.classList.add('hidden');
-                }
-                
-                // Today's stats
+            // Account info
+            if (data.account) {
+                document.getElementById('accountNumber').textContent = `#${data.account.number}`;
+                document.getElementById('balance').textContent = `$${data.account.balance.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                document.getElementById('equity').textContent = `$${data.account.equity.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            }
+            
+            // Mode badge
+            if (data.mode) {
+                const badge = document.getElementById('modeBadge');
+                badge.textContent = data.mode;
+                badge.className = data.mode === 'SAFE' 
+                    ? 'px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded-full'
+                    : 'px-2 py-0.5 bg-orange-500/20 text-orange-400 text-xs rounded-full';
+            }
+            
+            // Today's stats
+            if (data.today) {
                 const todayPnlEl = document.getElementById('todayPnl');
-                todayPnlEl.textContent = `$${bot.today.pnl >= 0 ? '+' : ''}${bot.today.pnl.toFixed(2)}`;
-                todayPnlEl.className = `text-3xl font-bold ${bot.today.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
+                todayPnlEl.textContent = `$${data.today.pnl >= 0 ? '+' : ''}${data.today.pnl.toFixed(2)}`;
+                todayPnlEl.className = `text-3xl font-bold ${data.today.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
                 
-                document.getElementById('todayTrades').textContent = bot.today.trades;
-                document.getElementById('todayWins').textContent = bot.today.wins;
-                document.getElementById('todayLosses').textContent = bot.today.losses;
-                document.getElementById('winRate').textContent = `${bot.today.win_rate}%`;
+                document.getElementById('todayTrades').textContent = data.today.trades;
+                document.getElementById('todayWins').textContent = data.today.wins;
+                document.getElementById('todayLosses').textContent = data.today.losses;
+                document.getElementById('winRate').textContent = `${data.today.win_rate}%`;
                 
                 // Daily progress
-                document.getElementById('dailyProgress').textContent = `${bot.today.pnl_pct >= 0 ? '+' : ''}${bot.today.pnl_pct}%`;
-                document.getElementById('dailyProgressBar').style.width = `${Math.min(bot.today.progress, 100)}%`;
-                
-                // Month stats
+                document.getElementById('dailyTargetPct').textContent = data.today.target_pct || 1.5;
+                const dailyPct = data.today.pnl_pct || 0;
+                document.getElementById('dailyProgress').textContent = `${dailyPct >= 0 ? '+' : ''}${dailyPct.toFixed(2)}%`;
+                const dailyProgress = Math.min(Math.max((dailyPct / (data.today.target_pct || 1.5)) * 100, 0), 100);
+                document.getElementById('dailyProgressBar').style.width = `${dailyProgress}%`;
+            }
+            
+            // Monthly stats
+            if (data.monthly) {
                 const monthPnlEl = document.getElementById('monthPnl');
-                monthPnlEl.textContent = `$${bot.month.pnl >= 0 ? '+' : ''}${bot.month.pnl.toFixed(2)}`;
-                monthPnlEl.className = `text-3xl font-bold ${bot.month.pnl >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
+                monthPnlEl.textContent = `$${data.monthly.pnl >= 0 ? '+' : ''}${data.monthly.pnl.toFixed(2)}`;
+                monthPnlEl.className = `text-3xl font-bold ${data.monthly.pnl >= 0 ? 'text-emerald-400' : 'text-red-400'}`;
                 
-                document.getElementById('monthTrades').textContent = bot.month.trades;
-                document.getElementById('monthWinRate').textContent = `${bot.month.win_rate}%`;
+                document.getElementById('monthlyTargetPct').textContent = data.monthly.target_pct || 25;
                 
-                // Monthly progress
-                document.getElementById('monthlyProgress').textContent = `${bot.month.pnl_pct >= 0 ? '+' : ''}${bot.month.pnl_pct}%`;
-                document.getElementById('monthlyProgressBar').style.width = `${Math.min(bot.month.progress, 100)}%`;
-                
-                // Open positions
-                const posEl = document.getElementById('openPositions');
-                if (bot.open_trades && bot.open_trades.length > 0) {
-                    posEl.innerHTML = bot.open_trades.map(p => `
-                        <div class="flex justify-between items-center bg-gray-800/50 rounded-lg p-3">
-                            <div>
-                                <span class="px-2 py-0.5 rounded text-xs ${p.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
-                                    ${p.type}
-                                </span>
-                                <span class="ml-2 font-mono text-sm">${p.symbol}</span>
-                                <span class="text-xs text-gray-400 ml-2">${p.lot_size} lot</span>
-                            </div>
-                            <div class="text-right">
-                                <div class="${p.profit >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
-                                    $${p.profit >= 0 ? '+' : ''}${p.profit.toFixed(2)}
-                                </div>
-                                <div class="text-xs text-gray-400">${p.entry_price.toFixed(2)} → ${p.current_price.toFixed(2)}</div>
-                            </div>
+                // Estimate monthly progress
+                const startBalance = (data.account?.balance || 5000) - (data.monthly.pnl || 0);
+                const monthlyPct = startBalance > 0 ? (data.monthly.pnl / startBalance) * 100 : 0;
+                document.getElementById('monthlyProgress').textContent = `${monthlyPct >= 0 ? '+' : ''}${monthlyPct.toFixed(2)}%`;
+                const monthlyProgress = Math.min(Math.max((monthlyPct / (data.monthly.target_pct || 25)) * 100, 0), 100);
+                document.getElementById('monthlyProgressBar').style.width = `${monthlyProgress}%`;
+            }
+            
+            // Weekly P&L
+            if (data.weekly) {
+                const weekEl = document.getElementById('weeklyPnl');
+                weekEl.textContent = `$${data.weekly.pnl >= 0 ? '+' : ''}${data.weekly.pnl.toFixed(2)}`;
+                weekEl.className = `text-2xl font-bold ${data.weekly.pnl >= 0 ? 'text-green-400' : 'text-red-400'}`;
+            }
+            
+            // Total trades
+            if (data.total_trades_all_time !== undefined) {
+                document.getElementById('totalTrades').textContent = data.total_trades_all_time;
+            }
+            
+            // Open positions
+            const posEl = document.getElementById('openPositions');
+            if (data.positions && data.positions.length > 0) {
+                posEl.innerHTML = data.positions.map(p => `
+                    <div class="flex justify-between items-center bg-gray-800/50 rounded-lg p-3">
+                        <div>
+                            <span class="px-2 py-0.5 rounded text-xs ${p.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
+                                ${p.type}
+                            </span>
+                            <span class="ml-2 font-mono text-sm">${p.symbol}</span>
+                            <span class="text-xs text-gray-400 ml-2">${p.volume} lot</span>
                         </div>
-                    `).join('');
-                } else {
-                    posEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No open positions</div>';
-                }
-                
-                // Recent trades
-                const tradesEl = document.getElementById('recentTrades');
-                if (bot.recent_trades && bot.recent_trades.length > 0) {
-                    tradesEl.innerHTML = bot.recent_trades.map(t => `
+                        <div class="text-right">
+                            <div class="${p.profit >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
+                                $${p.profit >= 0 ? '+' : ''}${p.profit.toFixed(2)}
+                            </div>
+                            <div class="text-xs text-gray-400">${p.entry_price} → ${p.current_price}</div>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                posEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No open positions</div>';
+            }
+            
+            // Recent trades
+            const tradesEl = document.getElementById('recentTrades');
+            if (data.recent_trades && data.recent_trades.length > 0) {
+                const recentFive = data.recent_trades.slice(-5).reverse();
+                tradesEl.innerHTML = recentFive.map(t => {
+                    const dt = new Date(t.time);
+                    const timeStr = dt.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+                    return `
                         <div class="flex justify-between items-center bg-gray-800/50 rounded-lg p-2">
                             <div class="flex items-center gap-2">
-                                <span class="text-xs text-gray-400">${t.time}</span>
+                                <span class="text-xs text-gray-400">${timeStr}</span>
                                 <span class="px-2 py-0.5 rounded text-xs ${t.type === 'BUY' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}">
                                     ${t.type}
                                 </span>
                                 <span class="font-mono text-sm">${t.symbol}</span>
                             </div>
-                            <span class="${t.profit >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
-                                $${t.profit >= 0 ? '+' : ''}${t.profit.toFixed(2)}
+                            <span class="${t.pnl >= 0 ? 'text-green-400' : 'text-red-400'} font-semibold">
+                                $${t.pnl >= 0 ? '+' : ''}${t.pnl.toFixed(2)}
                             </span>
                         </div>
+                    `;
+                }).join('');
+            } else {
+                tradesEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No trades yet</div>';
+            }
+            
+            // Strategy performance
+            const stratEl = document.getElementById('strategyPerf');
+            if (data.strategy_performance && data.strategy_performance.length > 0) {
+                stratEl.innerHTML = data.strategy_performance.map(s => `
+                    <div class="bg-gray-800/50 rounded-lg p-3 text-center">
+                        <div class="text-xs text-gray-400 mb-1">${s.strategy.replace('_', ' ')}</div>
+                        <div class="text-lg font-bold ${s.total_pnl >= 0 ? 'text-green-400' : 'text-red-400'}">
+                            $${s.total_pnl >= 0 ? '+' : ''}${s.total_pnl.toFixed(0)}
+                        </div>
+                        <div class="text-xs text-gray-500">${s.trades} trades | ${s.win_rate}%</div>
+                    </div>
+                `).join('');
+            }
+            
+            // Features
+            const featEl = document.getElementById('features');
+            if (data.features) {
+                const featureNames = {
+                    claude_ai: '🧠 Claude AI',
+                    dynamic_sltp: '📏 Dynamic SL/TP',
+                    vwap_filter: '📊 VWAP Filter',
+                    fvg_detection: '🎯 FVG Detection',
+                    session_filter: '⏰ Session Filter',
+                    loss_recovery: '🔄 Loss Recovery',
+                    self_tuning: '⚙️ Self-Tuning',
+                    partial_profits: '💰 Partial Profits',
+                    protection_system: '🛡️ Protection System',
+                    strategy_cap: '📈 Strategy Cap',
+                    hourly_limit: '⌛ Hourly Limit'
+                };
+                featEl.innerHTML = Object.entries(data.features)
+                    .filter(([k, v]) => v)
+                    .map(([k, v]) => `
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full">
+                            ${featureNames[k] || k}
+                        </span>
                     `).join('');
-                } else {
-                    tradesEl.innerHTML = '<div class="text-gray-500 text-sm text-center py-4">No trades yet today</div>';
-                }
             }
         }
 
@@ -330,13 +373,13 @@
                     updateDashboard(data);
                 }
             } catch (error) {
-                console.log('Waiting for data...');
+                console.log('Waiting for data...', error);
             }
         }
 
         // Initialize
         fetchData();
-        setInterval(fetchData, 5000); // Update every 5 seconds
+        setInterval(fetchData, 5000);
     </script>
 </body>
 </html>
