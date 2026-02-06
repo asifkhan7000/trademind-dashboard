@@ -2,8 +2,8 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-06T03:59:40.978049",
-  "timestamp_utc": "2026-02-05T23:59:40.978049",
+  "last_updated": "2026-02-06T04:04:45.813994",
+  "timestamp_utc": "2026-02-06T00:04:45.813994",
   "account": {
     "number": 262112946,
     "balance": 5297.14,
@@ -715,11 +715,11 @@
   "total_trades_all_time": 179,
   "market": {
     "is_open": true,
-    "status": "Open (Late/Asian)",
-    "session": "Late/Asian",
-    "hour_utc": 23,
-    "trading_active": false,
-    "trading_note": "Late session blocked (v6.6)"
+    "status": "Open (Asian)",
+    "session": "Asian",
+    "hour_utc": 0,
+    "trading_active": true,
+    "trading_note": "Bot active"
   },
   "features": {
     "claude_ai": true,
