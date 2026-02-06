@@ -2,15 +2,15 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-06T20:01:17.833791",
-  "timestamp_utc": "2026-02-06T16:01:17.833791",
+  "last_updated": "2026-02-06T20:03:16.132672",
+  "timestamp_utc": "2026-02-06T16:03:16.132672",
   "account": {
     "number": 262112946,
     "balance": 5285.52,
-    "equity": 5285.52,
-    "margin_used": 0.0,
-    "free_margin": 5285.52,
-    "floating_pnl": 0.0,
+    "equity": 5294.65,
+    "margin_used": 2.47,
+    "free_margin": 5292.18,
+    "floating_pnl": 9.13,
     "leverage": 2000
   },
   "today": {
@@ -30,7 +30,21 @@
     "pnl": -10.93,
     "target_pct": 25
   },
-  "positions": [],
+  "positions": [
+    {
+      "ticket": 713190612,
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "entry_price": 4940.37,
+      "current_price": 4949.5,
+      "sl": 4924.59,
+      "tp": 4980.08,
+      "profit": 9.13,
+      "swap": 0.0,
+      "time": "2026-02-06T20:01:25"
+    }
+  ],
   "recent_trades": [
     {
       "time": "2026-02-03T18:32:27",
