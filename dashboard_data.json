@@ -2,60 +2,36 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-06T06:06:23.003340",
-  "timestamp_utc": "2026-02-06T02:06:23.003340",
+  "last_updated": "2026-02-06T06:11:26.627067",
+  "timestamp_utc": "2026-02-06T02:11:26.627067",
   "account": {
     "number": 262112946,
-    "balance": 5303.45,
-    "equity": 5291.72,
-    "margin_used": 2.38,
-    "free_margin": 5289.34,
-    "floating_pnl": -11.73,
+    "balance": 5285.52,
+    "equity": 5285.52,
+    "margin_used": 0.0,
+    "free_margin": 5285.52,
+    "floating_pnl": 0.0,
     "leverage": 2000
   },
   "today": {
-    "trades": 2,
+    "trades": 3,
     "wins": 1,
-    "losses": 1,
-    "pnl": 6.31,
-    "pnl_pct": 0.12,
-    "win_rate": 50.0,
+    "losses": 2,
+    "pnl": -11.62,
+    "pnl_pct": -0.22,
+    "win_rate": 33.3,
     "target_pct": 1.5,
     "target_hit": false
   },
   "weekly": {
-    "pnl": 7.0
+    "pnl": -10.93
   },
   "monthly": {
-    "pnl": 7.0,
+    "pnl": -10.93,
     "target_pct": 25
   },
-  "positions": [
-    {
-      "ticket": 706993877,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "entry_price": 4769.01,
-      "current_price": 4780.74,
-      "sl": 4786.94,
-      "tp": 4723.94,
-      "profit": -11.73,
-      "swap": 0.0,
-      "time": "2026-02-06T05:55:16"
-    }
-  ],
+  "positions": [],
   "recent_trades": [
-    {
-      "time": "2026-02-03T18:16:07",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.02,
-      "price": 4913.75,
-      "pnl": -19.71,
-      "commission": 0.0,
-      "swap": 0.0
-    },
     {
       "time": "2026-02-03T18:32:27",
       "symbol": "XAUUSDm",
@@ -545,15 +521,25 @@
       "pnl": -18.1,
       "commission": 0.0,
       "swap": 0.0
+    },
+    {
+      "time": "2026-02-06T06:09:29",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "price": 4786.94,
+      "pnl": -17.93,
+      "commission": 0.0,
+      "swap": 0.0
     }
   ],
   "strategy_performance": [
     {
       "strategy": "Trend_Follow",
-      "trades": 162,
+      "trades": 163,
       "wins": 90,
-      "win_rate": 55.6,
-      "total_pnl": 154.18
+      "win_rate": 55.2,
+      "total_pnl": 136.25
     },
     {
       "strategy": "EMA_Cross",
@@ -607,13 +593,6 @@
       "total_pnl": 60.58
     },
     {
-      "hour": 5,
-      "trades": 4,
-      "wins": 3,
-      "win_rate": 75.0,
-      "total_pnl": 59.17
-    },
-    {
       "hour": 22,
       "trades": 13,
       "wins": 9,
@@ -633,6 +612,13 @@
       "wins": 2,
       "win_rate": 100.0,
       "total_pnl": 41.64
+    },
+    {
+      "hour": 5,
+      "trades": 5,
+      "wins": 3,
+      "win_rate": 60.0,
+      "total_pnl": 41.24
     },
     {
       "hour": 12,
@@ -726,7 +712,7 @@
       "total_pnl": -81.09
     }
   ],
-  "total_trades_all_time": 181,
+  "total_trades_all_time": 182,
   "market": {
     "is_open": true,
     "status": "Open (Asian)",
