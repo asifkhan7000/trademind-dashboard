@@ -2,15 +2,15 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-06T20:21:31.738443",
-  "timestamp_utc": "2026-02-06T16:21:31.738443",
+  "last_updated": "2026-02-06T20:23:30.994029",
+  "timestamp_utc": "2026-02-06T16:23:30.994029",
   "account": {
     "number": 262112946,
     "balance": 5285.52,
-    "equity": 5285.13,
+    "equity": 5279.73,
     "margin_used": 2.47,
-    "free_margin": 5282.66,
-    "floating_pnl": -0.39,
+    "free_margin": 5277.26,
+    "floating_pnl": -5.79,
     "leverage": 2000
   },
   "today": {
@@ -37,10 +37,10 @@
       "type": "BUY",
       "volume": 0.01,
       "entry_price": 4940.37,
-      "current_price": 4939.98,
+      "current_price": 4934.58,
       "sl": 4924.59,
       "tp": 4980.08,
-      "profit": -0.39,
+      "profit": -5.79,
       "swap": 0.0,
       "time": "2026-02-06T20:01:25"
     }
