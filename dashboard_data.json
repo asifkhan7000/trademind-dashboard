@@ -2,8 +2,8 @@
   "version": "6.6",
   "bot_name": "TradeMind v6.6",
   "mode": "SAFE",
-  "last_updated": "2026-02-06T18:56:56.528475",
-  "timestamp_utc": "2026-02-06T14:56:56.528475",
+  "last_updated": "2026-02-06T19:01:59.559563",
+  "timestamp_utc": "2026-02-06T15:01:59.559563",
   "account": {
     "number": 262112946,
     "balance": 5285.52,
@@ -717,7 +717,7 @@
     "is_open": true,
     "status": "Open (London/NY Overlap)",
     "session": "London/NY Overlap",
-    "hour_utc": 14,
+    "hour_utc": 15,
     "trading_active": true,
     "trading_note": "Bot active"
   },
