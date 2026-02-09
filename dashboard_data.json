@@ -3,28 +3,24 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-09T23:46:11.350825",
+    "updated": "2026-02-09T23:46:50.639105",
     "account": 262112946
   },
   "account": {
     "balance": 5302.98,
-    "equity": 5325.44,
-    "profit": 22.46,
+    "equity": 5323.33,
+    "profit": 20.35,
     "margin": 12.63,
-    "free_margin": 5312.81,
+    "free_margin": 5310.7,
     "leverage": 2000,
     "initial_balance": 5000
   },
   "zone": {
-    "zone": "HUNT",
-    "daily_pnl_pct": 0.646670292537262,
-    "trades_today": 54,
-    "wins_today": 38,
-    "losses_today": 16,
-    "reached_protect": false,
-    "consecutive_wins": 1,
-    "consecutive_losses": 0,
-    "weekly_pnl_pct": 0.646670292537262
+    "zone": "UNKNOWN",
+    "daily_pnl_pct": 0,
+    "trades_today": 0,
+    "wins_today": 0,
+    "losses_today": 0
   },
   "position_manager": {
     "tracked_positions": 1,
@@ -64,10 +60,10 @@
       "type": "BUY",
       "volume": 0.05,
       "open_price": 5053.934,
-      "current_price": 5058.425,
+      "current_price": 5058.003,
       "sl": 5056.806,
       "tp": 5060.184,
-      "profit": 22.46,
+      "profit": 20.35,
       "open_time": "2026-02-09T23:37:16"
     }
   ],
