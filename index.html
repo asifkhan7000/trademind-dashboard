@@ -366,7 +366,7 @@
             const statusEl = document.getElementById('marketStatus');
             if (data.meta && data.meta.updated) {
                 const age = (Date.now() - new Date(data.meta.updated).getTime()) / 1000;
-                const isLive = age < 120;
+                const isLive = age < 600;
                 statusEl.innerHTML = `
                     <span class="w-2 h-2 rounded-full ${isLive ? 'bg-green-500' : 'bg-red-500'} pulse"></span>
                     <span class="text-sm">${isLive ? 'Live' : 'Offline'}</span>
