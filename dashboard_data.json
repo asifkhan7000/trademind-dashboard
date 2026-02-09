@@ -3,74 +3,61 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-09T15:20:52.222118",
+    "updated": "2026-02-09T15:26:13.988509",
     "account": 262112946
   },
   "account": {
-    "balance": 5238.67,
-    "equity": 5257.11,
-    "profit": 18.44,
-    "margin": 12.48,
-    "free_margin": 5244.63,
+    "balance": 5276.51,
+    "equity": 5276.51,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 5276.51,
     "leverage": 2000,
     "initial_balance": 5000
   },
   "zone": {
     "zone": "HUNT",
-    "daily_pnl_pct": -0.6959620912814551,
-    "trades_today": 9,
-    "wins_today": 6,
+    "daily_pnl_pct": 0.021178594512753612,
+    "trades_today": 10,
+    "wins_today": 7,
     "losses_today": 3,
     "reached_protect": false,
-    "consecutive_wins": 1,
+    "consecutive_wins": 2,
     "consecutive_losses": 0,
-    "weekly_pnl_pct": -0.6959620912814551
+    "weekly_pnl_pct": 0.021178594512753612
   },
   "position_manager": {
-    "tracked_positions": 1,
-    "partial_closed": 1,
-    "at_breakeven": 1,
+    "tracked_positions": 0,
+    "partial_closed": 0,
+    "at_breakeven": 0,
     "trailing_active": 0
   },
   "today": {
-    "pnl": -36.26,
-    "pnl_pct": -0.73,
-    "trades": 9,
-    "wins": 6,
+    "pnl": 1.58,
+    "pnl_pct": 0.03,
+    "trades": 10,
+    "wins": 7,
     "losses": 3,
-    "win_rate": 66.7,
+    "win_rate": 70.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -36.26,
-    "trades": 9,
-    "wins": 6,
+    "pnl": 1.58,
+    "trades": 10,
+    "wins": 7,
     "losses": 3,
-    "win_rate": 66.7
+    "win_rate": 70.0
   },
   "monthly": {
-    "pnl": -12.04,
-    "trades": 203,
-    "wins": 127,
+    "pnl": 25.8,
+    "trades": 204,
+    "wins": 128,
     "losses": 76,
-    "win_rate": 62.6,
+    "win_rate": 62.7,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 723107334,
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.05,
-      "open_price": 4993.558,
-      "current_price": 4997.246,
-      "sl": 4994.808,
-      "tp": 4999.808,
-      "profit": 18.44,
-      "open_time": "2026-02-09T15:16:26"
-    }
-  ],
+  "positions": [],
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
