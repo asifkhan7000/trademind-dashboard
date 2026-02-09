@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-09T21:51:29.696557",
+    "updated": "2026-02-09T21:57:01.174038",
     "account": 262112946
   },
   "account": {
@@ -58,6 +58,99 @@
     "target": 20
   },
   "positions": [],
+  "recent_trades": [
+    {
+      "time": "2026-02-09T13:57:01",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.11,
+      "price": 5027.975,
+      "pnl": -27.5,
+      "comment": "[sl 5027.97500]"
+    },
+    {
+      "time": "2026-02-09T13:58:58",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.11,
+      "price": 5027.389,
+      "pnl": 0.05,
+      "comment": "[sl 5027.38900]"
+    },
+    {
+      "time": "2026-02-09T14:04:02",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.1,
+      "price": 5025.908,
+      "pnl": 0.05,
+      "comment": "[sl 5025.908]"
+    },
+    {
+      "time": "2026-02-09T14:04:03",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.1,
+      "price": 5026.05,
+      "pnl": 0.05,
+      "comment": "[sl 5026.050]"
+    },
+    {
+      "time": "2026-02-09T14:05:41",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.05,
+      "price": 5024.099,
+      "pnl": 18.66,
+      "comment": "Partial close 50"
+    },
+    {
+      "time": "2026-02-09T14:09:38",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.05,
+      "price": 5026.617,
+      "pnl": 6.07,
+      "comment": "[sl 5026.617]"
+    },
+    {
+      "time": "2026-02-09T14:11:55",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.1,
+      "price": 5027.831,
+      "pnl": -25.0,
+      "comment": "[sl 5027.831]"
+    },
+    {
+      "time": "2026-02-09T14:11:55",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.11,
+      "price": 5027.408,
+      "pnl": -27.5,
+      "comment": "[sl 5027.408]"
+    },
+    {
+      "time": "2026-02-09T16:48:35",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.05,
+      "price": 4997.33,
+      "pnl": 18.86,
+      "comment": "Partial close 50"
+    },
+    {
+      "time": "2026-02-09T16:54:09",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.05,
+      "price": 5001.125,
+      "pnl": 37.84,
+      "comment": "[tp 4999.808]"
+    }
+  ],
+  "total_trades_all_time": 549,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
