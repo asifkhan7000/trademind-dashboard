@@ -3,86 +3,61 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-09T12:40:46.598587",
+    "updated": "2026-02-09T12:45:50.065935",
     "account": 262112946
   },
   "account": {
-    "balance": 5272.31,
-    "equity": 5268.18,
-    "profit": -4.13,
-    "margin": 52.76,
-    "free_margin": 5215.42,
+    "balance": 5219.81,
+    "equity": 5219.81,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 5219.81,
     "leverage": 2000,
     "initial_balance": 5000
   },
   "zone": {
-    "zone": "HUNT",
-    "daily_pnl_pct": -0.5748535191320618,
-    "trades_today": 8,
+    "zone": "RECOVERY",
+    "daily_pnl_pct": -1.5806372545553817,
+    "trades_today": 10,
     "wins_today": 6,
-    "losses_today": 2,
+    "losses_today": 4,
     "reached_protect": false,
-    "consecutive_wins": 5,
-    "consecutive_losses": 0,
-    "weekly_pnl_pct": -0.5748535191320618
+    "consecutive_wins": 0,
+    "consecutive_losses": 2,
+    "weekly_pnl_pct": -1.5806372545553817
   },
   "position_manager": {
-    "tracked_positions": 2,
+    "tracked_positions": 0,
     "partial_closed": 0,
     "at_breakeven": 0,
     "trailing_active": 0
   },
   "today": {
-    "pnl": -2.62,
-    "pnl_pct": -0.05,
-    "trades": 6,
+    "pnl": -55.12,
+    "pnl_pct": -1.1,
+    "trades": 8,
     "wins": 5,
-    "losses": 1,
-    "win_rate": 83.3,
+    "losses": 3,
+    "win_rate": 62.5,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -2.62,
-    "trades": 6,
+    "pnl": -55.12,
+    "trades": 8,
     "wins": 5,
-    "losses": 1,
-    "win_rate": 83.3
+    "losses": 3,
+    "win_rate": 62.5
   },
   "monthly": {
-    "pnl": 21.6,
-    "trades": 200,
+    "pnl": -30.9,
+    "trades": 202,
     "wins": 126,
-    "losses": 74,
-    "win_rate": 63.0,
+    "losses": 76,
+    "win_rate": 62.4,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 721835947,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.1,
-      "open_price": 5025.331,
-      "current_price": 5025.306,
-      "sl": 5027.831,
-      "tp": 5019.081,
-      "profit": 0.25,
-      "open_time": "2026-02-09T12:35:28"
-    },
-    {
-      "ticket": 721863868,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.11,
-      "open_price": 5024.908,
-      "current_price": 5025.306,
-      "sl": 5027.408,
-      "tp": 5018.658,
-      "profit": -4.38,
-      "open_time": "2026-02-09T12:40:37"
-    }
-  ],
+  "positions": [],
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
