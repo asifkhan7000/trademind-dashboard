@@ -3,28 +3,28 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-10T07:00:32.968379",
+    "updated": "2026-02-10T07:05:36.013695",
     "account": 262112946
   },
   "account": {
-    "balance": 5358.33,
-    "equity": 5358.33,
+    "balance": 5330.83,
+    "equity": 5330.83,
     "profit": 0.0,
     "margin": 0.0,
-    "free_margin": 5358.33,
+    "free_margin": 5330.83,
     "leverage": 2000,
     "initial_balance": 5000
   },
   "zone": {
     "zone": "HUNT",
-    "daily_pnl_pct": -0.5326286361608934,
-    "trades_today": 1,
+    "daily_pnl_pct": -1.048495771297448,
+    "trades_today": 2,
     "wins_today": 0,
-    "losses_today": 1,
+    "losses_today": 2,
     "reached_protect": false,
     "consecutive_wins": 0,
-    "consecutive_losses": 1,
-    "weekly_pnl_pct": -0.5326286361608934
+    "consecutive_losses": 2,
+    "weekly_pnl_pct": -1.048495771297448
   },
   "position_manager": {
     "tracked_positions": 0,
@@ -33,28 +33,28 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -28.54,
-    "pnl_pct": -0.57,
-    "trades": 1,
+    "pnl": -56.04,
+    "pnl_pct": -1.12,
+    "trades": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_rate": 0.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 83.4,
-    "trades": 18,
+    "pnl": 55.9,
+    "trades": 19,
     "wins": 13,
-    "losses": 5,
-    "win_rate": 72.2
+    "losses": 6,
+    "win_rate": 68.4
   },
   "monthly": {
-    "pnl": 107.62,
-    "trades": 212,
+    "pnl": 80.12,
+    "trades": 213,
     "wins": 134,
-    "losses": 78,
-    "win_rate": 63.2,
+    "losses": 79,
+    "win_rate": 62.9,
     "target": 20
   },
   "positions": [],
@@ -67,9 +67,18 @@
       "price": 5038.274,
       "pnl": -28.54,
       "comment": "[sl 5038.27400]"
+    },
+    {
+      "time": "2026-02-10T07:01:31",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.11,
+      "price": 5017.375,
+      "pnl": -27.5,
+      "comment": "[sl 5017.37500]"
     }
   ],
-  "total_trades_all_time": 557,
+  "total_trades_all_time": 558,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
