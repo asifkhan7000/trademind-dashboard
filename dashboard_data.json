@@ -3,28 +3,28 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-10T08:51:34.106215",
+    "updated": "2026-02-10T08:56:37.026834",
     "account": 262112946
   },
   "account": {
-    "balance": 5330.83,
-    "equity": 5330.83,
+    "balance": 5361.42,
+    "equity": 5361.42,
     "profit": 0.0,
     "margin": 0.0,
-    "free_margin": 5330.83,
+    "free_margin": 5361.42,
     "leverage": 2000,
     "initial_balance": 5000
   },
   "zone": {
     "zone": "HUNT",
-    "daily_pnl_pct": -1.048495771297448,
-    "trades_today": 2,
-    "wins_today": 0,
+    "daily_pnl_pct": -0.47742217914614815,
+    "trades_today": 4,
+    "wins_today": 2,
     "losses_today": 2,
     "reached_protect": false,
-    "consecutive_wins": 0,
-    "consecutive_losses": 2,
-    "weekly_pnl_pct": -1.048495771297448
+    "consecutive_wins": 2,
+    "consecutive_losses": 0,
+    "weekly_pnl_pct": -0.47742217914614815
   },
   "position_manager": {
     "tracked_positions": 0,
@@ -33,28 +33,28 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -56.04,
-    "pnl_pct": -1.12,
-    "trades": 2,
-    "wins": 0,
+    "pnl": -25.45,
+    "pnl_pct": -0.51,
+    "trades": 4,
+    "wins": 2,
     "losses": 2,
-    "win_rate": 0.0,
+    "win_rate": 50.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 55.9,
-    "trades": 19,
-    "wins": 13,
+    "pnl": 86.49,
+    "trades": 21,
+    "wins": 15,
     "losses": 6,
-    "win_rate": 68.4
+    "win_rate": 71.4
   },
   "monthly": {
-    "pnl": 80.12,
-    "trades": 213,
-    "wins": 134,
+    "pnl": 110.71,
+    "trades": 215,
+    "wins": 136,
     "losses": 79,
-    "win_rate": 62.9,
+    "win_rate": 63.3,
     "target": 20
   },
   "positions": [],
@@ -76,9 +76,27 @@
       "price": 5017.375,
       "pnl": -27.5,
       "comment": "[sl 5017.37500]"
+    },
+    {
+      "time": "2026-02-10T08:55:16",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.06,
+      "price": 5028.002,
+      "pnl": 24.56,
+      "comment": "Partial close 50"
+    },
+    {
+      "time": "2026-02-10T08:55:59",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.05,
+      "price": 5025.114,
+      "pnl": 6.03,
+      "comment": "[sl 5025.114]"
     }
   ],
-  "total_trades_all_time": 558,
+  "total_trades_all_time": 560,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
