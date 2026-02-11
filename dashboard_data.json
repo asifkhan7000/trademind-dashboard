@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-11T10:20:10.922253",
+    "updated": "2026-02-11T10:23:24.453040",
     "account": 256085487
   },
   "account": {
-    "balance": 52.71,
-    "equity": 56.64,
-    "profit": 3.93,
-    "margin": 2.5300000000000002,
-    "free_margin": 54.11,
+    "balance": 56.31,
+    "equity": 56.31,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 56.31,
     "leverage": 2000,
     "initial_balance": 50
   },
@@ -27,50 +27,37 @@
     "weekly_pnl_pct": 0.0
   },
   "position_manager": {
-    "tracked_positions": 1,
-    "partial_closed": 1,
-    "at_breakeven": 1,
-    "trailing_active": 1
+    "tracked_positions": 0,
+    "partial_closed": 0,
+    "at_breakeven": 0,
+    "trailing_active": 0
   },
   "today": {
-    "pnl": 2.71,
-    "pnl_pct": 5.42,
-    "trades": 1,
-    "wins": 1,
+    "pnl": 6.31,
+    "pnl_pct": 12.62,
+    "trades": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate": 100.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 2.71,
-    "trades": 1,
-    "wins": 1,
+    "pnl": 6.31,
+    "trades": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate": 100.0
   },
   "monthly": {
-    "pnl": 2.71,
-    "trades": 1,
-    "wins": 1,
+    "pnl": 6.31,
+    "trades": 2,
+    "wins": 2,
     "losses": 0,
     "win_rate": 100.0,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 174707413,
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "open_price": 5050.397,
-      "current_price": 5054.332,
-      "sl": 5053.997,
-      "tp": 5056.647,
-      "profit": 3.93,
-      "open_time": "2026-02-11T10:16:14"
-    }
-  ],
+  "positions": [],
   "recent_trades": [
     {
       "time": "2026-02-11T10:00:39",
@@ -80,9 +67,18 @@
       "price": 5054.499,
       "pnl": 2.71,
       "comment": "[sl 5054.94200]"
+    },
+    {
+      "time": "2026-02-11T10:20:13",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "price": 5053.997,
+      "pnl": 3.6,
+      "comment": "[sl 5053.997]"
     }
   ],
-  "total_trades_all_time": 1,
+  "total_trades_all_time": 2,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
