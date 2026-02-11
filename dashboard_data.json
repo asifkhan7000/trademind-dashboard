@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "8.0",
-    "name": "TradeMind v8.0",
+    "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-11T09:49:55.741998",
+    "updated": "2026-02-11T09:53:04.207443",
     "account": 256085487
   },
   "account": {
@@ -13,7 +13,7 @@
     "margin": 0.0,
     "free_margin": 50.0,
     "leverage": 2000,
-    "initial_balance": 5000
+    "initial_balance": 50
   },
   "zone": {
     "zone": "HUNT",
