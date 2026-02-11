@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.0",
     "mode": "SAFE",
-    "updated": "2026-02-11T08:21:07.467436",
-    "account": 262112946
+    "updated": "2026-02-11T08:26:32.562454",
+    "account": 256085487
   },
   "account": {
-    "balance": 5417.86,
-    "equity": 5417.86,
+    "balance": 50.0,
+    "equity": 50.0,
     "profit": 0.0,
     "margin": 0.0,
-    "free_margin": 5417.86,
+    "free_margin": 50.0,
     "leverage": 2000,
     "initial_balance": 5000
   },
@@ -24,7 +24,7 @@
     "reached_protect": false,
     "consecutive_wins": 0,
     "consecutive_losses": 0,
-    "weekly_pnl_pct": 0.21266940752649366
+    "weekly_pnl_pct": 0.0
   },
   "position_manager": {
     "tracked_positions": 0,
@@ -43,23 +43,23 @@
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 142.93,
-    "trades": 27,
-    "wins": 20,
-    "losses": 7,
-    "win_rate": 74.1
+    "pnl": 0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0
   },
   "monthly": {
-    "pnl": 167.15,
-    "trades": 221,
-    "wins": 141,
-    "losses": 80,
-    "win_rate": 63.8,
+    "pnl": 0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
     "target": 20
   },
   "positions": [],
   "recent_trades": [],
-  "total_trades_all_time": 566,
+  "total_trades_all_time": 0,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
