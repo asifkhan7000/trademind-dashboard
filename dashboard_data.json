@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-11T14:46:18.385119",
+    "updated": "2026-02-11T14:51:28.848136",
     "account": 256085487
   },
   "account": {
-    "balance": 57.26,
-    "equity": 57.26,
+    "balance": 607.26,
+    "equity": 607.26,
     "profit": 0.0,
     "margin": 0.0,
-    "free_margin": 57.26,
+    "free_margin": 607.26,
     "leverage": 2000,
     "initial_balance": 50
   },
