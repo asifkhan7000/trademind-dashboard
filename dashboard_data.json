@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-12T08:43:13.763441",
+    "updated": "2026-02-12T08:48:23.379015",
     "account": 256085487
   },
   "account": {
@@ -27,10 +27,10 @@
     "weekly_pnl_pct": 11.85257541258285
   },
   "position_manager": {
-    "tracked_positions": 1,
-    "partial_closed": 1,
-    "at_breakeven": 1,
-    "trailing_active": 1
+    "tracked_positions": 0,
+    "partial_closed": 0,
+    "at_breakeven": 0,
+    "trailing_active": 0
   },
   "today": {
     "pnl": 1.48,
