@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-12T12:49:38.200819",
+    "updated": "2026-02-12T12:54:46.924938",
     "account": 256085487
   },
   "account": {
-    "balance": 606.24,
-    "equity": 607.56,
-    "profit": 1.32,
+    "balance": 609.95,
+    "equity": 609.92,
+    "profit": -0.03,
     "margin": 2.5300000000000002,
-    "free_margin": 605.03,
+    "free_margin": 607.39,
     "leverage": 2000,
     "initial_balance": 50
   },
@@ -33,42 +33,42 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -1.02,
-    "pnl_pct": -2.04,
-    "trades": 5,
-    "wins": 2,
+    "pnl": 2.69,
+    "pnl_pct": 5.38,
+    "trades": 6,
+    "wins": 3,
     "losses": 3,
-    "win_rate": 40.0,
+    "win_rate": 50.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 6.24,
-    "trades": 9,
-    "wins": 5,
+    "pnl": 9.95,
+    "trades": 10,
+    "wins": 6,
     "losses": 4,
-    "win_rate": 55.6
+    "win_rate": 60.0
   },
   "monthly": {
-    "pnl": 6.24,
-    "trades": 9,
-    "wins": 5,
+    "pnl": 9.95,
+    "trades": 10,
+    "wins": 6,
     "losses": 4,
-    "win_rate": 55.6,
+    "win_rate": 60.0,
     "target": 20
   },
   "positions": [
     {
-      "ticket": 176577089,
+      "ticket": 176587322,
       "symbol": "XAUUSDm",
       "type": "BUY",
       "volume": 0.01,
-      "open_price": 5063.632,
-      "current_price": 5064.95,
-      "sl": 5061.054,
-      "tp": 5069.804,
-      "profit": 1.32,
-      "open_time": "2026-02-12T12:42:50"
+      "open_price": 5067.84,
+      "current_price": 5067.814,
+      "sl": 5065.323,
+      "tp": 5074.073,
+      "profit": -0.03,
+      "open_time": "2026-02-12T12:54:27"
     }
   ],
   "recent_trades": [
@@ -116,9 +116,18 @@
       "price": 5063.34,
       "pnl": -2.5,
       "comment": "[sl 5063.34000]"
+    },
+    {
+      "time": "2026-02-12T12:54:00",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "price": 5067.339,
+      "pnl": 3.71,
+      "comment": "[sl 5067.339]"
     }
   ],
-  "total_trades_all_time": 9,
+  "total_trades_all_time": 10,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
