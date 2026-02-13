@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-13T23:55:19.403013",
+    "updated": "2026-02-14T00:00:21.647134",
     "account": 256085487
   },
   "account": {
@@ -33,12 +33,12 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -8.85,
-    "pnl_pct": -17.7,
-    "trades": 10,
-    "wins": 5,
-    "losses": 5,
-    "win_rate": 50.0,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
     "target": 2.0,
     "limit": -3.0
   },
@@ -58,98 +58,7 @@
     "target": 20
   },
   "positions": [],
-  "recent_trades": [
-    {
-      "time": "2026-02-13T08:18:09",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.05,
-      "price": 4975.515,
-      "pnl": -12.5,
-      "comment": "[sl 4975.515]"
-    },
-    {
-      "time": "2026-02-13T08:25:48",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4988.221,
-      "pnl": 3.8,
-      "comment": "[tp 4988.22100]"
-    },
-    {
-      "time": "2026-02-13T13:04:52",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4974.095,
-      "pnl": 3.7,
-      "comment": "[sl 4974.095]"
-    },
-    {
-      "time": "2026-02-13T15:48:50",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4970.977,
-      "pnl": -2.49,
-      "comment": "[sl 4970.97700]"
-    },
-    {
-      "time": "2026-02-13T16:11:48",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4968.28,
-      "pnl": -1.85,
-      "comment": "[sl 4968.28000]"
-    },
-    {
-      "time": "2026-02-13T17:48:07",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4968.857,
-      "pnl": 3.19,
-      "comment": "[sl 4968.857]"
-    },
-    {
-      "time": "2026-02-13T17:55:55",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4968.537,
-      "pnl": -3.58,
-      "comment": "[sl 4969.61800]"
-    },
-    {
-      "time": "2026-02-13T18:30:26",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4971.874,
-      "pnl": 3.37,
-      "comment": "[sl 4971.874]"
-    },
-    {
-      "time": "2026-02-13T18:55:09",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 4967.817,
-      "pnl": 0.01,
-      "comment": "[sl 4967.81700]"
-    },
-    {
-      "time": "2026-02-13T23:23:34",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "price": 5022.732,
-      "pnl": -2.5,
-      "comment": "[sl 5022.732]"
-    }
-  ],
+  "recent_trades": [],
   "total_trades_all_time": 24,
   "features": {
     "hybrid_protection": true,
