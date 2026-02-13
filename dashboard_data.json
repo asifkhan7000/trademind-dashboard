@@ -3,158 +3,63 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-12T16:42:38.345258",
+    "updated": "2026-02-13T07:46:17.366604",
     "account": 256085487
   },
   "account": {
-    "balance": 608.76,
-    "equity": 610.03,
-    "profit": 1.27,
-    "margin": 2.5300000000000002,
-    "free_margin": 607.5,
+    "balance": 613.84,
+    "equity": 613.84,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 613.84,
     "leverage": 2000,
     "initial_balance": 50
   },
   "zone": {
     "zone": "HUNT",
-    "daily_pnl_pct": -0.8368322511151922,
-    "trades_today": 8,
-    "wins_today": 3,
-    "losses_today": 5,
+    "daily_pnl_pct": 0.0,
+    "trades_today": 0,
+    "wins_today": 0,
+    "losses_today": 0,
     "reached_protect": false,
     "consecutive_wins": 0,
-    "consecutive_losses": 2,
-    "weekly_pnl_pct": 11.84217578241607
+    "consecutive_losses": 0,
+    "weekly_pnl_pct": 1.07194057083279
   },
   "position_manager": {
-    "tracked_positions": 1,
+    "tracked_positions": 0,
     "partial_closed": 0,
     "at_breakeven": 0,
     "trailing_active": 0
   },
   "today": {
-    "pnl": 1.5,
-    "pnl_pct": 3.0,
-    "trades": 9,
-    "wins": 4,
-    "losses": 5,
-    "win_rate": 44.4,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 8.76,
-    "trades": 13,
-    "wins": 7,
+    "pnl": 13.84,
+    "trades": 14,
+    "wins": 8,
     "losses": 6,
-    "win_rate": 53.8
+    "win_rate": 57.1
   },
   "monthly": {
-    "pnl": 8.76,
-    "trades": 13,
-    "wins": 7,
+    "pnl": 13.84,
+    "trades": 14,
+    "wins": 8,
     "losses": 6,
-    "win_rate": 53.8,
+    "win_rate": 57.1,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 177012705,
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "open_price": 5068.57,
-      "current_price": 5069.835,
-      "sl": 5066.179,
-      "tp": 5074.929,
-      "profit": 1.27,
-      "open_time": "2026-02-12T16:37:56"
-    }
-  ],
-  "recent_trades": [
-    {
-      "time": "2026-02-12T07:29:16",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5056.53,
-      "pnl": -2.5,
-      "comment": "[sl 5056.53000]"
-    },
-    {
-      "time": "2026-02-12T07:37:58",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5047.375,
-      "pnl": -2.5,
-      "comment": "[sl 5047.375]"
-    },
-    {
-      "time": "2026-02-12T07:51:00",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5059.668,
-      "pnl": 2.75,
-      "comment": "[sl 5059.78800]"
-    },
-    {
-      "time": "2026-02-12T08:42:58",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "price": 5059.096,
-      "pnl": 3.73,
-      "comment": "[sl 5059.09600]"
-    },
-    {
-      "time": "2026-02-12T11:27:20",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5063.34,
-      "pnl": -2.5,
-      "comment": "[sl 5063.34000]"
-    },
-    {
-      "time": "2026-02-12T12:54:00",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5067.339,
-      "pnl": 3.71,
-      "comment": "[sl 5067.339]"
-    },
-    {
-      "time": "2026-02-12T12:55:33",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5063.308,
-      "pnl": -4.53,
-      "comment": "[sl 5065.32300]"
-    },
-    {
-      "time": "2026-02-12T13:06:49",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5060.72,
-      "pnl": -3.17,
-      "comment": "[sl 5061.38800]"
-    },
-    {
-      "time": "2026-02-12T16:30:37",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5071.172,
-      "pnl": 6.51,
-      "comment": "[tp 5071.17200]"
-    }
-  ],
-  "total_trades_all_time": 13,
+  "positions": [],
+  "recent_trades": [],
+  "total_trades_all_time": 14,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
