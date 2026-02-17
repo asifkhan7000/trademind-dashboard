@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-17T22:52:45.512754",
+    "updated": "2026-02-17T21:27:29.860466",
     "account": 256085487
   },
   "account": {
@@ -13,7 +13,7 @@
     "margin": 0.0,
     "free_margin": 610.0,
     "leverage": 2000,
-    "initial_balance": 50
+    "initial_balance": 600
   },
   "zone": {
     "zone": "HUNT",
@@ -34,7 +34,7 @@
   },
   "today": {
     "pnl": 6.25,
-    "pnl_pct": 12.5,
+    "pnl_pct": 1.04,
     "trades": 1,
     "wins": 1,
     "losses": 0,
@@ -60,7 +60,7 @@
   "positions": [],
   "recent_trades": [
     {
-      "time": "2026-02-17T18:25:11",
+      "time": "2026-02-17T16:55:11",
       "symbol": "XAUUSDm",
       "type": "SELL",
       "volume": 0.01,
