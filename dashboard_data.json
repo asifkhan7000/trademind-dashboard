@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-19T18:05:27.211435",
+    "updated": "2026-02-19T18:10:29.998417",
     "account": 256085487
   },
   "account": {
-    "balance": 602.84,
-    "equity": 605.33,
-    "profit": 2.49,
-    "margin": 2.49,
-    "free_margin": 602.84,
+    "balance": 610.23,
+    "equity": 610.23,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 610.23,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -27,50 +27,37 @@
     "weekly_pnl_pct": -0.5112406036091197
   },
   "position_manager": {
-    "tracked_positions": 1,
+    "tracked_positions": 0,
     "partial_closed": 0,
-    "at_breakeven": 1,
+    "at_breakeven": 0,
     "trailing_active": 0
   },
   "today": {
-    "pnl": -5.31,
-    "pnl_pct": -0.88,
-    "trades": 6,
-    "wins": 3,
+    "pnl": 2.08,
+    "pnl_pct": 0.35,
+    "trades": 7,
+    "wins": 4,
     "losses": 3,
-    "win_rate": 50.0,
+    "win_rate": 57.1,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -2.16,
-    "trades": 12,
-    "wins": 6,
+    "pnl": 5.23,
+    "trades": 13,
+    "wins": 7,
     "losses": 6,
-    "win_rate": 50.0
+    "win_rate": 53.8
   },
   "monthly": {
-    "pnl": 2.84,
-    "trades": 37,
-    "wins": 20,
+    "pnl": 10.23,
+    "trades": 38,
+    "wins": 21,
     "losses": 17,
-    "win_rate": 54.1,
+    "win_rate": 55.3,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 185024079,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "open_price": 4988.576,
-      "current_price": 4986.094,
-      "sl": 4988.571,
-      "tp": 4981.189,
-      "profit": 2.49,
-      "open_time": "2026-02-19T18:03:05"
-    }
-  ],
+  "positions": [],
   "recent_trades": [
     {
       "time": "2026-02-19T15:01:50",
@@ -125,9 +112,18 @@
       "price": 4985.031,
       "pnl": 3.55,
       "comment": "Stage1 close 30%"
+    },
+    {
+      "time": "2026-02-19T18:08:01",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 4981.189,
+      "pnl": 7.39,
+      "comment": "[tp 4981.18900]"
     }
   ],
-  "total_trades_all_time": 37,
+  "total_trades_all_time": 38,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
