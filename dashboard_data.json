@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-19T18:55:54.165373",
+    "updated": "2026-02-19T19:00:56.825247",
     "account": 256085487
   },
   "account": {
-    "balance": 620.95,
-    "equity": 620.95,
+    "balance": 616.45,
+    "equity": 616.45,
     "profit": 0.0,
     "margin": 0.0,
-    "free_margin": 620.95,
+    "free_margin": 616.45,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -33,28 +33,28 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": 12.8,
-    "pnl_pct": 2.13,
-    "trades": 9,
+    "pnl": 8.3,
+    "pnl_pct": 1.38,
+    "trades": 10,
     "wins": 6,
-    "losses": 3,
-    "win_rate": 66.7,
+    "losses": 4,
+    "win_rate": 60.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": 15.95,
-    "trades": 15,
+    "pnl": 11.45,
+    "trades": 16,
     "wins": 9,
-    "losses": 6,
-    "win_rate": 60.0
+    "losses": 7,
+    "win_rate": 56.2
   },
   "monthly": {
-    "pnl": 20.95,
-    "trades": 40,
+    "pnl": 16.45,
+    "trades": 41,
     "wins": 23,
-    "losses": 17,
-    "win_rate": 57.5,
+    "losses": 18,
+    "win_rate": 56.1,
     "target": 20
   },
   "positions": [],
@@ -139,9 +139,18 @@
       "price": 5004.819,
       "pnl": 7.51,
       "comment": "[tp 5004.81900]"
+    },
+    {
+      "time": "2026-02-19T19:00:30",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.02,
+      "price": 5004.334,
+      "pnl": -4.5,
+      "comment": "[sl 5004.33400]"
     }
   ],
-  "total_trades_all_time": 40,
+  "total_trades_all_time": 41,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
