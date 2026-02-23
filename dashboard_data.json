@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-23T03:58:18.770263",
+    "updated": "2026-02-23T04:03:21.358976",
     "account": 256085487
   },
   "account": {
@@ -24,7 +24,7 @@
     "reached_protect": false,
     "consecutive_wins": 0,
     "consecutive_losses": 0,
-    "weekly_pnl_pct": -1.5595087557189304
+    "weekly_pnl_pct": 0.0
   },
   "position_manager": {
     "tracked_positions": 0,
