@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-02-26T19:09:42.326485",
+    "updated": "2026-02-26T19:14:45.583558",
     "account": 256085487
   },
   "account": {
     "balance": 587.19,
-    "equity": 588.8,
-    "profit": 1.6099999999999999,
+    "equity": 591.77,
+    "profit": 4.58,
     "margin": 2.58,
-    "free_margin": 586.22,
+    "free_margin": 589.19,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -64,10 +64,10 @@
       "type": "SELL",
       "volume": 0.01,
       "open_price": 5167.079,
-      "current_price": 5165.474,
-      "sl": 5180.329,
+      "current_price": 5162.499,
+      "sl": 5173.704,
       "tp": 5035.481,
-      "profit": 1.61,
+      "profit": 4.58,
       "open_time": "2026-02-26T19:05:21"
     }
   ],
