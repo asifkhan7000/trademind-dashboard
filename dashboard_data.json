@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-01T23:57:33.986861",
+    "updated": "2026-03-02T00:02:36.638879",
     "account": 256085487
   },
   "account": {
@@ -43,11 +43,11 @@
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -7.19,
-    "trades": 4,
-    "wins": 1,
-    "losses": 3,
-    "win_rate": 25.0
+    "pnl": 0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0
   },
   "monthly": {
     "pnl": 0,
