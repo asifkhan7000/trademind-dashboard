@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-02T23:55:07.673566",
+    "updated": "2026-03-03T00:00:10.374851",
     "account": 256085487
   },
   "account": {
@@ -33,12 +33,12 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -0.36,
-    "pnl_pct": -0.06,
-    "trades": 1,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "trades": 0,
     "wins": 0,
-    "losses": 1,
-    "win_rate": 0.0,
+    "losses": 0,
+    "win_rate": 0,
     "target": 2.0,
     "limit": -3.0
   },
@@ -58,17 +58,7 @@
     "target": 20
   },
   "positions": [],
-  "recent_trades": [
-    {
-      "time": "2026-03-02T12:22:19",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5404.637,
-      "pnl": -0.36,
-      "comment": "TM8_Time exit: 4"
-    }
-  ],
+  "recent_trades": [],
   "total_trades_all_time": 52,
   "features": {
     "hybrid_protection": true,
