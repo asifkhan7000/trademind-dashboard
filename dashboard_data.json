@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-05T13:13:06.825086",
+    "updated": "2026-03-05T13:18:10.210630",
     "account": 256085487
   },
   "account": {
@@ -16,8 +16,8 @@
     "initial_balance": 600
   },
   "zone": {
-    "zone": "HUNT",
-    "daily_pnl_pct": 0.0,
+    "zone": "RECOVERY",
+    "daily_pnl_pct": -1.42,
     "trades_today": 0,
     "wins_today": 0,
     "losses_today": 0,
