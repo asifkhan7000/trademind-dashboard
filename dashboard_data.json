@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-05T22:18:24.122975",
+    "updated": "2026-03-05T22:23:27.960715",
     "account": 256085487
   },
   "account": {
@@ -16,15 +16,15 @@
     "initial_balance": 600
   },
   "zone": {
-    "zone": "STOP",
-    "daily_pnl_pct": -3.9546263717700665,
-    "trades_today": 10,
-    "wins_today": 3,
+    "zone": "RECOVERY",
+    "daily_pnl_pct": -1.4215662115912622,
+    "trades_today": 11,
+    "wins_today": 4,
     "losses_today": 7,
     "reached_protect": false,
-    "consecutive_wins": 0,
-    "consecutive_losses": 3,
-    "weekly_pnl_pct": -2.5346263717700674
+    "consecutive_wins": 1,
+    "consecutive_losses": 0,
+    "weekly_pnl_pct": -0.0015662115912631336
   },
   "position_manager": {
     "tracked_positions": 0,
