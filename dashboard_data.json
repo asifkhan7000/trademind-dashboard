@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-05T12:03:32.927116",
+    "updated": "2026-03-05T12:08:36.632716",
     "account": 256085487
   },
   "account": {
-    "balance": 589.24,
-    "equity": 585.06,
-    "profit": -4.18,
+    "balance": 585.55,
+    "equity": 587.88,
+    "profit": 2.33,
     "margin": 2.58,
-    "free_margin": 582.48,
+    "free_margin": 585.3,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -33,42 +33,42 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -4.96,
-    "pnl_pct": -0.83,
-    "trades": 3,
-    "wins": 1,
-    "losses": 2,
-    "win_rate": 33.3,
-    "target": 2.0,
-    "limit": -3.0
-  },
-  "weekly": {
-    "pnl": -5.32,
-    "trades": 4,
-    "wins": 1,
-    "losses": 3,
-    "win_rate": 25.0
-  },
-  "monthly": {
-    "pnl": -5.32,
+    "pnl": -8.65,
+    "pnl_pct": -1.44,
     "trades": 4,
     "wins": 1,
     "losses": 3,
     "win_rate": 25.0,
+    "target": 2.0,
+    "limit": -3.0
+  },
+  "weekly": {
+    "pnl": -9.01,
+    "trades": 5,
+    "wins": 1,
+    "losses": 4,
+    "win_rate": 20.0
+  },
+  "monthly": {
+    "pnl": -9.01,
+    "trades": 5,
+    "wins": 1,
+    "losses": 4,
+    "win_rate": 20.0,
     "target": 20
   },
   "positions": [
     {
-      "ticket": 199285456,
+      "ticket": 199293496,
       "symbol": "XAUUSDm",
-      "type": "BUY",
+      "type": "SELL",
       "volume": 0.01,
-      "open_price": 5160.8009999999995,
-      "current_price": 5156.615,
-      "sl": 5147.424,
-      "tp": 5295.737,
-      "profit": -4.18,
-      "open_time": "2026-03-05T11:54:31"
+      "open_price": 5156.585,
+      "current_price": 5154.256,
+      "sl": 5163.384,
+      "tp": 5020.615,
+      "profit": 2.33,
+      "open_time": "2026-03-05T12:05:40"
     }
   ],
   "recent_trades": [
@@ -98,9 +98,18 @@
       "price": 5164.295,
       "pnl": -1.24,
       "comment": "AI Monitor EXIT"
+    },
+    {
+      "time": "2026-03-05T12:04:39",
+      "symbol": "XAUUSDm",
+      "type": "BUY",
+      "volume": 0.01,
+      "price": 5157.106,
+      "pnl": -3.69,
+      "comment": "AI Monitor EXIT"
     }
   ],
-  "total_trades_all_time": 55,
+  "total_trades_all_time": 56,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
