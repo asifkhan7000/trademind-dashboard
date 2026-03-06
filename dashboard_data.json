@@ -3,7 +3,7 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-06T23:58:02.874188",
+    "updated": "2026-03-07T00:03:06.121664",
     "account": 256085487
   },
   "account": {
@@ -33,12 +33,12 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": 661.26,
-    "pnl_pct": 110.21,
-    "trades": 7,
-    "wins": 4,
-    "losses": 3,
-    "win_rate": 57.1,
+    "pnl": 0,
+    "pnl_pct": 0.0,
+    "trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0,
     "target": 2.0,
     "limit": -3.0
   },
@@ -58,71 +58,7 @@
     "target": 20
   },
   "positions": [],
-  "recent_trades": [
-    {
-      "time": "2026-03-06T17:00:34",
-      "symbol": "XAUUSDm",
-      "type": "BUY",
-      "volume": 0.01,
-      "price": 5079.549,
-      "pnl": -4.76,
-      "comment": ""
-    },
-    {
-      "time": "2026-03-06T17:11:21",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "price": 5069.851,
-      "pnl": -2.63,
-      "comment": ""
-    },
-    {
-      "time": "2026-03-06T17:33:06",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.02,
-      "price": 5123.973,
-      "pnl": -31.33,
-      "comment": "[sl 5123.973]"
-    },
-    {
-      "time": "2026-03-06T17:48:04",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "price": 5112.976,
-      "pnl": 7.88,
-      "comment": ""
-    },
-    {
-      "time": "2026-03-06T17:54:08",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.02,
-      "price": 5104.396,
-      "pnl": 24.9,
-      "comment": ""
-    },
-    {
-      "time": "2026-03-06T17:55:48",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.5,
-      "price": 5096.955,
-      "pnl": 288.9,
-      "comment": ""
-    },
-    {
-      "time": "2026-03-06T17:57:43",
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.5,
-      "price": 5079.916,
-      "pnl": 378.3,
-      "comment": ""
-    }
-  ],
+  "recent_trades": [],
   "total_trades_all_time": 71,
   "features": {
     "hybrid_protection": true,
