@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-06T17:39:33.189818",
+    "updated": "2026-03-06T17:44:36.353301",
     "account": 256085487
   },
   "account": {
     "balance": 551.87,
-    "equity": 551.87,
-    "profit": 0.0,
-    "margin": 0.0,
-    "free_margin": 551.87,
+    "equity": 556.36,
+    "profit": 4.49,
+    "margin": 2.56,
+    "free_margin": 553.8,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -57,7 +57,20 @@
     "win_rate": 25.0,
     "target": 20
   },
-  "positions": [],
+  "positions": [
+    {
+      "ticket": 200969331,
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "open_price": 5120.861,
+      "current_price": 5116.37,
+      "sl": 0.0,
+      "tp": 0.0,
+      "profit": 4.49,
+      "open_time": "2026-03-06T17:40:38"
+    }
+  ],
   "recent_trades": [
     {
       "time": "2026-03-06T17:00:34",
