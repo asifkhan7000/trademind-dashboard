@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-06T17:44:36.353301",
+    "updated": "2026-03-06T17:49:39.156483",
     "account": 256085487
   },
   "account": {
-    "balance": 551.87,
-    "equity": 556.36,
-    "profit": 4.49,
-    "margin": 2.56,
-    "free_margin": 553.8,
+    "balance": 559.75,
+    "equity": 559.75,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 559.75,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -33,44 +33,31 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -38.72,
-    "pnl_pct": -6.45,
-    "trades": 3,
-    "wins": 0,
+    "pnl": -30.84,
+    "pnl_pct": -5.14,
+    "trades": 4,
+    "wins": 1,
     "losses": 3,
-    "win_rate": 0.0,
+    "win_rate": 25.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -42.69,
-    "trades": 16,
-    "wins": 4,
+    "pnl": -34.81,
+    "trades": 17,
+    "wins": 5,
     "losses": 12,
-    "win_rate": 25.0
+    "win_rate": 29.4
   },
   "monthly": {
-    "pnl": -42.69,
-    "trades": 16,
-    "wins": 4,
+    "pnl": -34.81,
+    "trades": 17,
+    "wins": 5,
     "losses": 12,
-    "win_rate": 25.0,
+    "win_rate": 29.4,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 200969331,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "open_price": 5120.861,
-      "current_price": 5116.37,
-      "sl": 0.0,
-      "tp": 0.0,
-      "profit": 4.49,
-      "open_time": "2026-03-06T17:40:38"
-    }
-  ],
+  "positions": [],
   "recent_trades": [
     {
       "time": "2026-03-06T17:00:34",
@@ -98,9 +85,18 @@
       "price": 5123.973,
       "pnl": -31.33,
       "comment": "[sl 5123.973]"
+    },
+    {
+      "time": "2026-03-06T17:48:04",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5112.976,
+      "pnl": 7.88,
+      "comment": ""
     }
   ],
-  "total_trades_all_time": 67,
+  "total_trades_all_time": 68,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
