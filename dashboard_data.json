@@ -3,15 +3,15 @@
     "version": "8.0",
     "name": "TradeMind v8.1",
     "mode": "SAFE",
-    "updated": "2026-03-06T17:09:15.648199",
+    "updated": "2026-03-06T17:14:18.544156",
     "account": 256085487
   },
   "account": {
-    "balance": 585.83,
-    "equity": 586.26,
-    "profit": 0.43,
-    "margin": 25.34,
-    "free_margin": 560.92,
+    "balance": 583.2,
+    "equity": 583.2,
+    "profit": 0.0,
+    "margin": 0.0,
+    "free_margin": 583.2,
     "leverage": 2000,
     "initial_balance": 600
   },
@@ -33,44 +33,31 @@
     "trailing_active": 0
   },
   "today": {
-    "pnl": -4.76,
-    "pnl_pct": -0.79,
-    "trades": 1,
+    "pnl": -7.39,
+    "pnl_pct": -1.23,
+    "trades": 2,
     "wins": 0,
-    "losses": 1,
+    "losses": 2,
     "win_rate": 0.0,
     "target": 2.0,
     "limit": -3.0
   },
   "weekly": {
-    "pnl": -8.73,
-    "trades": 14,
+    "pnl": -11.36,
+    "trades": 15,
     "wins": 4,
-    "losses": 10,
-    "win_rate": 28.6
+    "losses": 11,
+    "win_rate": 26.7
   },
   "monthly": {
-    "pnl": -8.73,
-    "trades": 14,
+    "pnl": -11.36,
+    "trades": 15,
     "wins": 4,
-    "losses": 10,
-    "win_rate": 28.6,
+    "losses": 11,
+    "win_rate": 26.7,
     "target": 20
   },
-  "positions": [
-    {
-      "ticket": 200896428,
-      "symbol": "XAUUSDm",
-      "type": "SELL",
-      "volume": 0.01,
-      "open_price": 5067.224,
-      "current_price": 5066.789,
-      "sl": 5099.718,
-      "tp": 5030.718,
-      "profit": 0.43,
-      "open_time": "2026-03-06T17:09:03"
-    }
-  ],
+  "positions": [],
   "recent_trades": [
     {
       "time": "2026-03-06T17:00:34",
@@ -80,9 +67,18 @@
       "price": 5079.549,
       "pnl": -4.76,
       "comment": ""
+    },
+    {
+      "time": "2026-03-06T17:11:21",
+      "symbol": "XAUUSDm",
+      "type": "SELL",
+      "volume": 0.01,
+      "price": 5069.851,
+      "pnl": -2.63,
+      "comment": ""
     }
   ],
-  "total_trades_all_time": 65,
+  "total_trades_all_time": 66,
   "features": {
     "hybrid_protection": true,
     "trailing_stop": true,
